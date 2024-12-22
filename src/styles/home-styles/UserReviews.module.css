@@ -1,0 +1,73 @@
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: "" !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  cursor:pointer;
+  height: 66px;
+  width:66px;
+  background:#1f1f1f;
+  border-radius:9999px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+
+
+
+.stats-grid {
+    display: grid;
+    gap: 0em;
+    grid-template-columns: repeat(4, 250px);
+    justify-items: center;
+    justify-content: center;
+    padding-right:8em;
+    padding-left:8em;
+  }
+
+.object-fit {
+    max-width:100%;
+    height:auto;
+  }
+  
+
+  .hidden {
+    display: none;
+  }
+
+  .disabled {
+    pointer-events: none;
+  }
+
+  
+  /* for hovering circle*/
+.hover-circle {
+  color: #4b4c53;
+}
+
+.circle-animate {
+  stroke:white;
+  transform-origin:30px 30px;
+  stroke-dasharray: 175.929; /* Perimeter of the circle */
+  stroke-dashoffset: 175.929; /* Initially fully hidden */
+  animation: fill-clear 8s ease-in-out infinite; /* Adjust timing as needed */
+  transform: rotate(-90deg); /* Change the starting point */
+
+
+}
+
+@keyframes fill-clear {
+  0% {
+    stroke-dashoffset: 175.929; /* Start with an empty circle */
+  }
+  90% {
+    stroke-dashoffset: 0; /* Fully filled */
+  }
+ 100% {
+    stroke-dashoffset: 0; /* Fully filled */
+  }
+
+}

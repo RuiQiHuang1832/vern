@@ -3,6 +3,17 @@
   --nav-brand-color: #ffffff;
   --page-background-color: rgb(18,18,18);
 }
+::selection {
+  background-color:#53478f;
+ 
+}
+
+/* For Retina or high-DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    zoom: 115%; /* Scale content down for high DPI */
+  }
+}
 
 * {
   margin: 0;
@@ -178,24 +189,84 @@ textarea {
   color: rgba(106, 106, 106, 0.489);
 }
 
-/* Fade and downward animation for the slide content */
-.slide-content {
+/* Fade and downward animation for the slide content REVIEW_DESCRIPTION */
+.review-description  {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 2s ease, transform 1s ease;
+  transition: opacity 0s ease-in 0.6s, transform 1s ease;
 }
 
-.swiper-slide.swiper-slide-active .slide-content {
-  opacity: 1;
+.swiper-slide.swiper-slide-active .review-description  {
   transform: translateY(0);
-  transition: opacity 0.4s ease 0.6s; /* Add a delay before the new text appears */
-
 }
 
-.swiper-slide:not(.swiper-slide-active) .slide-content {
+.swiper-slide:not(.swiper-slide-active) .review-description {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(10px);
 }
+
+/* Fade and downward animation for the slide content REVIEW_ROLE */
+
+
+.review-role  {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0s ease-in 0.6s, transform 1s ease;
+  transition-delay: 0.5s;
+  /*
+  !FIX THIS  
+  */
+
+}
+
+.swiper-slide.swiper-slide-active .review-role  {
+  transform: translateY(0);
+}
+
+.swiper-slide:not(.swiper-slide-active) .review-role {
+  opacity: 0;
+  transform: translateY(10px);
+}
+/* Fade and downward animation for the slide content REVIEW_NAME */
+
+.review-name  {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0s ease-in 0.6s, transform 1s ease;
+}
+
+.swiper-slide.swiper-slide-active .review-name  {
+  transform: translateY(0);
+}
+
+.swiper-slide:not(.swiper-slide-active) .review-name {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+
+/* Target .review-avatar separately for scaling */
+.review-avatar {
+  transform: scale(1);
+  opacity:1;
+  transition: opacity 0.4s ease-in, transform 0.4s cubic-bezier(.17,.84,.44,1);
+
+}
+
+.swiper-slide.swiper-slide-active  .review-avatar {
+  transform: scale(1);
+  transition-delay:0.6s;
+
+}
+
+.swiper-slide:not(.swiper-slide-active) .review-avatar {
+  transform: scale(.92); /* Scale down when not active */
+  opacity: 0;
+
+}
+
+/* Target .review-avatar separately for scaling */
+
 
 
 .mySwiper {

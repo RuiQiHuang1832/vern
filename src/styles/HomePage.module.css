@@ -88,15 +88,7 @@
   padding-left:8em;
 }
 
-.stats-grid {
-  display: grid;
-  gap: 0em;
-  grid-template-columns: repeat(4, 250px);
-  justify-items: center;
-  justify-content: center;
-  padding-right:8em;
-  padding-left:8em;
-}
+
 
 .creative-process-container {
   max-width:90%;
@@ -276,50 +268,4 @@
   transition: width 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Spring effect on initial state */
   transform: translateX(5px); /* Use transform to simulate margin-left */
 
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  content: "" !important;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  cursor:pointer;
-  height: 66px;
-  width:66px;
-  background:#1f1f1f;
-  border-radius:9999px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  color:white;
-}
-
-/* Container for the progress bar */
-.progress-bar {
-  height:2px;
-  overflow: hidden; /* Ensure the progress stays within bounds */
-  position: relative;
-}
-
-/* Progress fill */
-.progress {
-  height: 100%;
-  background-color: white; /* Color of the progress */
-  width: 0; /* Start with 0 width */
-  animation: fill 12s linear infinite; /* Animation duration includes delay */
-
-}
-
-/* Animation keyframes */
-@keyframes fill {
-  0% {
-    width: 0;
-  }
-  80% {
-    width:100%
-  }
-  100% {
-    width: 100%; /* Maintain the final state during delay */
-  }
 }

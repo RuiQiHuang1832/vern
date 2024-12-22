@@ -8,12 +8,12 @@ import { sections } from "@/global/sectionsData";
 import  { ScrollableArrow } from "@/components/Arrows";
 import Button from "@/components/Button";
 import { mapObjectToComponent } from "@/helpers/mapObjectToComponent";
-import { stepData, toolData, statsData, quoteData, arrowData, featuresData, imageData, accordionData } from "@/global/homeData";
+import { stepData, toolData, arrowData, featuresData, imageData, accordionData } from "@/global/homeData";
 import example from "@/assets/images/home/example.png";
 import { FaCheck } from "react-icons/fa";
 import Newsletter from "@/components/Newsletter";
 import FadeInElement from "@/components/FadeInElement";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import bbdo from "@/assets/svg/bbdo.svg"
 import discord from "@/assets/svg/discord.svg"
@@ -30,17 +30,7 @@ import upwork from "@/assets/svg/upwork.svg"
 import { BiSupport } from "react-icons/bi";
 import { IoTriangle } from "react-icons/io5";
 import newsletter from "@/assets/images/newsletter.png";
-import { BiSolidBriefcaseAlt2 } from "react-icons/bi";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import 'swiper/css/effect-fade';
-
-import { Navigation, EffectFade } from "swiper/modules";
-//icons
-import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import UserReviews from "./components/UserReviews";
 
 
 // used for scrollProgressBar
@@ -52,46 +42,16 @@ import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-ic
 export default function Home() {
 
   const [isVisible, setIsVisible] = useState(false);
-  const swiperRef = useRef(null);
-
-  const [isComplete, setIsComplete] = useState(false);
-
-
-
   useEffect(() => {
     // Set isVisible to true when the component mounts (page load)
     setIsVisible(true);
   }, []);
 
-  useEffect(() => {
-    const progressElement = document.querySelector('.progress-ref');
   
-    const handleAnimationEnd = () => {
-      setIsComplete(true); // Set to true when animation ends
-    };
-  
-    if (progressElement) {
-      progressElement.addEventListener('animationiteration', handleAnimationEnd);
-    }
-  
-    return () => {
-      if (progressElement) {
-        progressElement.removeEventListener('animationiteration', handleAnimationEnd);
-      }
-    };
-  }, []); // Only set up the event listener once
-
-useEffect(() => {
-  if (swiperRef.current && isComplete) {
-    console.log("fired");
-    swiperRef.current.slideNext(); // Change to the next slide
-    setIsComplete(false); // Optionally reset state if needed for repeated usage
-  }
-}, [isComplete]);
   return (
     <div className="text-white">
       <div className="container-lg mt-5 mb-5 ">
-        <div className={`row gx-0 mb-5`}>
+        <div className={`row gx-0`}>
           <div className={`col-xxl-6 col-xl-7 col d-flex align-items-center order-xl-1 order-2 justify-content-lg-start justify-content-center`}>
             <div className="text col-10 col-lg-12 col-xl-10">
               <h1 className={`${styles["header"]} responsiveHeader fade-in-from-bottom`}>
@@ -134,7 +94,7 @@ useEffect(() => {
         </div>
         <ScrollableArrow></ScrollableArrow>
       </div>
-      <section id="approach" className={` mx-auto col-xl-6 col-10 col-lg-8 `}>
+      <section id="approach" className={` mx-auto col-xl-6 col-10 col-lg-8`}>
         <h1 style={{ fontSize: "85px" }} className="fw-bolder text-center">
           Our <span style={{}}>Approach</span>
         </h1>
@@ -253,68 +213,7 @@ useEffect(() => {
           </div>
         </FadeInElement>
       </section>
-      <section style={{ background: "#1A1A1A", borderRadius: "24px", margin: "2rem 4rem" }}>
-
-        <div style={{ paddingTop: "8rem" }} className="d-flex justify-content-around ">
-          <div style={{ maxWidth: "20%" }} className={` `}>
-            <h1 className="fw-light mb-4">What people are saying</h1>
-          </div>
-          
-          <div style={{ background: "rgb(17 17 17 / 51%)", borderRadius: "10px" }} className=" col-7">
-          <div className={`${styles["progress-bar"]}`}>
-          <div className={`${styles["progress"]} progress-ref`}></div></div>
-            <Swiper
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
-
-              navigation={{ nextEl: `.${styles["swiper-button-next"]}`, prevEl: `.${styles["swiper-button-prev"]}` }}
-              breakpointsBase="container"
-              pagination={false}
-              modules={[Navigation, EffectFade]}
-              effect="fade"
-              speed={500}
-              watchSlidesProgress={true}
-              allowTouchMove={false}
-              fadeEffect={{
-                crossFade: true,
-              }}
-              className={` mySwiper p-5 `}
-              loop={true}
-              spaceBetween={30}
-            >
-              {quoteData.map((e, index) => (
-                <SwiperSlide key={index}>
-                  <h2 style={{ height: "250px", textAlign: "left" }} className="fw-light slide-content">
-                    &ldquo;{e.description}&rdquo;
-                  </h2>
-                  <div style={{ gap: "15px",}} className="d-flex">
-                    <div style={{ gap: "20px",textAlign:'left' }} className="slide-content d-flex me-auto align-items-center">
-                      <Image style={{ borderRadius: "9999px" }} priority={true} src={e.source.src} width={64} height={1000} quality={100} className={`${styles["object-fit"]}`} alt={e.name}></Image>
-                      <div style={{fontSize:"20px"}} className="fw-light">
-                        <div>{e.name}</div>
-                        <div style={{color:"#6B7280"}}><BiSolidBriefcaseAlt2 style={{transform:"translateY(-2px)"}}></BiSolidBriefcaseAlt2>&nbsp;{e.role}</div>
-                      </div>
-                    </div>
-                    <div style={{flexShrink:"0" }} className={`${styles["swiper-button-prev"]}`}>
-                      <MdOutlineKeyboardArrowLeft size="1.5em" />
-                    </div>
-                    <div style={{flexShrink:"0" }} className={`${styles["swiper-button-next"]} me-3`}>
-                      <MdOutlineKeyboardArrowRight size="1.5em" />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
-        <div style={{ paddingTop: "6rem" }} className={`${styles["stats-grid"]} pb-5`}>
-          {statsData.map((e, i) => (
-            <div key={i} className={`${styles["stats"]}`}>
-              <h1 style={{ fontSize: "48px" }}>{e.number}</h1>
-              <p className="fs-5">{e.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <UserReviews></UserReviews>
       <section id="pin" style={{ padding: "6rem 0" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]} ${styles["view-height-alternative"]}`}>
         <div className="home-page-accordion accordion col-6 ms-auto">
           <div className=" mb-4">

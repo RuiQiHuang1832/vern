@@ -135,26 +135,26 @@ export const statsData:statsDataType[] = [
 export const quoteData:quoteDataType[] = [
     {
         name:"Alex Johnson",
-        role:"Advisor at Synergy Studios",
+        role:"Advisor @ Synergy Studios",
         description:"This platform has transformed how I discover and share media. The recommendations are spot on and the community is incredibly supportive.",
         source: alex_johnson,
       
     },
     {
         name:"Taylor Reed",
-        role:"Chief Content Strategist at Inspire Media",
+        role:"Chief Content Strategist",
         description:"I love how easy it is to find new content and share my reviews with others. It is like having a personal media curator at my fingertips!",
         source: taylor_reed,
     },
     {
         name:"Jordan Parker",
-        role:"Senior Editor at WriteWorks Inc.",
+        role:"Senior Editor @ WriteWorks Inc.",
         description:"The user interface is so intuitive. I was able to jump right into exploring and reviewing media without any hassle.",
         source: jordan_parker
     },
     {
         name:"Sam Kim",
-        role:"Marketing Director at BrandFlow Solutions",
+        role:"Marketing @ Brand Solutions",
         description:"Being part of this community has enhanced my media experience. The insights and recommendations are invaluable!",
         source: sam_kim
     }
