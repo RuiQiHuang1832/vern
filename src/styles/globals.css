@@ -202,7 +202,7 @@ textarea {
 
 .swiper-slide:not(.swiper-slide-active) .review-description {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(20px);
 }
 
 /* Fade and downward animation for the slide content REVIEW_ROLE */
@@ -211,11 +211,7 @@ textarea {
 .review-role  {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0s ease-in 0.6s, transform 1s ease;
-  transition-delay: 0.5s;
-  /*
-  !FIX THIS  
-  */
+  transition: opacity 0s cubic-bezier(.17,.84,.44,1) 0.7s, transform 1s ease;
 
 }
 

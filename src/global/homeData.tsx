@@ -4,11 +4,11 @@ import step3 from "@/assets/images/home/step_3.png";
 import { StaticImageData } from 'next/image';
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import { TbAtom2Filled } from "react-icons/tb";
+import { PiAtomBold } from "react-icons/pi";
+import { FaAtom } from "react-icons/fa";
 import { PiBook } from "react-icons/pi";
 import { IconType } from "react-icons";
-import review from "@/assets/images/home/review.png";
-import discover from "@/assets/images/home/discover.png";
-import collaborate from "@/assets/images/home/collaborate.png";
 import alex_johnson from "@/assets/images/alex_johnson.jpg";
 import sam_kim from "@/assets/images/sam_kim.jpg";
 import taylor_reed from "@/assets/images/taylor_reed.jpg";
@@ -52,11 +52,46 @@ export type stepDataType = {
  
   };
 
-  export type imageDataType = {
-    title: string;
+  export type membershipDataType = {
+    plan: string;
+    price: string;
+    type:string;
+    features:string[];
     description: string;
-    source:StaticImageData
+    src:IconType
   };
+
+  export const membershipData:membershipDataType[] = [
+    {
+      plan: "Essentials",
+      price: "$0",
+      type: "Get started for free",
+      description: "Perfect for casual users looking to start organizing their favorite media.",
+      features: ["Create up to 3 playlists", "Rate media with a 5-star system", "Basic media search functionality", "Access to community ratings", "Standard customer support"],
+      src: TbAtom2Filled
+    },
+    {
+      plan: "Premium",
+      price: "$8",
+      type: "Open an account",
+      description: "Ideal for enthusiasts ready to dive deeper into media cataloging.",
+      features: ["Unlimited playlists", "Advanced media search filters", "Custom tags for better organization", "Collaborative playlist creation", "Download playlists as PDF", "Exclusive content recommendations", "Personalized analytics dashboard"],
+      src: PiAtomBold
+
+    },
+    {
+      plan: "Enterprise",
+      price: "Custom pricing",
+      type: "Contact sales",
+      description: "Designed for power users who want the complete media curation experience.",
+      features: ["AI-powered playlist suggestions", "Dynamic playlist cover designs", "Offline playlist access", "Priority customer support", "Custom media sorting rules", "Early access to new features", "Advanced collaboration tools", "Shareable playlist links", "Integrations with streaming platforms", "Ad-free experience"],
+      src:FaAtom
+    },
+  ];
+
+
+
+
 export const stepData:stepDataType[] = [
     {
         id:"step 1",
@@ -96,23 +131,6 @@ export const toolData:toolDataType[] = [
     },
 ]
 
-export const imageData:imageDataType[] = [
-    {
-        title:"REVIEWS",
-        description:"Effortlessly write content without distractions or limitations.",
-        source:review
-    },  
-    {
-        title:"DISCOVER",
-        description:"Explore new media recommendations tailored to your interests, seamlessly linking to reviews and ratings.",
-        source:discover
-    },  
-    {
-        title:"COLLABORATE",
-        description:"Easily connect with other users to discuss and recommend media using versatile forums and chat features.",
-        source:collaborate
-    }
-]
 
 export const statsData:statsDataType[] = [
     {

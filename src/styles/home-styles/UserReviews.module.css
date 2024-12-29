@@ -53,7 +53,7 @@
   transform-origin:30px 30px;
   stroke-dasharray: 175.929; /* Perimeter of the circle */
   stroke-dashoffset: 175.929; /* Initially fully hidden */
-  animation: fill-clear 8s ease-in-out infinite; /* Adjust timing as needed */
+  animation: fill-clear 8s ease-in-out infinite, fill-green 8s ease-in-out infinite; /* Adjust timing as needed */
   transform: rotate(-90deg); /* Change the starting point */
 
 
@@ -70,4 +70,18 @@
     stroke-dashoffset: 0; /* Fully filled */
   }
 
+}
+
+@keyframes fill-green {
+  0%, 80% {
+    stroke: white;
+  }
+  90%,100% {
+    stroke:green;
+  }
+}
+
+
+.scaled-svg {
+  transform:scale(0.6)
 }

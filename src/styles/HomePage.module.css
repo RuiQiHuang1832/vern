@@ -241,14 +241,6 @@
 }
 
 
-.logo-grid {
-  display: grid;
-  gap: 4em;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-    justify-items: start;
-    align-items:center;
-}
 
 .support-button {
   display:flex;

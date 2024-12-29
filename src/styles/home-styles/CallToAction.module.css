@@ -1,0 +1,45 @@
+
+.logo-grid {
+    display: grid;
+    gap: 4em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+      justify-items: start;
+      align-items:center;
+  }
+  
+  .support-button {
+    display:flex;
+    font-size: 15px;
+    height:45px;
+    align-items:center;
+    text-wrap:nowrap;
+  }
+  
+  .support-button:hover .support-arrow {
+    width:20px;
+  
+  }
+  
+  .support-arrow {
+    width:0;
+    transition: width 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Spring effect on initial state */
+    transform: translateX(5px); /* Use transform to simulate margin-left */
+  
+  }
+
+  
+.btn-container {
+    column-gap: 1rem;
+  
+  }
+  @media only screen and (max-width: 466px) {
+  .btn-container {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  
+  }
+  }
+  
+  

@@ -1,36 +1,23 @@
 "use client";
 import image_4 from "@/assets/images/home/illustration-data-4.png";
-import settings from "@/assets/images/home/settings.png";
 import HeaderWithImageAndParagraph from "@/components/HeaderWithImageAndParagraph";
 import Image from "next/image";
 import styles from "@/styles/HomePage.module.css";
 import { sections } from "@/global/sectionsData";
 import  { ScrollableArrow } from "@/components/Arrows";
-import Button from "@/components/Button";
 import { mapObjectToComponent } from "@/helpers/mapObjectToComponent";
-import { stepData, toolData, arrowData, featuresData, imageData, accordionData } from "@/global/homeData";
+import { stepData, toolData, arrowData, featuresData, accordionData } from "@/global/homeData";
 import example from "@/assets/images/home/example.png";
 import { FaCheck } from "react-icons/fa";
 import Newsletter from "@/components/Newsletter";
+import Support from "@/components/Support";
 import FadeInElement from "@/components/FadeInElement";
 import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import bbdo from "@/assets/svg/bbdo.svg"
-import discord from "@/assets/svg/discord.svg"
-import dropbox from "@/assets/svg/dropbox.svg"
-import greenhouse from "@/assets/svg/greenhouse.svg"
-import ideo from "@/assets/svg/ideo.svg"
-import monday from "@/assets/svg/monday.svg"
-import ncr from "@/assets/svg/ncr.svg"
-import nyt from "@/assets/svg/nyt.svg"
-import orange from "@/assets/svg/orange.svg"
-import philips from "@/assets/svg/philips.svg"
-import ted from "@/assets/svg/ted.svg"
-import upwork from "@/assets/svg/upwork.svg"
-import { BiSupport } from "react-icons/bi";
-import { IoTriangle } from "react-icons/io5";
 import newsletter from "@/assets/images/newsletter.png";
-import UserReviews from "./components/UserReviews";
+import UserReviews from "./sections/UserReviews";
+import MembershipOptions from "./sections/MembershipOptions";
+import CallToAction from "./sections/CallToAction";
 
 
 // used for scrollProgressBar
@@ -156,7 +143,7 @@ export default function Home() {
             </div>
           </FadeInElement>
         </div>
-        <div style={{ background: "#23272c", borderRadius: "24px", margin: "2rem 4rem" }}>
+        <div style={{ background: "#1A1A1A", borderRadius: "24px", margin: "2rem 4rem" }}>
           <div style={{ maxWidth: "35rem" }} className={`text-wrap-balance text-center mx-auto col-md-10 col py-5`}>
             <h1 className="fw-bold mb-4">Power tools for the discerning reviewers</h1>
             <p className="fs-6 fw-light ">We prefer a quality workflow over a quantity of features, but we have plenty of those too.</p>
@@ -186,35 +173,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section style={{ background: "rgb(55 54 63 / 14%)", borderRadius: "24px", margin: "2rem 4rem" }}>
-        <div style={{ maxWidth: "35rem" }} className={`text-center mx-auto col-md-10 col px-4 py-5`}>
-          <h1 className="fw-bold mb-4">Customizable Settings</h1>
-          <p className="fs-6 fw-light ">vern streamlines the way you create and share your worlds, offering fully customizable settings to reflect your unique identity and preferences.</p>
-        </div>
-        <FadeInElement value="fade-in-section">
-          <div className={`text-center`}>
-            <Image src={settings.src} alt="Home page logo" width={0} height={0} sizes="100vw" className={`${styles["img-width-2"]} rounded h-100 focus-ring ring-blue`} priority={true} quality={100} />
-          </div>
-        </FadeInElement>
-        <div className={`text-wrap-balance mx-auto col-md-10 col py-5`}>
-          <div className="fs-2 fw-light ">Whether you’re sharing your insights, discovering new favorites, or engaging with a vibrant community, we make it effortless to connect with the media and people you ❤️.</div>
-        </div>
-        <FadeInElement value="fade-in-section">
-          <div className={`${styles["tool-grid"]} text-center mx-auto pb-5`}>
-            {imageData.map((data, i) => (
-              <div key={i} className={`${styles["grid-item"]} pb-3 item item-${i} ring-blue focus-ring`}>
-                <Image style={{ borderRadius: "10px 10px 0 0" }} priority={true} src={data.source.src} width={1000} height={260} quality={100} className={`${styles["object-fit"]}`} alt={data.title}></Image>
-                <h6 style={{ letterSpacing: "0.1rem" }} className="my-4 px-3">
-                  {data.title}
-                </h6>
-                <p className=" px-3 ">{data.description}</p>
-              </div>
-            ))}
-          </div>
-        </FadeInElement>
-      </section>
       <UserReviews></UserReviews>
-      <section id="pin" style={{ padding: "6rem 0" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]} ${styles["view-height-alternative"]}`}>
+      <MembershipOptions></MembershipOptions>
+      <Support></Support>
+      <section id="pin" style={{ padding: "6rem 0", gap:"6rem" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]} ${styles["view-height-alternative"]}`}>
         <div className="home-page-accordion accordion col-6 ms-auto">
           <div className=" mb-4">
             <h1 style={{ fontSize: "60px" }} className="fw-light" id="Faq">
@@ -237,67 +199,15 @@ export default function Home() {
           ))}
         </div>
 
-        <div style={{ padding: "5rem 5rem" }}>
-          <div style={{ marginBottom: "12rem", borderRadius: "10px", fontSize: "30px", backgroundColor: "#1A1A1A", padding: "4rem" }} className="">
-            <div className="mb-3" style={{ fontSize: "12px", color: "#949494" }}>
-              CONTACT US &nbsp;<BiSupport style={{ transform: "translateY(-1px)" }}></BiSupport>
-            </div>
-            <div className="d-flex justify-content-between">
-              <h1>Psst! Our team is here to help! 😊</h1>
-              <div className="align-self-end">
-                <Button buttonColor={{ cssColor: "#3C3C3C" }} href="https://airtable.com/appZ6rwp0wgPvNpjJ/pagfrOydoyfmz8qJe/form" width="auto" radius="10px" padding="11px" type="button" styleClass={`${styles["support-button"]}`}>
-                  Contact support
-                  <BsArrowRight className={`${styles["support-arrow"]}`} size="1em"></BsArrowRight>
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div style={{ backgroundColor: "rgb(0, 0, 0, 0.27)" }}></div>
-        </div>
-        <div style={{ gap: "10rem" }} className="d-flex container">
+    
+        <div style={{ gap: "10rem" }} className="d-flex container py-5">
           <div>
             <Newsletter></Newsletter>
           </div>
           <Image src={newsletter.src} alt="Home page logo" width={0} height={0} sizes="100vw" style={{ height: "auto", width: "34%" }} priority={true} quality={100} className="rounded" />
         </div>
       </section>
-      <section style={{ padding: "6rem 0" }}>
-        <div style={{ gap: "50px" }} className="d-flex justify-content-center my-5">
-          <div className="col-5">
-            <h1 style={{ fontSize: "88px" }} className={`fw-bold text-wrap-balance  mb-4 lh-1`}>
-              Get started for free!
-            </h1>
-            <p style={{ fontSize: "24px", color: "#767676" }} className={`text-wrap-pretty mb-5 fw-light`}>
-              Experience Vern for free—submit reviews, rate media, and join a community of enthusiasts with no costs or subscriptions.
-            </p>
-            <div className={`d-flex justify-content-start  ${styles["btn-container"]}`}>
-              <Button buttonColor={{ cssColor: "white" }} type="submit" width="auto" radius="10px" padding="10px" styleClass={`${styles["support-button"]}`}>
-                <span style={{ color: "black" }}>
-                  <IoTriangle></IoTriangle>&nbsp;Start Reviewing
-                </span>
-                <BsArrowRight className={`${styles["support-arrow"]}`} color="black" size="1em"></BsArrowRight>
-              </Button>
-            </div>
-          </div>
-          <div className="">
-            <h6 style={{ color: "#767676" }}>EMPOWERING A COMMUNITY OF PASSIONATE REVIEWERS AT</h6>
-            <div style={{ opacity: "0.5" }} className={`${styles["logo-grid"]} position-relative mt-5`}>
-              <Image src={upwork} alt="upwork"></Image>
-              <Image src={ideo} alt="ideo"></Image>
-              <Image src={discord} alt="discord"></Image>
-              <Image src={dropbox} alt="dropbox"></Image>
-              <Image src={greenhouse} alt="greenhouse"></Image>
-              <Image src={bbdo} alt="bbdo"></Image>
-              <Image src={monday} alt="monday"></Image>
-              <Image src={ncr} alt="ncr"></Image>
-              <Image src={nyt} width="160" alt="nyt"></Image>
-              <Image src={orange} width="130" alt="orange"></Image>
-              <Image src={philips} alt="philips"></Image>
-              <Image src={ted} alt="ted"></Image>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CallToAction></CallToAction>
     </div>
   );
 }
