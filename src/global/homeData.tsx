@@ -55,6 +55,7 @@ export type stepDataType = {
     left: string
  
   };
+  //log
 
   export type membershipDataType = {
     plan: string;
