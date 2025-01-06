@@ -7,6 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import Button from "@/components/Button";
 import { IoIosArrowDropright } from "react-icons/io";
 import { MdStorage, MdPerson, MdAnalytics } from "react-icons/md";
+import { WEBSITE_NAME } from '@/global/global';
 
 export default function Billing() {
   const freePlanFeatures = ["Basic Profile", "Limited Reviews", "Basic Recommendations", "Standard Support", "Ad-supported"];
@@ -58,7 +59,7 @@ export default function Billing() {
         <div className={styles["plan-heading"]}>
           <Image src={logo} alt="Logo" width={50} height={50} />
           <div className="ms-2">
-            <h6 className={styles["web-title"]}>Vernacular Free</h6>
+            <h6 className={styles["web-title"]}>{WEBSITE_NAME} Free</h6>
             <div className={styles["plan-subtext"]}>The basics for all reviewers</div>
           </div>
           <div className={`ms-auto text-end d-flex flex-sm-row flex-column ${styles["btn-group"]}`}>

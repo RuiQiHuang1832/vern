@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { RiComputerLine } from "react-icons/ri";
 import Button from "@/components/Button";
 import styles from "@/styles/settings-styles/Sessions.module.css";
+import { WEBSITE_NAME } from "@/global/global";
 
 export default function Sessions() {
   interface InfoItem {
@@ -63,8 +64,8 @@ export default function Sessions() {
         ))}
       </section>
       <section>
-        <SectionHeading on={true} section="Vernacular Mobile sessions"></SectionHeading>
-        <p className="subtext pb-5">Vernacular Mobile can be used to verify your identity when signing in from a new device and as a two-factor authentication method. Learn more about authentication with Vernacular Mobile. To get started, install Vernacular Mobile for iOS or Android and sign in to your account.</p>
+        <SectionHeading on={true} section={`${WEBSITE_NAME} Mobile sessions`}></SectionHeading>
+        <p className="subtext pb-5">{WEBSITE_NAME} Mobile can be used to verify your identity when signing in from a new device and as a two-factor authentication method. Learn more about authentication with {WEBSITE_NAME} Mobile. To get started, install {WEBSITE_NAME} Mobile for iOS or Android and sign in to your account.</p>
       </section>
     </div>
   );

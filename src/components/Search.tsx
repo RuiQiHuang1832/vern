@@ -5,6 +5,7 @@ import FuzzySearch from 'fuzzy-search';
 import { useState } from "react";
 import { PiArrowBendUpRightFill } from "react-icons/pi";
 import { searchable } from "@/global/table";
+import { WEBSITE_NAME } from "@/global/global";
 export default function Search() {
   interface QueryType {
     section: string;
@@ -65,7 +66,7 @@ export default function Search() {
               <span className={`input-group-text pe-0  ${styles["icon-container"]}`}>
                 <MdSearch size="1.5em" className="text-white"></MdSearch>
               </span>
-              <input type="text" onChange={handleSearch} className={`form-control ${styles["light-border-input"]} ${styles["placeholder"]} py-3 border-start-0`} placeholder="Search Vernacular.." />
+              <input type="text" onChange={handleSearch} className={`form-control ${styles["light-border-input"]} ${styles["placeholder"]} py-3 border-start-0`} placeholder={`Search ${WEBSITE_NAME}..`} />
             </div>
             <div style={{height:"80vh"}} className="text-center overflow-auto">
               {renderContent()}

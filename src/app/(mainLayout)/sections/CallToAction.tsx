@@ -16,17 +16,20 @@ import Button from "@/components/Button";
 import styles from "@/styles/home-styles/CallToAction.module.css";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
+import { WEBSITE_NAME } from "@/global/global";
 
 export default function CallToAction() {
   return (
-    <section style={{ padding: "6rem 0", backgroundColor:"black" }}>
-    <div style={{ gap: "50px" }} className="d-flex justify-content-center my-5">
+    <section style={{ padding: "0rem 0rem 6rem 0", backgroundColor:"black" }}>
+                  <div className={`${styles["wave"]}`}></div>
+
+    <div style={{ gap: "50px" }} className="d-flex justify-content-center mb-5">
       <div className="col-5">
         <h1 style={{ fontSize: "88px" }} className={`fw-bold text-wrap-balance  mb-4 lh-1`}>
           Get started for free!
         </h1>
-        <p style={{ fontSize: "24px", color: "#767676" }} className={`text-wrap-pretty mb-5 fw-light`}>
-        Experience Vern for free—submit reviews, rate media, and connect with enthusiasts. Upgrade with an optional subscription for even more features!
+        <p style={{ fontSize: "24px"}} className={` text-secondary text-wrap-pretty mb-5 fw-light`}>
+        Experience {WEBSITE_NAME} for free—submit reviews, rate media, and connect with enthusiasts. Upgrade with an optional subscription for even more features!
         </p>
         <div className={`d-flex justify-content-start  ${styles["btn-container"]}`}>
           <Button buttonColor={{ cssColor: "white" }} type="submit" width="auto" radius="10px" padding="10px" styleClass={`${styles["support-button"]}`}>
@@ -37,8 +40,8 @@ export default function CallToAction() {
           </Button>
         </div>
       </div>
-      <div className="">
-        <h6 style={{ color: "#767676" }}>EMPOWERING A COMMUNITY OF PASSIONATE REVIEWERS AT</h6>
+      <div>
+        <h6 className="text-secondary">EMPOWERING A COMMUNITY OF PASSIONATE REVIEWERS AT</h6>
         <div style={{ opacity: "0.5" }} className={`${styles["logo-grid"]} position-relative mt-5`}>
           <Image src={upwork} alt="upwork"></Image>
           <Image src={ideo} alt="ideo"></Image>

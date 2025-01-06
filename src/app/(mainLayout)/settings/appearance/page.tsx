@@ -13,6 +13,7 @@ import darkHighContrast from "@/assets/svg/dark-high-contrast.svg";
 import Image from "next/image";
 import classNames from "classnames";
 import styles from "@/styles/settings-styles/Appearance.module.css";
+import { WEBSITE_NAME } from "@/global/global";
 
 export default function Appearance() {
   const themes = [
@@ -50,7 +51,7 @@ export default function Appearance() {
     <div>
       <section>
       <SectionHeading on={true} section="Theme Preferences"></SectionHeading>
-      <p className="subtext">Choose how Vernacular looks to you. Select a single theme, or sync with your system and automatically switch between day and night themes.</p>
+      <p className="subtext">Choose how {WEBSITE_NAME} looks to you. Select a single theme, or sync with your system and automatically switch between day and night themes.</p>
       <div className={styles["grid"]}>
         {themes.map((e, i) => (
           <div

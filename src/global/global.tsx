@@ -1,1 +1,1 @@
-export const NAME = "vern";
+export const WEBSITE_NAME = "vern";

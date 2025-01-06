@@ -2,17 +2,20 @@ import step1 from "@/assets/images/home/step_1.png";
 import step2 from "@/assets/images/home/step_2.png";
 import step3 from "@/assets/images/home/step_3.png";
 import { StaticImageData } from 'next/image';
-import { HiOutlineLightBulb } from "react-icons/hi";
-import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+
 import { TbAtom2Filled } from "react-icons/tb";
 import { PiAtomBold } from "react-icons/pi";
 import { FaAtom } from "react-icons/fa";
-import { PiBook } from "react-icons/pi";
+import { WEBSITE_NAME } from "@/global/global";
+
 import { IconType } from "react-icons";
 import alex_johnson from "@/assets/images/alex_johnson.jpg";
 import sam_kim from "@/assets/images/sam_kim.jpg";
 import taylor_reed from "@/assets/images/taylor_reed.jpg";
 import jordan_parker from "@/assets/images/jordan_parker.jpg";
+import tool_1 from "@/assets/images/employee-onboarding-icon.png"
+import tool_2 from "@/assets/images/employee-onboarding-icon-2.png"
+import tool_3 from "@/assets/images/employee-onboarding-icon-3.png"
 
 export type stepDataType = {
     id: string;
@@ -23,7 +26,8 @@ export type stepDataType = {
   export type toolDataType = {
     title: string;
     description: string;
-    source:IconType
+    source:StaticImageData;
+
   };
   export type statsDataType = {
     number: string;
@@ -115,19 +119,19 @@ export const stepData:stepDataType[] = [
 
 export const toolData:toolDataType[] = [
     {
-        title:"SMART RECOMMENDATIONS",
-        description:"Receive personalized media recommendations based on your reviews and search history.",
-        source:HiOutlineLightBulb
+        title:"Smart recommendations",
+        description:"Get personalized media suggestions based on your reviews, search history, and preferences, helping you discover content you'll love. Our recommendations are tailored to match your unique taste, making it easier to find new movies, books, and shows.",
+        source:tool_1
     },
     {
-        title:"COMMUNITY INSIGHTS",
-        description:"Engage with community insights and trending reviews to discover what's popular and worth your time.",
-        source:HiOutlineChatBubbleLeftRight
+        title:"Community Insights",
+        description:"Stay up to date with trending reviews and discussions from a vibrant community of media enthusiasts. Discover popular titles and gain valuable insights into what's worth watching or reading.",
+        source:tool_2
     },
     {
-        title:"CURATED COLLECTIONS",
-        description:"Explore curated collections created by experts and enthusiasts, perfect for finding hidden gems.",
-        source:PiBook
+        title:"Curated Collections",
+        description:"Explore expert-curated collections designed to showcase hidden gems and essential media. These carefully selected lists help you find unique and quality content based on specific themes or genres.",
+        source:tool_3
     },
 ]
 
@@ -179,15 +183,12 @@ export const quoteData:quoteDataType[] = [
 ]
 
 export const featuresData:featuresDataType[] =[
-    {name:"TAGS & PROPERTIES",
-     description:"Efficiently categorize and display your content when and where you need it.",
+    {name:"Infinite Scrolling, Optimized",
+     description:"Effortless navigation powered by intuitive design and modern solutions like React, Vue, and more.",
     },
-    {name:"TEMPLATES",
-    description:"Create and reuse templates for consistent page layouts and faster content creation.",
+    {name:"Scalable and Flexible",
+    description:"Whether you're reviewing your favorite show or exploring new media, our platform is ready to grow with your needs.",
    },
-   {name:"COLLABORATIVE BOARDS",
-   description:"Craft intricate story flows, trace family trees, and unravel conspiracies with our collaborative whiteboards.",
-  }
 ]
 
 export const arrowData:arrowDataType[] = [
@@ -206,12 +207,12 @@ export const arrowData:arrowDataType[] = [
 export const accordionData:accordionDataType[] = [
     {
         id: "questionOne",
-        question: "Is there a cost associated with using vern?",
+        question: `Is there a cost associated with using ${WEBSITE_NAME}?`,
         answer: (
             <>
-                <p><strong>No, absolutely not!</strong> Using <em>vern</em> is completely free and will <strong>always be free!</strong></p>
+                <p><strong>No, absolutely not!</strong> Using <em>{WEBSITE_NAME}</em> is completely free and will <strong>always be free!</strong></p>
                 <ul>
-                    <li className="mb-2"><mark>No subscription fees</mark></li>
+                    <li className="mb-2"><mark>Optional subscription</mark></li>
                     <li className="mb-2"><mark>No hidden charges</mark></li>
                     <li className="mb-2"><mark>Enjoy access to valuable resources without financial barriers</mark></li>
                 </ul>
@@ -221,7 +222,7 @@ export const accordionData:accordionDataType[] = [
     },
     {
         id: "questionTwo",
-        question: "Can I customize my user experience on vern?",
+        question: `Can I customize my user experience on ${WEBSITE_NAME}?`,
         answer: (
             <>
                 <p><strong>Yes, definitely!</strong> We offer a range of customization options to make your experience truly your own:</p>
@@ -274,7 +275,7 @@ export const accordionData:accordionDataType[] = [
                     <li>Have questions? We’re happy to help before and after you get started.</li>
                     <li>Need tips? We’ll help you optimize your experience.</li>
                 </ul>
-                <p>Email us at <a href="mailto:hello@vern.com">hello@vern.com</a> to connect with our friendly team. We’re happy to assist you in <strong>French</strong>, <strong>English</strong>, <strong>Spanish</strong>, or <strong>German</strong>.</p>
+                <p>Email us at <a href={`mailto:hello@${WEBSITE_NAME}.com`}>hello@{WEBSITE_NAME}.com</a> to connect with our friendly team. We’re happy to assist you in <strong>French</strong>, <strong>English</strong>, <strong>Spanish</strong>, or <strong>German</strong>.</p>
             </>
         )
     },

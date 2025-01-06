@@ -6,19 +6,18 @@ import styles from "@/styles/HomePage.module.css";
 import { sections } from "@/global/sectionsData";
 import  { ScrollableArrow } from "@/components/Arrows";
 import { mapObjectToComponent } from "@/helpers/mapObjectToComponent";
-import { stepData, toolData, arrowData, featuresData, accordionData } from "@/global/homeData";
-import example from "@/assets/images/home/example.png";
-import { FaCheck } from "react-icons/fa";
+import { stepData, arrowData, accordionData } from "@/global/homeData";
 import Newsletter from "@/components/Newsletter";
-import Support from "@/components/Support";
 import FadeInElement from "@/components/FadeInElement";
 import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import newsletter from "@/assets/images/newsletter.png";
+// import newsletter from "@/assets/images/newsletter.png";
 import UserReviews from "./sections/UserReviews";
 import MembershipOptions from "./sections/MembershipOptions";
 import CallToAction from "./sections/CallToAction";
-
+import FrameworkIntegrations from "./sections/FrameworkIntegrations";
+import ThreeItemShowcase from "./sections/ThreeItemShowcase";
+import Support from "@/components/Support";
 
 // used for scrollProgressBar
 // const icons: IconType[] = [BsFill0CircleFill, BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill, BsFill4CircleFill];
@@ -89,7 +88,8 @@ export default function Home() {
         <p className=" mb-0">Explore a new dimension of media cataloging. Our intuitive web app lets you effortlessly create, curate, and explore personalized playlists, transforming how you organize and enjoy your favorite content.</p>
       </section>
       <section style={{ padding: "6rem 0" }}>{mapObjectToComponent(sections, HeaderWithImageAndParagraph)}</section>
-      <section id="howitworks" style={{ padding: "6rem 0" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]}`}>
+
+      <section id="howitworks" style={{ padding: "16rem 0", background:"#1A1A1A" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]}`}>
         <div className={`col-md-10 col mb-5 ${styles["steps-container"]} text-wrap-balance`}>
           <h1 className="fw-bolder mb-4 ">3 steps to better media management</h1>
           <p className="fs-6 fw-light ">We believe great software tools unleash your creative potential while fading into the background.</p>
@@ -119,65 +119,18 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="creativeProcess" className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-black"]}`}>
-        <div style={{ maxWidth: "35rem" }} className={`text-center mx-auto col-md-10 col my-5 text-wrap-balance`}>
-          <h1 className="fw-bold mb-4">Simplify your creative process</h1>
-          <p className="fs-6 fw-light ">Tame the chaos of scattered content and focus on your stories.</p>
-        </div>
-        <div className={`d-flex  flex-lg-row flex-column mx-auto ${styles["creative-process-container"]}`}>
-          <div style={{ flex: "1 0 auto" }} className="d-flex flex-column col-lg-3 col">
-            <blockquote className="fst-italic ">“I switched to vern because everything was intuitive and fast! Nothing interrupting your flow.”</blockquote>
-            <p className="fst-italic">— Ben</p>
-            {featuresData.map((e, i) => (
-              <div key={i} className="my-3">
-                <h6 className="mb-3">
-                  <FaCheck></FaCheck>&#9;{e.name}
-                </h6>
-                <p className="">{e.description}</p>
-              </div>
-            ))}
-          </div>
-          <FadeInElement value="fade-in-section">
-            <div style={{ flex: "1 1 auto" }} className={`align-self-center text-lg-end text-center`}>
-              <Image src={example.src} width="0" height="0" sizes="100vw" className={`${styles["img-width"]} rounded h-100 focus-ring ring-yellow`} alt="example img" priority={true} quality={100} />
-            </div>
-          </FadeInElement>
-        </div>
-        <div style={{ background: "#1A1A1A", borderRadius: "24px", margin: "2rem 4rem" }}>
-          <div style={{ maxWidth: "35rem" }} className={`text-wrap-balance text-center mx-auto col-md-10 col py-5`}>
-            <h1 className="fw-bold mb-4">Power tools for the discerning reviewers</h1>
-            <p className="fs-6 fw-light ">We prefer a quality workflow over a quantity of features, but we have plenty of those too.</p>
-          </div>
 
-          <FadeInElement value="fade-in-section">
-            <div className={`${styles["tool-grid"]} text-center mx-auto`}>
-              {toolData.map((data, i) => (
-                <div key={i} className={`${styles["grid-item"]} mt-3 px-3 py-5 item item-${i} focus-ring`}>
-                  <data.source size="3em" color="green" className="mb-3"></data.source>
-                  <h6 className="my-4">{data.title}</h6>
-                  <p className="fw-light">{data.description}</p>
-                </div>
-              ))}
-            </div>
-          </FadeInElement>
-          <div className="text-center mt-5">
-            <p className="text-decoration-underline text-success fs-4 ">See our complete list of features</p>
-            <blockquote style={{ rowGap: "3em", maxWidth: "50em" }} className="d-flex flex-column align-items-center mx-auto">
-              <div className="fs-4 fw-light">&ldquo;Thanks to the intuitive design, I was able to dive right into reviewing and exploring new media. It’s easy to connect with other users and discover great recommendations at my own pace. 😊 &rdquo;</div>
-              <div className="d-flex pb-3">
-                <div style={{ letterSpacing: ".1em" }}>BEN</div>
-                <span className="mx-2">/</span>
-                <div style={{ color: "#627280" }}>vern Community Member</div>
-              </div>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-      <UserReviews></UserReviews>
+      <ThreeItemShowcase></ThreeItemShowcase>
+      <FrameworkIntegrations></FrameworkIntegrations>
       <MembershipOptions></MembershipOptions>
       <Support></Support>
-      <section id="pin" style={{ padding: "6rem 0", gap:"6rem" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]} ${styles["view-height-alternative"]}`}>
-        <div className="home-page-accordion accordion col-6 ms-auto">
+
+      <UserReviews></UserReviews> 
+
+      <section  style={{ padding: "0rem 4rem 15rem 4rem", background:"#1A1A1A" }} className={`d-flex flex-column justify-content-center   ${styles["view-height-alternative"]}`}>
+      <div className={`${styles["wave"]}`}></div>
+
+        <div className="home-page-accordion accordion col-6 ms-auto pb-5">
           <div className=" mb-4">
             <h1 style={{ fontSize: "60px" }} className="fw-light" id="Faq">
               FAQ
@@ -187,11 +140,11 @@ export default function Home() {
             <div key={accordion.id} style={{ width: "90%" }} className={`accordion-item py-4 ${styles["accordion-item-home"]} `}>
               <h2 className="accordion-header">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${accordion.id}`} aria-expanded="false" aria-controls={accordion.id}>
-                  <h4 className="fw-light accordion-question">{accordion.question}</h4>
+                  <h4 className="fw-light accordion-question text-secondary">{accordion.question}</h4>
                 </button>
               </h2>
               <div id={accordion.id} className="accordion-collapse collapse">
-                <h5 style={{ color: "#848484" }} className="accordion-body fw-light">
+                <h5 style={{ color: "white" }} className="accordion-body fw-light">
                   {accordion.answer}
                 </h5>
               </div>
@@ -199,14 +152,12 @@ export default function Home() {
           ))}
         </div>
 
-    
-        <div style={{ gap: "10rem" }} className="d-flex container py-5">
-          <div>
+        <div style={{ background:"#121212", borderRadius:"24px"}} className=" p-5">
             <Newsletter></Newsletter>
           </div>
-          <Image src={newsletter.src} alt="Home page logo" width={0} height={0} sizes="100vw" style={{ height: "auto", width: "34%" }} priority={true} quality={100} className="rounded" />
-        </div>
+
       </section>
+
       <CallToAction></CallToAction>
     </div>
   );

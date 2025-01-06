@@ -6,6 +6,7 @@ import styles from "@/styles/settings-styles/General.module.css"
 import PhoneInput from "react-phone-input-2";
 import SectionHeading from "@/components/SectionHeading";
 import "react-phone-input-2/lib/style.css";
+import { WEBSITE_NAME } from "@/global/global";
 
 type UnitProps = {
   unitClass: string;
@@ -93,7 +94,7 @@ export default function General() {
     },
     {
       title: "Email",
-      description: "Please enter the email address you want to use to log in with Vernacular.",
+      description: `Please enter the email address you want to use to log in with ${WEBSITE_NAME}.`,
       footer: "We will email you to verify the change.",
       buttonText: "Save",
       showInput: true,

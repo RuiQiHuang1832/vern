@@ -4,7 +4,7 @@ import styles from "@/styles/Footer.module.css";
 import { IconType } from "react-icons";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-
+import { WEBSITE_NAME } from "@/global/global";
 const socialIcons: IconType[] = [
   BsFacebook,
   BsGithub,
@@ -59,7 +59,7 @@ export default function Footer() {
           <Link href="/tos" style={{color:"#fafafccc", fontSize:"12px"}} className="p-2 me-2 text-decoration-none text-reset">Privacy Policy</Link>
           <Link href="/tos" style={{color:"#fafafccc", fontSize:"12px"}} className="p-2 me-2 text-decoration-none text-reset">Responsible Disclosure</Link>
           <Link href="/tos" style={{color:"#fafafccc", fontSize:"12px"}} className="p-2 me-2 text-decoration-none text-reset">Trust Center</Link>
-          <div  style={{opacity:"0.8", fontSize:"12px"}} className="ms-auto">© 2024-2025 Vern Technologies Inc. All rights reserved.</div>
+          <div  style={{opacity:"0.8", fontSize:"12px"}} className="ms-auto">© 2024-2025 {WEBSITE_NAME} Technologies Inc. All rights reserved.</div>
         </div>
       </section>
     </footer>

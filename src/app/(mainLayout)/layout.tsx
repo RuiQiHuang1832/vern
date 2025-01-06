@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import type { Metadata } from "next";
 import { Lexend_Deca } from "next/font/google";
 import classNames from "classnames";
+import { WEBSITE_NAME } from "@/global/global";
 
 //allows painless use of bootstrap without worrying about client/server components
 //doesn't require useEffect/dynamic
@@ -14,7 +15,7 @@ import Script from "next/script";
 const lexendDeca = Lexend_Deca({ subsets: ["latin"], display:'swap' });
 //Defaults
 export const metadata: Metadata = {
-  title: "Vern - Playlist Playground",
+  title: `${WEBSITE_NAME.charAt(0).toUpperCase() + WEBSITE_NAME.slice(1)} - Playlist Playground`,
   description: "Personal Media Catalog & Reviews Hub",
 };
 

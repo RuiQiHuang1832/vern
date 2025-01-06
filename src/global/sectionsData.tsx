@@ -2,6 +2,7 @@ import image_1 from "@/assets/images/home/illustration-data-1.png";
 import image_2 from "@/assets/images/home/illustration-data-2.png";
 import image_3 from "@/assets/images/home/illustration-data-3.png";
 import styles from "@/styles/HeaderWithImageAndParagraph.module.css"
+import { WEBSITE_NAME } from "./global";
 export interface SectionType {
     id: string;
     header: React.ReactNode;
@@ -71,7 +72,7 @@ export const sections: SectionType[] = [
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row-reverse" as const,
-      learnMore: "Learn more about vern's solutions",
+      learnMore: `Learn more about ${WEBSITE_NAME}'s solutions`,
       sectionContainerClass:styles[""]
     }
   ];

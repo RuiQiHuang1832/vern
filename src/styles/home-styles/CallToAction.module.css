@@ -43,3 +43,30 @@
   }
   
   
+  .wave {
+    position: relative;
+    width: 100%;
+    height:130px;
+  }
+  
+  .wave::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background-color:#000000;
+  }
+  
+  .wave::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -200px;
+    width: 100%;
+    height: 100%;
+   background-repeat: no-repeat;
+  background-image: url("/wave-3.svg");
+  
+  }

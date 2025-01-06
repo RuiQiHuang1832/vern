@@ -9,7 +9,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import { MdSearch } from "react-icons/md";
 import Search from "./Search";
-
+import { WEBSITE_NAME } from "@/global/global";
 const navLinks = [
   // { text: "VIEW", href: "/playlist/view" },
   { text: "CREATE", href: "/playlist/create" },
@@ -87,7 +87,7 @@ export default function Navigation({ hidden = false }: NavigationProps) {
         )}
 
         <a className={`navbar-brand fw-bold ms-xxl-3 ps-0 ps-md-2 pt-2`} href="/">
-          <span className="brand">vern</span>
+          <span className="brand">{WEBSITE_NAME}</span>
         </a>
         {!hidden && (
           <>

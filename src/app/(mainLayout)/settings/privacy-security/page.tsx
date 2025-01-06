@@ -2,6 +2,7 @@
 import React, { ReactNode, useState } from "react";
 import styles from "@/styles/settings-styles/PrivacySecurity.module.css";
 import SectionHeading from "@/components/SectionHeading";
+import { WEBSITE_NAME } from "@/global/global";
 
 type UnitProps = {
   unitClass: string;
@@ -167,7 +168,7 @@ export default function PrivacySecurity() {
   const title = [
     { section: "Privacy Settings", subtext: "Choose who can see your profile and its content. Control visibility settings to make your profile public, visible to friends only, or completely private.", option: privacyOptions },
     { section: "Security Settings", subtext: "Enhance the security of your account with options like two-factor authentication, managing active sessions, and setting up security questions for account recovery.", option: securityOptions },
-    { section: "Data & Privacy Policy", subtext: "Access and manage your data usage preferences and review vernacular's privacy policy. Download your data or delete your account in compliance with data protection regulations.", option: dataOptions },
+    { section: "Data & Privacy Policy", subtext: `Access and manage your data usage preferences and review ${WEBSITE_NAME}'s privacy policy. Download your data or delete your account in compliance with data protection regulations.`, option: dataOptions },
   ];
 
   return (

@@ -6,7 +6,7 @@ import styles from "@/styles/Support.module.css"
 export default function Support() {
   return (
     <div style={{ padding: "0rem 4rem" }}>
-    <div style={{  margin: "2rem 0rem", borderRadius: "24px", fontSize: "30px", backgroundColor: "#1A1A1A", padding: "4rem" }} className="">
+    <div style={{  margin: "2rem 0rem", borderRadius: "24px", fontSize: "30px", backgroundColor: "#1A1A1A", }} className="p-5">
       <div className="mb-3" style={{ fontSize: "12px", color: "#949494" }}>
         CONTACT US &nbsp;<BiSupport style={{ transform: "translateY(-1px)" }}></BiSupport>
       </div>
