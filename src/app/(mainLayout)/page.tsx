@@ -4,21 +4,19 @@ import HeaderWithImageAndParagraph from "@/components/HeaderWithImageAndParagrap
 import Image from "next/image";
 import styles from "@/styles/HomePage.module.css";
 import { sections } from "@/global/sectionsData";
-import  { ScrollableArrow } from "@/components/Arrows";
+import { ScrollableArrow } from "@/components/Arrows";
 import { mapObjectToComponent } from "@/helpers/mapObjectToComponent";
-import { stepData, arrowData, accordionData } from "@/global/homeData";
+
 import Newsletter from "@/components/Newsletter";
-import FadeInElement from "@/components/FadeInElement";
 import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-// import newsletter from "@/assets/images/newsletter.png";
 import UserReviews from "./sections/UserReviews";
 import MembershipOptions from "./sections/MembershipOptions";
 import CallToAction from "./sections/CallToAction";
 import FrameworkIntegrations from "./sections/FrameworkIntegrations";
 import ThreeItemShowcase from "./sections/ThreeItemShowcase";
-import Support from "@/components/Support";
-
+import HowitWorks from "./sections/HowitWorks";
+import Faq from "@/components/Faq";
 // used for scrollProgressBar
 // const icons: IconType[] = [BsFill0CircleFill, BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill, BsFill4CircleFill];
 //  <span className="d-none d-xxl-inline">
@@ -26,14 +24,12 @@ import Support from "@/components/Support";
 //       </span>
 
 export default function Home() {
-
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Set isVisible to true when the component mounts (page load)
     setIsVisible(true);
   }, []);
 
-  
   return (
     <div className="text-white">
       <div className="container-lg mt-5 mb-5 ">
@@ -89,75 +85,20 @@ export default function Home() {
       </section>
       <section style={{ padding: "6rem 0" }}>{mapObjectToComponent(sections, HeaderWithImageAndParagraph)}</section>
 
-      <section id="howitworks" style={{ padding: "16rem 0", background:"#1A1A1A" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 ${styles["section-container-style-lighter"]}`}>
-        <div className={`col-md-10 col mb-5 ${styles["steps-container"]} text-wrap-balance`}>
-          <h1 className="fw-bolder mb-4 ">3 steps to better media management</h1>
-          <p className="fs-6 fw-light ">We believe great software tools unleash your creative potential while fading into the background.</p>
-        </div>
-        <div className={`${styles["step-grid"]} text-center col-md-10 col mx-auto text-wrap-balance`}>
-          {stepData.map((data, i) => (
-            <div key={data.id} className={`mt-3 col-10}`}>
-              <FadeInElement value="fade-in-from-z">
-                <Image priority src={data.source.src} width={50} height={80} alt={data.id} className={`mb-4 item item-${i}`}></Image>
-              </FadeInElement>
-              <FadeInElement value="fade-in-section">
-                <div className={`item item-${i} slow`}>
-                  <h4>{data.title}</h4>
-                  <p>{data.description}</p>
-                </div>
-              </FadeInElement>
-            </div>
-          ))}
-        </div>
-        <div className={`${styles["arrows-container"]} arrows d-none d-xl-block`}>
-          {arrowData.map((e, i) => (
-            <div key={i} style={{ left: e.left }} className={`${styles["arrow"]}`}>
-              <svg width="185" height="36" viewBox="0 0 185 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d={e.path} fill="white" />
-              </svg>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      <HowitWorks></HowitWorks>
       <ThreeItemShowcase></ThreeItemShowcase>
       <FrameworkIntegrations></FrameworkIntegrations>
+
       <MembershipOptions></MembershipOptions>
-      <Support></Support>
 
-      <UserReviews></UserReviews> 
+      <UserReviews></UserReviews>
 
-      <section  style={{ padding: "0rem 4rem 15rem 4rem", background:"#1A1A1A" }} className={`d-flex flex-column justify-content-center   ${styles["view-height-alternative"]}`}>
-      <div className={`${styles["wave"]}`}></div>
-
-        <div className="home-page-accordion accordion col-6 ms-auto pb-5">
-          <div className=" mb-4">
-            <h1 style={{ fontSize: "60px" }} className="fw-light" id="Faq">
-              FAQ
-            </h1>
-          </div>
-          {accordionData.map((accordion) => (
-            <div key={accordion.id} style={{ width: "90%" }} className={`accordion-item py-4 ${styles["accordion-item-home"]} `}>
-              <h2 className="accordion-header">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${accordion.id}`} aria-expanded="false" aria-controls={accordion.id}>
-                  <h4 className="fw-light accordion-question text-secondary">{accordion.question}</h4>
-                </button>
-              </h2>
-              <div id={accordion.id} className="accordion-collapse collapse">
-                <h5 style={{ color: "white" }} className="accordion-body fw-light">
-                  {accordion.answer}
-                </h5>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ background:"#121212", borderRadius:"24px"}} className=" p-5">
-            <Newsletter></Newsletter>
-          </div>
-
-      </section>
-
+      <div className={`${styles["faq-news-container"]}`}>
+        <div className={`${styles["wave"]}`}></div>
+        <Faq></Faq>
+        <div className="py-5"></div>
+        <Newsletter></Newsletter>
+      </div>
       <CallToAction></CallToAction>
     </div>
   );

@@ -19,57 +19,11 @@
     }
   }
 
-  .step-grid {
-    display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-  }
 
-  @media screen and (max-width: 1200px) {
-    .step-grid {
-    gap: 54px;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
- 
-.arrows-container {
-  position: relative;
-}
-  .arrow {
-    position: absolute;
-    bottom:12em;
-  }
 
-.section-container-style-lighter {
-    padding:2em;
-}
 
-.accordion-item-home {
-  background-color:transparent;
-  border-radius:0
-}
 
-/* instead of using minHeight:100vh which causes shaking. solution for 100vh and accordions */
-.view-height-alternative {
-  padding-top: calc((100vh - 460px) / 2); /* Calculate top padding */
-  padding-bottom: calc((100vh - 460px) / 2); /* Calculate bottom padding */
-}
 
-.stats {
-  display:flex; 
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  white-space: nowrap;
-}
-
-@media screen and (max-width:1000px) {
-  .stats {
-    flex-grow:1;
-    width:40%
-  }
-}
 
 
 .tool-grid {
@@ -108,24 +62,13 @@
   padding-right:0em;
   padding-left:0em;
 }
-.stats-grid {
-  grid-template-columns: repeat(2,1fr);
-  gap: 2em;
 
-}
 .creative-process-container {
   max-width:100%;
 }
 
 }
 
-@media screen and (max-width: 450px) {
-  .stats-grid {
-    grid-template-columns: repeat(1,1fr);
- 
-  
-  }
-}
 
 @media screen and (max-width: 828px) {
   .quote-grid {
@@ -162,11 +105,6 @@
 }
 
 
-.steps-container {
-  max-width:42rem;
-  margin: 0 auto;
-  text-align: center;
-}
 
 /* .bg-image {
   background: url('../assets/images/home/bg.png') no-repeat;
@@ -289,4 +227,16 @@
  background-image: url("/wave.svg");
  transform: scaleX(-1); /* Flip horizontally */
 
+}
+
+
+.faq-news-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 4rem 15rem 4rem;
+   background: #1A1A1A;
+   /* instead of using minHeight:100vh which causes shaking. solution for 100vh and accordions */
+   /* padding-top: calc((100vh - 460px) / 2); 
+   padding-bottom: calc((100vh - 460px) / 2);  */
 }

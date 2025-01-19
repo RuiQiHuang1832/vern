@@ -1,14 +1,11 @@
-import step1 from "@/assets/images/home/step_1.png";
-import step2 from "@/assets/images/home/step_2.png";
-import step3 from "@/assets/images/home/step_3.png";
 import { StaticImageData } from 'next/image';
 
-import { TbAtom2Filled } from "react-icons/tb";
-import { PiAtomBold } from "react-icons/pi";
-import { FaAtom } from "react-icons/fa";
 import { WEBSITE_NAME } from "@/global/global";
 
-import { IconType } from "react-icons";
+import crocodile from "@/assets/svg/crocodile.svg"
+import shrimp from "@/assets/svg/shrimp.svg"
+import whale from "@/assets/svg/whale.svg"
+
 import alex_johnson from "@/assets/images/alex_johnson.jpg";
 import sam_kim from "@/assets/images/sam_kim.jpg";
 import taylor_reed from "@/assets/images/taylor_reed.jpg";
@@ -17,11 +14,23 @@ import tool_1 from "@/assets/images/employee-onboarding-icon.png"
 import tool_2 from "@/assets/images/employee-onboarding-icon-2.png"
 import tool_3 from "@/assets/images/employee-onboarding-icon-3.png"
 
+import step_1 from "@/assets/svg/step_1.svg"
+import step_2 from "@/assets/svg/step_2.svg"
+import step_3 from "@/assets/svg/step_3.svg"
+import step_4 from "@/assets/svg/step_4.svg"
+import step_5 from "@/assets/svg/step_5.svg"
+
+import stats_growth from "@/assets/svg/stats_growth.svg"
+import stats_read from "@/assets/svg/stats_read.svg"
+import stats_users from "@/assets/svg/stats_users.svg"
+import stats_visits from "@/assets/svg/stats_visits.svg"
+
 export type stepDataType = {
     id: string;
     title: string;
     description: string;
-    source:StaticImageData
+    icon:StaticImageData
+
   };
   export type toolDataType = {
     title: string;
@@ -32,6 +41,8 @@ export type stepDataType = {
   export type statsDataType = {
     number: string;
     description: string;
+    icon:StaticImageData;
+
   };
 
   export type featuresDataType = {
@@ -63,7 +74,7 @@ export type stepDataType = {
     type:string;
     features:string[];
     description: string;
-    src:IconType
+    src:StaticImageData
   };
 
   export const membershipData:membershipDataType[] = [
@@ -72,16 +83,16 @@ export type stepDataType = {
       price: "$0",
       type: "Get started for free",
       description: "Perfect for casual users looking to start organizing their favorite media.",
-      features: ["Create up to 3 playlists", "Rate media with a 5-star system", "Basic media search functionality", "Access to community ratings", "Standard customer support"],
-      src: TbAtom2Filled
+      features: ["Create up to 3 playlists", "Rate media with a 5-star system", "Basic media search functionality"],
+      src: shrimp
     },
     {
       plan: "Premium",
       price: "$8",
       type: "Open an account",
       description: "Ideal for enthusiasts ready to dive deeper into media cataloging.",
-      features: ["Unlimited playlists", "Advanced media search filters", "Custom tags for better organization", "Collaborative playlist creation", "Download playlists as PDF", "Exclusive content recommendations", "Personalized analytics dashboard"],
-      src: PiAtomBold
+      features: ["Unlimited playlists", "Advanced media search filters", "Custom tags for better organization", "Collaborative playlist creation", "Download playlists as PDF"],
+      src: crocodile
 
     },
     {
@@ -89,34 +100,51 @@ export type stepDataType = {
       price: "Custom pricing",
       type: "Contact sales",
       description: "Designed for power users who want the complete media curation experience.",
-      features: ["AI-powered playlist suggestions", "Dynamic playlist cover designs", "Offline playlist access", "Priority customer support", "Custom media sorting rules", "Early access to new features", "Advanced collaboration tools", "Shareable playlist links", "Integrations with streaming platforms", "Ad-free experience"],
-      src:FaAtom
+      features: ["AI-powered playlist suggestions", "Dynamic playlist cover designs", "Offline playlist access", "Priority customer support", "Custom media sorting rules", "Early access to new features", "Advanced collaboration tools", "Shareable playlist links",],
+      src:whale
     },
   ];
 
 
 
 
-export const stepData:stepDataType[] = [
+  export const stepData: stepDataType[] = [
     {
-        id:"step 1",
-        title:"Select Media Type",
-        description:"Users choose the type of media they want to review, such as movies, TV shows, or music.",
-        source:step1
+        id: "step 1",
+        title: "Select Media Type",
+        description: "Users choose the type of media they want to review, such as movies, TV shows, or music.",
+        icon: step_1, // Represents media like movies and shows.
+
     },
     {
-        id:"step 2",
-        title:"Choose Specific Title",
-        description:"After selecting the media type, users pick a specific title (up to 10) within that category.",
-        source:step2
+        id: "step 2",
+        title: "Choose Specific Title",
+        description: "After selecting the media type, users pick a specific title (up to 10) within that category.",
+        icon: step_2, // Suggests listing or selecting items.
+
     },
     {
-        id:"step 3",
-        title:"Rate and Review",
-        description:"Users review the selected media, providing a star rating (1-5) and written feedback.",
-        source:step3
+        id: "step 3",
+        title: "Add Context",
+        description: "Users can provide optional context, such as their favorite genres, similar titles they've enjoyed, or personal preferences.",
+        icon: step_3, // Reflects creativity or adding input.
+
     },
-]
+    {
+        id: "step 4",
+        title: "Rate and Review",
+        description: "Users review the selected media, providing a star rating (1-5) and written feedback.",
+        icon: step_4, // Indicates a review or rating system.
+
+    },
+    {
+        id: "step 5",
+        title: "Save and Share",
+        description: "Users can save their review to their profile or share it on social media platforms to help others discover great media.",
+        icon: step_5, // Represents sharing or saving content.
+
+    }
+];
 
 export const toolData:toolDataType[] = [
     {
@@ -136,23 +164,26 @@ export const toolData:toolDataType[] = [
     },
 ]
 
-
 export const statsData:statsDataType[] = [
     {
-        number:"+2M",
-        description:"MEMBERS",
+        number:"+2000",
+        description:"Members Active",
+        icon:stats_users
     },
     {
-        number:">500",
-        description:"REVIEWS CREATED",
+        number:"50%",
+        description:"Review Growth",
+        icon:stats_growth
     },
     {
         number:"60K",
-        description:"DAILY VISITS",
+        description:"Daily Visits",
+        icon:stats_visits
     },
     {
         number:"~120",
-        description:"REVIEWS READ DAILY",
+        description:"Reviews Read Daily",
+        icon:stats_read
     }
 ]
 export const quoteData:quoteDataType[] = [
@@ -217,7 +248,7 @@ export const accordionData:accordionDataType[] = [
                     <li className="mb-2"><mark>No hidden charges</mark></li>
                     <li className="mb-2"><mark>Enjoy access to valuable resources without financial barriers</mark></li>
                 </ul>
-                <p>Feel free to explore, review, and share your thoughts on your favorite media titles with zero cost involved!</p>
+                <div>Feel free to explore, review, and share your thoughts on your favorite media titles with zero cost involved!</div>
             </>
         )
     },
@@ -232,7 +263,7 @@ export const accordionData:accordionDataType[] = [
                     <li><strong>Set notification preferences:</strong> Decide what updates matter most to you.</li>
                     <li><strong>Adjust viewing settings:</strong> Create the perfect browsing environment.</li>
                 </ul>
-                <p>Your comfort and satisfaction are our top priorities. Customize away and enjoy a tailored experience!</p>
+                <div>Your comfort and satisfaction are our top priorities. Customize away and enjoy a tailored experience!</div>
             </>
         )
     },
@@ -247,7 +278,7 @@ export const accordionData:accordionDataType[] = [
                     <li>Choose the specific title you want to review.</li>
                     <li>Provide your feedback, including a <strong>rating</strong> and <strong>review description</strong>.</li>
                 </ol>
-                <p>Your insights help others discover amazing media. Join the community and make your voice heard!</p>
+                <div>Your insights help others discover amazing media. Join the community and make your voice heard!</div>
             </>
         )
     },
@@ -262,7 +293,7 @@ export const accordionData:accordionDataType[] = [
                     <li>Timeless <em>classic TV shows</em></li>
                     <li>Hidden gems like an <em>underground indie album</em></li>
                 </ul>
-                <p>We welcome all kinds of reviews—express your thoughts on the media that resonates with you and connect with a diverse community of reviewers.</p>
+                <div>We welcome all kinds of reviews—express your thoughts on the media that resonates with you and connect with a diverse community of reviewers.</div>
             </>
         )
     },
@@ -276,7 +307,7 @@ export const accordionData:accordionDataType[] = [
                     <li>Have questions? We’re happy to help before and after you get started.</li>
                     <li>Need tips? We’ll help you optimize your experience.</li>
                 </ul>
-                <p>Email us at <a href={`mailto:hello@${WEBSITE_NAME}.com`}>hello@{WEBSITE_NAME}.com</a> to connect with our friendly team. We’re happy to assist you in <strong>French</strong>, <strong>English</strong>, <strong>Spanish</strong>, or <strong>German</strong>.</p>
+                <div>Email us at <a href={`mailto:hello@${WEBSITE_NAME}.com`}>hello@{WEBSITE_NAME}.com</a> to connect with our friendly team. We’re happy to assist you in <strong>French</strong>, <strong>English</strong>, <strong>Spanish</strong>, or <strong>German</strong>.</div>
             </>
         )
     },

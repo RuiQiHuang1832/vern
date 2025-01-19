@@ -15,6 +15,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { Navigation, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+// import Stats from "@/components/Stats";
 
 export default function UserReviews() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -47,9 +48,11 @@ export default function UserReviews() {
     }
   }, [isComplete]);
 
+
+
   return (
     <section style={{ background: "#1A1A1A", borderRadius: "24px", margin: "2rem 4rem", marginBottom:"15rem" }}>
-      <div style={{ paddingTop: "8rem" }} className="d-flex justify-content-around ">
+      <div style={{ padding: "8rem 0 8rem 0" }} className="d-flex justify-content-around ">
         <div style={{ maxWidth: "20%" }} className={` `}>
           <h1 className="mb-4">What people are saying</h1>
         </div>
@@ -109,14 +112,7 @@ export default function UserReviews() {
           </Swiper>
         </div>
       </div>
-      <div style={{ paddingTop: "6rem" }} className={`${styles["stats-grid"]} pb-5`}>
-        {/* {statsData.map((e, i) => (
-          <div key={i} className={`${styles["stats"]}`}>
-            <h1 style={{ fontSize: "48px" }}>{e.number}</h1>
-            <p className="fs-5">{e.description}</p>
-          </div>
-        ))} */}
-      </div>
+            {/* <Stats></Stats> */}
     </section>
   );
 }

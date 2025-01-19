@@ -23,12 +23,12 @@ export default function CallToAction() {
     <section style={{ padding: "0rem 0rem 6rem 0", backgroundColor:"black" }}>
                   <div className={`${styles["wave"]}`}></div>
 
-    <div style={{ gap: "50px" }} className="d-flex justify-content-center mb-5">
+    <div style={{ gap: "60px" }} className="d-flex justify-content-center mb-5">
       <div className="col-5">
         <h1 style={{ fontSize: "88px" }} className={`fw-bold text-wrap-balance  mb-4 lh-1`}>
-          Get started for free!
+          Ready to get started?
         </h1>
-        <p style={{ fontSize: "24px"}} className={` text-secondary text-wrap-pretty mb-5 fw-light`}>
+        <p style={{ fontSize: "20px"}} className={` text-secondary text-wrap-pretty mb-5 fw-light`}>
         Experience {WEBSITE_NAME} for free—submit reviews, rate media, and connect with enthusiasts. Upgrade with an optional subscription for even more features!
         </p>
         <div className={`d-flex justify-content-start  ${styles["btn-container"]}`}>

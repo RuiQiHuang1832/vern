@@ -7,9 +7,10 @@ import { usePathname } from "next/navigation";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect } from "react";
-import { MdSearch } from "react-icons/md";
 import Search from "./Search";
 import { WEBSITE_NAME } from "@/global/global";
+import icon from "@/assets/images/icon.png"
+import Image from "next/image";
 const navLinks = [
   // { text: "VIEW", href: "/playlist/view" },
   { text: "CREATE", href: "/playlist/create" },
@@ -77,10 +78,10 @@ export default function Navigation({ hidden = false }: NavigationProps) {
               <div className="position-relative" onClick={searchOverlay}>
                 <div    onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`${styles["rotating-circle-container"]}`}>
               <div style={{transform: `rotate(${angle}deg)`}} className={`${styles["rotating-circle"]}`}>
-              <svg height="50" width="50" viewBox="0 0 56 56"><path d="M29.465,0.038373A28,28,0,0,1,52.948,40.712L51.166,39.804A26,26,0,0,0,29.361,2.0356Z"  fill="#F14243"></path><path d="M51.483,43.250A28,28,0,0,1,4.5172,43.250L6.1946,42.161A26,26,0,0,0,49.805,42.161Z" fill="#45A3FE"></path><path d="M3.0518,40.712A28,28,0,0,1,26.535,0.038373L26.639,2.0356A26,26,0,0,0,4.8338,39.804Z"  fill="#F2CC42"></path></svg>
+              <svg height="56" width="56" viewBox="0 0 56 56"><path d="M29.465,0.038373A28,28,0,0,1,52.948,40.712L51.166,39.804A26,26,0,0,0,29.361,2.0356Z"  fill="#F14243"></path><path d="M51.483,43.250A28,28,0,0,1,4.5172,43.250L6.1946,42.161A26,26,0,0,0,49.805,42.161Z" fill="#45A3FE"></path><path d="M3.0518,40.712A28,28,0,0,1,26.535,0.038373L26.639,2.0356A26,26,0,0,0,4.8338,39.804Z"  fill="#F2CC42"></path></svg>
               </div>
               </div>
-                <MdSearch size="1.5em" color="white"></MdSearch>
+              <Image alt="icon" src={icon} width={40} height={40}></Image>
               </div>
             </div>
           </div>

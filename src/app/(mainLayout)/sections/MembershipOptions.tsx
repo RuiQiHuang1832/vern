@@ -11,7 +11,10 @@ export default function MembershipOptions() {
     <section  style={{ padding: "0rem 4rem 0 4rem", background:"#121212" }}>
 <div className={`${styles["wave"]}`}></div>
       <div  className="container col-8 text-center">
-      <h1>Plans That Fit Your Needs. <span style={{backgroundColor:"yellow",color:"black"}}>No Surprises.</span></h1>
+      <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Plans & Pricing</h6>
+
+      <h1 className="my-4">Plans That Fit Your Needs. <span style={{backgroundColor:"yellow",color:"black"}}>No Surprises.</span></h1>
+      <p className="fs-5 text-secondary fw-light">Don’t overthink it! Every option is backed by our 30-day money-<br></br>back guarantee. We&apos;ll make sure you find the perfect fit!</p>
       <Image src={pricingLogo.src} alt="pricing logo" width={0} height={0} sizes="100vw" style={{ height: "auto", width:"100%"}} priority={true} quality={100} className="my-5"/>
       </div>
       <div style={{ gap: "2rem" }} className="mt-5 d-flex">
@@ -19,7 +22,8 @@ export default function MembershipOptions() {
           <div  key={i} className="p-5 fw-light focus-ring ring-blue" style={{ borderRadius: "24px", flex: "1", backgroundColor: "#1A1A1A", }}>
             <div className="d-flex justify-content-between align-items-center">
               <div style={{fontSize:'40px', fontWeight:"400"}}>{e.plan}</div>  
-             <div><e.src size="35px" color="rgb(0, 187, 255)"></e.src></div>
+             <div><Image priority src={e.src} width={70} height={70} alt={"icon"} ></Image>
+             </div>
             </div>
             <p className="text-secondary">{e.description}</p>
             <h3>{e.price}{i !== 2 && <small style={{color:"#848484"}}>/month</small>}</h3>

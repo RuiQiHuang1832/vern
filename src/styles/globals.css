@@ -339,6 +339,10 @@ textarea {
   --bs-accordion-btn-focus-box-shadow: none;
 
 }
+.accordion-item.active {
+  background-color: #151515 !important; /* Active state */
+}
+
 
 .accordion-button[aria-expanded="false"] .accordion-question {
   color:#848484
@@ -632,7 +636,7 @@ textarea {
 }
 
 .focus-ring:is(.ring-blue):hover {
-  box-shadow: 0 0 0 6px #23272C, 0 0 0 8px rgb(0, 187, 255); 
+  box-shadow: 0 0 0 6px #121212, 0 0 0 8px rgb(0, 187, 255); 
 }
 
 .focus-ring:is(.ring-yellow):hover {

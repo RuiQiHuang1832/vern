@@ -1,0 +1,7 @@
+ 
+.arrows-container {
+    position: relative;
+  }
+.arrow {
+      position: absolute;
+}

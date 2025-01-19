@@ -1,0 +1,35 @@
+
+.steps-container {
+    max-width:42rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .step-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .step-grid {
+    gap: 54px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.section-container-style-lighter {
+    padding:2em;
+}
+
+.circled-number {
+  color:white;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em; 
+  height: 2em;
+}
