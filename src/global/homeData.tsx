@@ -25,11 +25,19 @@ import stats_read from "@/assets/svg/stats_read.svg"
 import stats_users from "@/assets/svg/stats_users.svg"
 import stats_visits from "@/assets/svg/stats_visits.svg"
 
+import step1 from "@/assets/images/steps/step1.png"
+import step2 from "@/assets/images/steps/step2.png"
+import step3 from "@/assets/images/steps/step3.png"
+import step4 from "@/assets/images/steps/step4.png"
+import step5 from "@/assets/images/steps/step5.png"
+
+
 export type stepDataType = {
     id: string;
     title: string;
     description: string;
-    icon:StaticImageData
+    icon:StaticImageData;
+    image:StaticImageData;
 
   };
   export type toolDataType = {
@@ -112,39 +120,40 @@ export type stepDataType = {
     {
         id: "step 1",
         title: "Select Media Type",
-        description: "Users choose the type of media they want to review, such as movies, TV shows, or music.",
+        description: "Users choose the type of media they want to review, such as movies, TV shows, or music. This ensures the review process is tailored to the specific category.",
         icon: step_1, // Represents media like movies and shows.
-
+        image: step1
     },
     {
         id: "step 2",
         title: "Choose Specific Title",
-        description: "After selecting the media type, users pick a specific title (up to 10) within that category.",
+        description: "After selecting the media type, users pick a specific title (up to 10) within that category. This allows them to focus on the media they find most interesting.",
         icon: step_2, // Suggests listing or selecting items.
-
+        image: step2
     },
     {
         id: "step 3",
         title: "Add Context",
-        description: "Users can provide optional context, such as their favorite genres, similar titles they've enjoyed, or personal preferences.",
+        description: "Users can provide optional context, such as their favorite genres, similar titles they've enjoyed, or personal preferences. This adds depth to their reviews, making them more helpful.",
         icon: step_3, // Reflects creativity or adding input.
-
+        image: step3
     },
     {
         id: "step 4",
         title: "Rate and Review",
-        description: "Users review the selected media, providing a star rating (1-5) and written feedback.",
+        description: "Users review the selected media, providing a star rating (1-5) and written feedback. Detailed reviews help others discover and appreciate the media more effectively.",
         icon: step_4, // Indicates a review or rating system.
-
+        image: step4
     },
     {
         id: "step 5",
         title: "Save and Share",
-        description: "Users can save their review to their profile or share it on social media platforms to help others discover great media.",
+        description: "Users can save their review to their profile or share it on social media platforms to help others discover great media. Sharing also invites discussions and recommendations.",
         icon: step_5, // Represents sharing or saving content.
-
+        image: step5
     }
 ];
+
 
 export const toolData:toolDataType[] = [
     {

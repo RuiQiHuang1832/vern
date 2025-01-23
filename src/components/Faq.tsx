@@ -2,6 +2,9 @@
 import styles from "@/styles/Faq.module.css";
 import { accordionData } from "@/global/homeData";
 import { useState } from "react";
+import faqguy from "@/assets/images/faq-guy.png"
+import FadeInElement from "./FadeInElement";
+import Image from "next/image";
 export default function Faq() {
   const [activeItem, setActiveItem] = useState<number|null>(null);
 
@@ -11,7 +14,8 @@ export default function Faq() {
   };
 
   return (
-            <div id="accordionExample" className="home-page-accordion accordion col-6 ms-auto pb-5">
+    <div className="d-flex justify-content-end align-items-center ">
+            <div id="accordionExample" className="home-page-accordion accordion col-6 order-1 pb-5">
               <div className=" px-4 mb-4 col-10 text-wrap-balance">
               <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Frequently Asked Questions</h6>
                 <h1 className="my-4">We&apos;re here to answer all your questions</h1>
@@ -33,7 +37,12 @@ export default function Faq() {
                 </div>
               ))}
             </div>
-    
+            <div className="mx-auto">
+            <FadeInElement value="fade-in-from-z">
+<Image src={faqguy} alt="faqguy" width={350} height={0} style={{ height: "auto"}} className="item" quality={100}></Image>
+</FadeInElement>
+</div>
+            </div>
           
     
   )

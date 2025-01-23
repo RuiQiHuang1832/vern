@@ -9,11 +9,11 @@ export default function FrameworkIntegrations() {
     <section style={{background:"#1A1A1A", paddingBottom:"10rem"}}>
             <div className={`${styles["wave"]}`}></div>
 
-      <div className={`text-center mx-auto col-md-10 col mb-5 text-wrap-balance`}>
+      <div className={`text-center mx-auto container col-8 mb-5 text-wrap-balance`}>
       <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Framework Integration</h6>
 
         <h1 className=" my-4">Compatible with Modern Technologies</h1>
-        <p className="fs-5 text-secondary fw-light">Built to integrate seamlessly with the frameworks and tools you already know and love.</p>
+        <p className="fs-5 text-secondary fw-light">Built to integrate seamlessly with the frameworks <br></br> and tools  you already know and love.</p>
       </div>
       <div className={`${styles["logo-scroll-container"]} mx-auto`}>
         <div className={`${styles["logo-track"]}`}>
