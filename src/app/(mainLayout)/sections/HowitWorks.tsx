@@ -2,13 +2,13 @@ import FadeInElement from "@/components/FadeInElement";
 import { stepData } from "@/global/homeData";
 import styles from "@/styles/home-styles/HowItWorks.module.css";
 import Image from "next/image";
-export default function HowitWorks() {
+export default function HowItWorks() {
   return (
     <section style={{ paddingBottom: "10rem", background: "#1A1A1A" }} className={`d-flex flex-column justify-content-center px-4 px-xl-0 `}>
       <div className={`${styles["wave"]}`}></div>
       <div className={`text-center mx-auto container col-8 mb-5`}>
         <h6 style={{ letterSpacing: "1.5px", textTransform: "uppercase", fontWeight: "500", fontFamily: "monospace" }}>Your Journey, Simplified</h6>
-        <h1 className="my-4 ">How Vern works</h1>
+        <h1 className="my-4 ">how vern works</h1>
         <p className="fs-5 text-secondary fw-light">
           We believe great software tools unleash your creative <br></br> potential while fading into the background.
         </p>

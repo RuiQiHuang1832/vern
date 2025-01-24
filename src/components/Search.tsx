@@ -6,6 +6,10 @@ import { useState } from "react";
 import { PiArrowBendUpRightFill } from "react-icons/pi";
 import { searchable } from "@/global/table";
 import { WEBSITE_NAME } from "@/global/global";
+import searchImg from "@/assets/images/search.png"
+import notFound from "@/assets/images/notFound.png"
+
+import Image from "next/image";
 export default function Search() {
   interface QueryType {
     section: string;
@@ -27,12 +31,13 @@ export default function Search() {
 
   const renderContent = () => {
     if (query.length == 0 && input == "") {
-      return <p className={styles["subtext"]}>Find anything about our product, search our links, and more. Enter a query in the search input above, and results will be displayed as you type.</p>
+      return <><p className={styles["subtext"]}>Find anything about our product, search our links, and more. Enter a query in the search input above, and results will be displayed as you type.</p>
+          <Image src={searchImg} alt="search" width={700} height={0} style={{ height: "auto" }} className="item mt-5" quality={100}></Image>
+      </>
     } else if (query.length == 0 && input != "") {
       return <div className={styles["subtext"]}>
-        <p>Oops! We could not find any result for <span><em>{input}</em></span>.</p>
-        <p><small>Try queries such as <strong className="text-success">general</strong>, <strong className="text-success">pricing</strong>, or <strong className="text-success">rules</strong> in the search bar, and explore a world of opportunities for your website.</small>    
-        </p>
+        <p>Oops! We could not find any result for <span className="text-danger">&apos;<em>{input}</em> &apos;</span>.</p>
+        <Image src={notFound} alt="search" width={400} height={0} style={{ height: "auto" }} className="item mt-3" quality={100}></Image>
         </div>
     } else {
       return (

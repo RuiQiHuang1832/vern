@@ -14,7 +14,7 @@ export default function Newsletter() {
       <div style={{flex:"1"}}>
       <div className=" d-flex flex-column">
         <h1 className="mb-3">
-          Sign up for email updates &nbsp;<SiMinutemailer></SiMinutemailer>
+          sign up for email updates &nbsp;<SiMinutemailer></SiMinutemailer>
         </h1>
         <p style={{ fontSize: "24px"}} className="mb-3 text-secondary col-9  text-wrap fw-light">
           The {WEBSITE_NAME} newsletter provides creative deep dives, review content, inspiration, and occasional product updates.{" "}

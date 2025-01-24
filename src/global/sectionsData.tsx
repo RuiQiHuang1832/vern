@@ -2,7 +2,6 @@ import image_1 from "@/assets/images/home/illustration-data-1.png";
 import image_2 from "@/assets/images/home/illustration-data-2.png";
 import image_3 from "@/assets/images/home/illustration-data-3.png";
 import styles from "@/styles/HeaderWithImageAndParagraph.module.css"
-import { WEBSITE_NAME } from "./global";
 export interface SectionType {
     id: string;
     header: React.ReactNode;
@@ -11,18 +10,16 @@ export interface SectionType {
     imageWidth: number;
     imageHeight: number;
     direction: 'flex-lg-row' | 'flex-lg-row-reverse';
-    learnMore: string;
     sectionContainerClass?:string;
   }
 
-  const highlightColor:string = ""
 
 export const sections: SectionType[] = [
     {
       id: "anchor-1",
       header: (
         <>
-          Discover <span style={{color:highlightColor}}>Seamless</span> Multimedia Management
+          discover seamless multimedia management
         </>
       ),
       paragraph: (
@@ -34,14 +31,13 @@ export const sections: SectionType[] = [
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row-reverse" as const,
-      learnMore: "Learn more about seamless multimedia management",
       sectionContainerClass:styles[""]
     },
     {
       id: "anchor-2",
       header: (
         <>
-          <span style={{color:highlightColor}}>Simplify</span> Your Multimedia Lifestyle
+          simplify your multimedia lifestyle
         </>
       ),
       paragraph: (
@@ -53,14 +49,13 @@ export const sections: SectionType[] = [
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row" as const,
-      learnMore: "Learn more about our customizable playlist",
       sectionContainerClass:styles[""]
     },
     {
       id: "anchor-3",
       header: (
         <>
-          Elevate Your <span style={{color:highlightColor}}>Media Collection</span> 
+          elevate your media collection
         </>
       ),
       paragraph: (
@@ -72,7 +67,6 @@ export const sections: SectionType[] = [
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row-reverse" as const,
-      learnMore: `Learn more about ${WEBSITE_NAME}'s solutions`,
       sectionContainerClass:styles[""]
     }
   ];

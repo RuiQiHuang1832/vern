@@ -87,7 +87,7 @@ export type stepDataType = {
 
   export const membershipData:membershipDataType[] = [
     {
-      plan: "Essentials",
+      plan: "essentials",
       price: "$0",
       type: "Get started for free",
       description: "Perfect for casual users looking to start organizing their favorite media.",
@@ -95,7 +95,7 @@ export type stepDataType = {
       src: shrimp
     },
     {
-      plan: "Premium",
+      plan: "premium",
       price: "$8",
       type: "Open an account",
       description: "Ideal for enthusiasts ready to dive deeper into media cataloging.",
@@ -104,7 +104,7 @@ export type stepDataType = {
 
     },
     {
-      plan: "Enterprise",
+      plan: "enterprise",
       price: "Custom pricing",
       type: "Contact sales",
       description: "Designed for power users who want the complete media curation experience.",

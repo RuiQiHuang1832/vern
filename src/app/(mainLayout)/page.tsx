@@ -1,22 +1,25 @@
 "use client";
-import image_4 from "@/assets/images/home/illustration-data-4.png";
-import HeaderWithImageAndParagraph from "@/components/HeaderWithImageAndParagraph";
-import Image from "next/image";
-import styles from "@/styles/HomePage.module.css";
-import { sections } from "@/global/sectionsData";
-import { ScrollableArrow } from "@/components/Arrows";
-import { mapObjectToComponent } from "@/helpers/mapObjectToComponent";
-
-import Newsletter from "@/components/Newsletter";
 import { useEffect, useState } from "react";
+import styles from "@/styles/HomePage.module.css";
+import Image from "next/image";
+
+import image_4 from "@/assets/images/home/illustration-data-4.png";
+
+import { ScrollableArrow } from "@/components/Arrows";
+import Faq from "@/components/Faq";
+import Newsletter from "@/components/Newsletter";
+
 import { BsArrowRight } from "react-icons/bs";
+
 import UserReviews from "./sections/UserReviews";
 import MembershipOptions from "./sections/MembershipOptions";
 import CallToAction from "./sections/CallToAction";
 import FrameworkIntegrations from "./sections/FrameworkIntegrations";
 import ThreeItemShowcase from "./sections/ThreeItemShowcase";
-import HowitWorks from "./sections/HowitWorks";
-import Faq from "@/components/Faq";
+import HowItWorks from "./sections/HowItWorks";
+import OurApproach from "./sections/OurApproach";
+
+
 // used for scrollProgressBar
 // const icons: IconType[] = [BsFill0CircleFill, BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill, BsFill4CircleFill];
 //  <span className="d-none d-xxl-inline">
@@ -76,23 +79,13 @@ export default function Home() {
         </div>
         <ScrollableArrow></ScrollableArrow>
       </div>
-      <section id="approach" className={` mx-auto col-xl-6 col-10 col-lg-8`}>
-        <h1 style={{ fontSize: "85px" }} className="fw-bolder text-center">
-          Our <span style={{}}>Approach</span>
-        </h1>
-        <hr></hr>
-        <p className=" mb-0">Explore a new dimension of media cataloging. Our intuitive web app lets you effortlessly create, curate, and explore personalized playlists, transforming how you organize and enjoy your favorite content.</p>
-      </section>
-      <section style={{ padding: "6rem 0" }}>{mapObjectToComponent(sections, HeaderWithImageAndParagraph)}</section>
 
-      <HowitWorks></HowitWorks>
+      <OurApproach></OurApproach>
+      <HowItWorks></HowItWorks>
       <ThreeItemShowcase></ThreeItemShowcase>
       <FrameworkIntegrations></FrameworkIntegrations>
-
       <MembershipOptions></MembershipOptions>
-
       <UserReviews></UserReviews>
-
       <div className={`${styles["faq-news-container"]}`}>
         <div className={`${styles["wave"]}`}></div>
         <Faq></Faq>

@@ -13,7 +13,7 @@ export default function MembershipOptions() {
       <div  className="container col-8 text-center">
       <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Plans & Pricing</h6>
 
-      <h1 className="my-4">Plans That Fit Your Needs. <span style={{backgroundColor:"yellow",color:"black"}}>No Surprises.</span></h1>
+      <h1 className="my-4">plans that fit your needs. <span style={{backgroundColor:"yellow",color:"black"}}>no surprises.</span></h1>
       <p className="fs-5 text-secondary fw-light">Don’t overthink it! Every option is backed by our 30-day money-<br></br>back guarantee. We&apos;ll make sure you find the perfect fit!</p>
       <Image src={pricingLogo.src} alt="pricing logo" width={0} height={0} sizes="100vw" style={{ height: "auto", width:"100%"}} priority={true} quality={100} className="my-5"/>
       </div>

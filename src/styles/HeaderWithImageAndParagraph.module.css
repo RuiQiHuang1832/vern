@@ -1,16 +1,4 @@
 .default-font-size {
-  font-size: 32px;
-}
-
-.section-container-style-lighter {
-  padding-left: 2em;
-  padding-right: 2em;
-
-  background: #1d2426;
-}
-
-.section-container-style-black {
-  padding-left: 2em;
-  padding-right: 2em;
+  font-size: 3em;
 }
 

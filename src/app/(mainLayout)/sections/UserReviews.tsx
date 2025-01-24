@@ -54,7 +54,7 @@ export default function UserReviews() {
     <section style={{ background: "#1A1A1A", borderRadius: "24px", margin: "2rem 4rem", marginBottom:"15rem" }}>
       <div style={{ padding: "8rem 0 8rem 0" }} className="d-flex justify-content-around ">
         <div style={{ maxWidth: "20%" }} className={` `}>
-          <h1 className="mb-4">What people are saying</h1>
+          <h1 className="mb-4">what people are saying</h1>
         </div>
         <div style={{ background: "rgb(17 17 17 / 51%)", borderRadius: "10px" }} className="position-relative col-7">
           <div style={{ position: "absolute", top: "0", right: "0" }} className={`${clicked && styles["hidden"]}`}>

@@ -12,7 +12,7 @@ export default function FrameworkIntegrations() {
       <div className={`text-center mx-auto container col-8 mb-5 text-wrap-balance`}>
       <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Framework Integration</h6>
 
-        <h1 className=" my-4">Compatible with Modern Technologies</h1>
+        <h1 className=" my-4">compatible with modern technologies</h1>
         <p className="fs-5 text-secondary fw-light">Built to integrate seamlessly with the frameworks <br></br> and tools  you already know and love.</p>
       </div>
       <div className={`${styles["logo-scroll-container"]} mx-auto`}>

@@ -9,7 +9,7 @@ export default function ThreeItemShowcase() {
 
       <div className={` text-center mx-auto col-md-10 col mb-5`}>
         <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Everything you need</h6>
-        <h1 className=" my-4">Essential tools for expert reviewers</h1>
+        <h1 className=" my-4">essential tools for expert reviewers</h1>
         <p className="fs-5 text-secondary fw-light">We prioritize delivering a streamlined, high-quality workflow designed for efficiency and ease of use. <br></br>Additionally, we offer robust features to enhance your review experience..</p>
       </div>
       <div className="spacer" style={{height:"100px"}}></div>
