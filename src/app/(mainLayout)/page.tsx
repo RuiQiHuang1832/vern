@@ -19,7 +19,7 @@ import ThreeItemShowcase from "./sections/ThreeItemShowcase";
 import HowItWorks from "./sections/HowItWorks";
 import OurApproach from "./sections/OurApproach";
 
-
+//
 // used for scrollProgressBar
 // const icons: IconType[] = [BsFill0CircleFill, BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill, BsFill4CircleFill];
 //  <span className="d-none d-xxl-inline">
@@ -31,6 +31,7 @@ export default function Home() {
   useEffect(() => {
     // Set isVisible to true when the component mounts (page load)
     setIsVisible(true);
+    console.log("s")
   }, []);
 
   return (
