@@ -1,25 +1,25 @@
 'use client'
-import { BsFacebook, BsGithub, BsGoogle, BsInstagram, BsLinkedin } from "react-icons/bs";
+// import { BsFacebook, BsGithub, BsGoogle, BsInstagram, BsLinkedin } from "react-icons/bs";
 import styles from "@/styles/Footer.module.css";
-import { IconType } from "react-icons";
+// import { IconType } from "react-icons";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { WEBSITE_NAME } from "@/global/global";
-const socialIcons: IconType[] = [
-  BsFacebook,
-  BsGithub,
-  BsLinkedin,
-  BsInstagram,
-  BsGoogle,
-];
+// const socialIcons: IconType[] = [
+//   BsFacebook,
+//   BsGithub,
+//   BsLinkedin,
+//   BsInstagram,
+//   BsGoogle,
+// ];
 
-const socialIconLinks: string[] = [
-  "",
-  "https://github.com/RuiQiHuang1832",
-  "https://www.linkedin.com/in/rui-huang-528a43220/",
-  "",
-  "mailto:huangben32@gmail.com"
-]
+// const socialIconLinks: string[] = [
+//   "",
+//   "https://github.com/RuiQiHuang1832",
+//   "https://www.linkedin.com/in/rui-huang-528a43220/",
+//   "",
+//   "mailto:huangben32@gmail.com"
+// ]
 
 export default function Footer() {
   const pathname = usePathname();
@@ -37,7 +37,7 @@ export default function Footer() {
       </div> }
     
       <section  className="container-lg py-5">
-        <div style={{columnGap:"50px"}} className="d-flex justify-content-center mb-2 flex-wrap">
+        {/* <div style={{columnGap:"50px"}} className="d-flex justify-content-center mb-2 flex-wrap">
         <Link href="/playlist/community" className="p-2 text-decoration-none text-reset">Community</Link>
         <Link href="https://airtable.com/appZ6rwp0wgPvNpjJ/pagfrOydoyfmz8qJe/form" className="p-2 text-decoration-none text-reset">Contact</Link>
         <Link href="/" className="p-2 text-decoration-none text-reset">Team</Link>
@@ -51,7 +51,7 @@ export default function Footer() {
               <Icon size={"1.2em"} />
             </a>
           ))}
-        </div>
+        </div> */}
         <hr></hr>
 
         <div className={`${styles["text"]} d-flex align-items-center`} >

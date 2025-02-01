@@ -8,6 +8,10 @@
  
 }
 
+.secondary {
+  color:#767676;
+}
+
 /* For Retina or high-DPI displays */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body {
@@ -186,7 +190,7 @@ textarea {
 }
 
 .ph-color-white::placeholder {
-  color: rgba(106, 106, 106, 0.489);
+  color: rgba(106, 106, 106, 0.615);
 }
 
 /* Fade and downward animation for the slide content REVIEW_DESCRIPTION */
@@ -428,7 +432,23 @@ textarea {
 .text-wrap-pretty {
   text-wrap: pretty;
 }
+/* ---------------------------------------------------------------- */
 
+.fade-in-section-left,
+.fade-in-section-left .item {
+  opacity: 0;
+  transform: translateX(-15%);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 0.5s ease, box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  will-change: opacity, visibility, transform;
+
+}
+.fade-in-section-left.is-visible,
+.fade-in-section-left.is-visible .item {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
 /* fade in for items */
 /*  3 specificity*/
 .fade-in-section:not(:has(.item.slow)),
@@ -469,16 +489,19 @@ textarea {
 }
 
 .fade-in-from-z.is-visible .item-1,
-.fade-in-section.is-visible .item-1 {
+.fade-in-section.is-visible .item-1,
+.fade-in-section-left.is-visible .item-1
+ {
   transition: opacity 1s ease-out 0.3s, transform 0.5s ease 0.3s, box-shadow 0.3s ease; /* Smooth transition for box-shadow */
 
 }
 .fade-in-from-z.is-visible .item-2,
-.fade-in-section.is-visible .item-2 {
+.fade-in-section.is-visible .item-2,
+.fade-in-section-left.is-visible .item-2 {
   transition: opacity 1s ease-out 0.6s, transform 0.5s ease 0.6s, box-shadow 0.3s ease; /* Smooth transition for box-shadow */
 
 }
-
+/* ---------------------------------------------------------------- */
 .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
 .form-floating > .form-control:focus ~ label::after {
   background-color: rgba(255, 255, 255, 0) !important;
@@ -656,6 +679,6 @@ mark {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5em; 
-  height: 5em;
+  width: 3em; 
+  height: 3em;
 }

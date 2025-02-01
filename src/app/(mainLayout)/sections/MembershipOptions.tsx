@@ -14,7 +14,7 @@ export default function MembershipOptions() {
       <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Plans & Pricing</h6>
 
       <h1 className="my-4">plans that fit your needs. <span style={{backgroundColor:"yellow",color:"black"}}>no surprises.</span></h1>
-      <p className="fs-5 text-secondary fw-light">Don’t overthink it! Every option is backed by our 30-day money-<br></br>back guarantee. We&apos;ll make sure you find the perfect fit!</p>
+      <p className="fs-5 secondary fw-light">Don’t overthink it! Every option is backed by our 30-day money-<br></br>back guarantee. We&apos;ll make sure you find the perfect fit!</p>
       <Image src={pricingLogo.src} alt="pricing logo" width={0} height={0} sizes="100vw" style={{ height: "auto", width:"100%"}} priority={true} quality={100} className="my-5"/>
       </div>
       <div style={{ gap: "2rem" }} className="mt-5 d-flex">
@@ -25,7 +25,7 @@ export default function MembershipOptions() {
              <div><Image priority src={e.src} width={70} height={70} alt={"icon"} ></Image>
              </div>
             </div>
-            <p className="text-secondary">{e.description}</p>
+            <p className="secondary">{e.description}</p>
             <h3>{e.price}{i !== 2 && <small style={{color:"#848484"}}>/month</small>}</h3>
             <div className="py-3">
               <Button buttonColor={{ cssColor: "black" }} type="submit" width="100%" radius="10px" padding="13px" styleClass={``}>

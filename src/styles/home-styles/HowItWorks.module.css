@@ -55,7 +55,7 @@
 
 .circled-number-container {
  left: 50%;
-  top: 15%;
+  top: -23%;
   transform: translateX(-50%);
   position:absolute;
 }

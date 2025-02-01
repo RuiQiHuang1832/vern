@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import image_4 from "@/assets/images/home/illustration-data-4.png";
 
-import { ScrollableArrow } from "@/components/Arrows";
+// import { ScrollableArrow } from "@/components/Arrows";
 import Faq from "@/components/Faq";
 import Newsletter from "@/components/Newsletter";
 
@@ -18,20 +18,13 @@ import FrameworkIntegrations from "./sections/FrameworkIntegrations";
 import ThreeItemShowcase from "./sections/ThreeItemShowcase";
 import HowItWorks from "./sections/HowItWorks";
 import OurApproach from "./sections/OurApproach";
-
-//
-// used for scrollProgressBar
-// const icons: IconType[] = [BsFill0CircleFill, BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill, BsFill4CircleFill];
-//  <span className="d-none d-xxl-inline">
-//         <ScrollProgressBar startHeight={40} startColor="#172B4D" distance={24.99} icons={icons}></ScrollProgressBar>
-//       </span>
+import ScrollProgressBar from "@/components/ScrollProgressBar";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Set isVisible to true when the component mounts (page load)
     setIsVisible(true);
-    console.log("s")
   }, []);
 
   return (
@@ -41,15 +34,14 @@ export default function Home() {
           <div className={`col-xxl-6 col-xl-7 col d-flex align-items-center order-xl-1 order-2 justify-content-lg-start justify-content-center`}>
             <div className="text col-10 col-lg-12 col-xl-10">
               <h1 className={`${styles["header"]} responsiveHeader fade-in-from-bottom`}>
-                {/* <Arrows></Arrows> */}
                 <span style={{ color: "rgb(90,90,90)" }}>Elevate Entertainment&nbsp;</span>
                 <span className="d-none d-xl-inline">
                   <br />
                 </span>
-                Your Playlist Playground.
+               Your Playlist Playground
               </h1>
               <hr style={{ color: "rgba(255, 255, 255, 0.25)" }} className="fade-in-from-bottom"></hr>
-              <p className="fade-in-from-bottom fade-in-delay-1 mb-5">
+              <p className="fade-in-from-bottom fade-in-delay-1  mb-5 fw-light">
                 Craft and curate your ultimate media collection.&nbsp;
                 <span className="d-none d-xl-inline">
                   <br />
@@ -58,7 +50,7 @@ export default function Home() {
               </p>
               <div className="fade-in-from-bottom fade-in-delay-2 ">
                 <a href="" className={`${styles["get-started"]} d-inline-flex text-decoration-none text-white align-items-center learn-more-hover-circle`}>
-                  <span className="me-5 fs-5 ">Get started — it&apos;s free!</span>
+                  <span style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"600", fontFamily:"monospace"}} className="me-5 fs-5 text-decoration-underline">Get started — it&apos;s free</span>
                   <div className="position-relative">
                     <BsArrowRight className={`${styles["icon"]}`} size="2em"></BsArrowRight>
                     <div className="hover-circle">
@@ -78,9 +70,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <ScrollableArrow></ScrollableArrow>
+        {/* <ScrollableArrow></ScrollableArrow> */}
       </div>
-
+      <span className="d-none d-md-inline">
+        <ScrollProgressBar></ScrollProgressBar>
+      </span>
       <OurApproach></OurApproach>
       <HowItWorks></HowItWorks>
       <ThreeItemShowcase></ThreeItemShowcase>

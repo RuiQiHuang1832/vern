@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Personal Media Catalog & Reviews Hub",
 };
 
-const body = classNames("default-bg-color", "overflow-x-hidden")
+const body = classNames("default-bg-color overflow-x-hidden")
 
 export default function RootLayout({
   children,

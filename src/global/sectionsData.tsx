@@ -1,7 +1,8 @@
-import image_1 from "@/assets/images/home/illustration-data-1.png";
-import image_2 from "@/assets/images/home/illustration-data-2.png";
-import image_3 from "@/assets/images/home/illustration-data-3.png";
-import styles from "@/styles/HeaderWithImageAndParagraph.module.css"
+
+import step3 from "@/assets/images/steps/step3.png";
+import step1 from "@/assets/images/steps/step1.png";
+import step2 from "@/assets/images/steps/step2.png";
+
 export interface SectionType {
     id: string;
     header: React.ReactNode;
@@ -19,7 +20,7 @@ export const sections: SectionType[] = [
       id: "anchor-1",
       header: (
         <>
-          discover seamless multimedia management
+          unlock: fluid digital mastery
         </>
       ),
       paragraph: (
@@ -27,11 +28,10 @@ export const sections: SectionType[] = [
            Our innovative web app empowers you to effortlessly organize, curate, and enjoy your favorite media. Whether it&apos;s movies, TV shows, or other content, our platform provides a seamless and intuitive solution.
         </>
       ),
-      imageSrc: image_1.src,
+      imageSrc: step1.src,
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row-reverse" as const,
-      sectionContainerClass:styles[""]
     },
     {
       id: "anchor-2",
@@ -45,17 +45,16 @@ export const sections: SectionType[] = [
           Say Goodbye to Chaos. Easily create and customize playlists, rate and review your media, and discover new content that resonates with your unique preferences.
         </>
       ),
-      imageSrc: image_2.src,
+      imageSrc: step2.src,
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row" as const,
-      sectionContainerClass:styles[""]
     },
     {
       id: "anchor-3",
       header: (
         <>
-          elevate your media collection
+          seamlessness is...<br></br> the new standard
         </>
       ),
       paragraph: (
@@ -63,10 +62,9 @@ export const sections: SectionType[] = [
            Unlock the potential of personalized playlists that reflect your taste. With our platform, you&apos;re not just consuming content – you&apos;re curating a tailored entertainment experience.
         </>
       ),
-      imageSrc: image_3.src,
+      imageSrc: step3.src,
       imageWidth: 600,
       imageHeight: 600,
       direction: "flex-lg-row-reverse" as const,
-      sectionContainerClass:styles[""]
     }
   ];

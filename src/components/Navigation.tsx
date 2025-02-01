@@ -90,14 +90,13 @@ export default function Navigation({ hidden = false }: NavigationProps) {
         <a className={`navbar-brand fw-bold ms-xxl-3 ps-0 ps-md-2 pt-2`} href="/">
           <span className="brand">{WEBSITE_NAME}</span>
         </a>
-        {!hidden && (
-          <>
+    
           <div className="order-first pt-2">
             <button className="navbar-toggler navbar-dark py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <FaBars color="#86c232" size="1.3em" />
             </button>
             </div>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div style={{visibility: hidden ? "hidden" : "visible"}} className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className={`navbar-nav mb-lg-0 flex-grow-1 ${styles["custom-column-gap"]}`}>
                 {navLinks.map(
                   (link, index): React.ReactNode => (
@@ -131,8 +130,7 @@ export default function Navigation({ hidden = false }: NavigationProps) {
                 </li>}
               </ul>
             </div>
-          </>
-        )}
+   
       </div>
     </nav>
   );
