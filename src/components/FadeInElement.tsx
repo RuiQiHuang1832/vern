@@ -22,7 +22,7 @@ const FadeInElement = ({ children, value }: {children:ReactNode, value:string}) 
   
     return (
       <div
-        className={`${value} ${isVisible ? 'is-visible' : ''}`}
+        className={`${value} ${isVisible ? 'is-visible' : ''} `}
         ref={domRef}
       >
         {children}

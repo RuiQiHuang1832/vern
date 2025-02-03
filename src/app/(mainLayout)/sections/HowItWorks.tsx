@@ -18,7 +18,7 @@ export default function HowItWorks() {
       </div>
       <div style={{ gap: "10em", marginTop: "8em" }} className={`d-flex flex-column col-md-10 col mx-auto  align-items-center`}>
         {stepData.map((data, i) => (
-                <FadeInElement key={data.id} value="fade-in-section">
+ <FadeInElement key={data.id} value="fade-in-section">
           <div style={{ gap: "5em", minHeight: "30em", borderRadius: "24px", background: "#121212", padding: "0 3em" }} className={`mt-3 align-items-center d-flex position-relative`}>
             <div style={{ gap: "2.5em", flex: "1" }} className="d-flex justify-content-center">
                 <Image priority src={data.icon} width={65} height={65} alt={data.id} className={`mb-4 item`}></Image>
