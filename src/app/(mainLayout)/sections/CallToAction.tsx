@@ -25,9 +25,11 @@ export default function CallToAction() {
 
     <div style={{ gap: "60px" }} className="d-flex justify-content-center mb-5">
       <div className="col-5">
-        <h1 style={{ fontSize: "88px" }} className={`fw-bold text-wrap-balance  mb-4 lh-1`}>
+
+        <h1 style={{ fontSize: "88px" }} className={`fw-bold text-wrap-balance item mb-4 lh-1`}>
           Ready to get started?
         </h1>
+
         <p style={{ fontSize: "20px"}} className={` secondary text-wrap-pretty mb-5 fw-light`}>
         Experience {WEBSITE_NAME} for free—submit reviews, rate media, and connect with enthusiasts. Upgrade with an optional subscription for even more features!
         </p>

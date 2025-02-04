@@ -7,11 +7,15 @@ import { WEBSITE_NAME } from "@/global/global";
 import reading from "@/assets/images/reading.png"
 import Image from "next/image";
 import FadeInElement from "./FadeInElement";
+
 export default function Newsletter() {
   return (
+    <FadeInElement value="fade-in-section">
     <div style={{ background: "#121212", borderRadius: "24px" }} className="p-5">
+
     <div className="d-flex align-items-center">
       <div style={{flex:"1"}}>
+      <FadeInElement value="fade-in-section-left">
       <div className=" d-flex flex-column">
         <h1 className="mb-3">
         Join Our Growing Community &nbsp;<SiMinutemailer></SiMinutemailer>
@@ -20,6 +24,8 @@ export default function Newsletter() {
           The {WEBSITE_NAME} newsletter provides creative deep dives, review content, inspiration, and occasional product updates.{" "}
         </p>
       </div>
+      </FadeInElement>
+      <FadeInElement value="fade-in-section-left">
       <form style={{ columnGap: "0.5rem", rowGap: "0.5rem" }} className="d-flex flex-column flex-sm-row col-9">
         <input required type="text" style={{ flex: "1" }} placeholder="Enter email address..." className={`form-control light-border-input ph-color-white`} />
         <Button buttonColor={{ cssColor: "white" }} type="submit" width="auto" radius="10px" padding="10px" styleClass={`${styles["support-button"]}`}>
@@ -27,6 +33,9 @@ export default function Newsletter() {
           <BsArrowRight className={`${styles["support-arrow"]}`} color="black" size="1em"></BsArrowRight>
         </Button>
       </form>
+      </FadeInElement>
+      <FadeInElement value="fade-in-section-left">
+
       <div  className="mt-3 secondary text-wrap-pretty fw-light">
         By subscribing, you agree to our{" "}
         <a href="/tos" className="text-decoration-underline text-reset fw-normal">
@@ -38,6 +47,8 @@ export default function Newsletter() {
         </a>
         . <span className="text-danger">*</span> <br></br> Unsubscribe anytime. <MdUnsubscribe></MdUnsubscribe> <br></br>
       </div>
+      </FadeInElement>
+
       </div>
       <div style={{transform:"translateX(-100px)"}} className=" text-center " >
 
@@ -50,5 +61,6 @@ export default function Newsletter() {
 
     </div>
     </div>
+    </FadeInElement>
   );
 }

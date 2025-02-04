@@ -17,13 +17,15 @@ export default function Faq() {
     <div className="d-flex justify-content-end align-items-center ">
             <div id="accordionExample" className="home-page-accordion accordion col-6 order-1 pb-5">
               <div className=" px-4 mb-4 col-10 text-wrap-balance">
-              <h6 style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Frequently Asked Questions</h6>
-              
-                <h1 className="my-4">we&apos;re here to answer all your questions</h1>
-                <p className="fs-5 secondary fw-light">Everything you need to know about the product, team, and billing. Can’t find the answer you’re looking for? Post your question in our <span className="text-decoration-underline">community forum!</span></p>
+                <FadeInElement value="fade-in-section">
+              <h6 className="item slow item-1" style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Frequently Asked Questions</h6>
+                <h1 className="my-4 item slow">we&apos;re here to answer all your questions</h1>
+                <p className="fs-5 secondary fw-light item slow item-2">Everything you need to know about the product, team, and billing. Can’t find the answer you’re looking for? Post your question in our <span className="text-decoration-underline">community forum!</span></p>
+                </FadeInElement>
               </div>
               {accordionData.map((accordion,i) => (
-                <div  key={accordion.id} className={`accordion-item p-4 ${styles["accordion-item-home"]} ${activeItem === i ? 'active' : ''}`}>
+                <FadeInElement key={accordion.id} value="fade-in-section-left">
+                <div   className={`accordion-item p-4  ${styles["accordion-item-home"]} ${activeItem === i ? 'active' : ''}`}>
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed"  onClick={() => toggleAccordion(i)}
  type="button" data-bs-toggle="collapse" data-bs-target={`#${accordion.id}`} aria-expanded="false" aria-controls={accordion.id}>
@@ -36,6 +38,7 @@ export default function Faq() {
                     </div>
                   </div>
                 </div>
+                </FadeInElement>
               ))}
             </div>
             <div className="mx-auto">
