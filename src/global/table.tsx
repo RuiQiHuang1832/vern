@@ -17,7 +17,7 @@ export const searchable = [{
     link:"settings/general",
     desc:"General Settings. Customize your profile to reflect your identity and preferences. Update your avatar, name, and contact details, or manage acc.",
     keywords: ["Avatar", "Display Name", "Email", "Phone Number", "Biography", "Password", "Delete Account"],
-    icon:<FaGear color="lightgreen"></FaGear>,
+    icon:<FaGear color="white"></FaGear>,
     location:"Settings"
   },
   {
@@ -25,7 +25,7 @@ export const searchable = [{
     link:"settings/billing",
     desc:"View and manage your current subscription plan and access details.",
     keywords:["Billing Summary", "Current Subscription", "Current Plan", "Payment Information", "Add-ons"],
-    icon:<FaReceipt color="lightgreen"></FaReceipt>,
+    icon:<FaReceipt color="white"></FaReceipt>,
     location:"Settings"
 
   },
@@ -34,7 +34,7 @@ export const searchable = [{
     link:"settings/sessions",
     desc:"This is a list of devices that have logged into your account.",
     keywords:["Mobile" ],
-    icon:<GiAerialSignal color="lightgreen"></GiAerialSignal>,
+    icon:<GiAerialSignal color="white"></GiAerialSignal>,
     location:"Settings"
 
   },
@@ -43,7 +43,7 @@ export const searchable = [{
     link:"settings/notification",
     desc:"Manage your personal notification settings.",
     keywords:["Comments", "Likes", "Followers", "Reviews", "Recommendations"],
-    icon:<FaBell color="lightgreen"></FaBell>,
+    icon:<FaBell color="white"></FaBell>,
     location:"Settings"
 
   },
@@ -52,7 +52,7 @@ export const searchable = [{
     link:"settings/appearance",
     desc:`Choose how ${WEBSITE_NAME} looks to you. Select a single theme, or sync with your system and automatically switch between day and night themes.`,
     keywords:["Emoji skin tone", "Preference", "Accent color", "Dark", "Light"],
-    icon:<FaPaintbrush color="lightgreen"></FaPaintbrush>,
+    icon:<FaPaintbrush color="white"></FaPaintbrush>,
     location:"Settings"
 
   },
@@ -61,7 +61,7 @@ export const searchable = [{
     link:"settings/privacy-security",
     desc:"Choose who can see your profile and its content. Control visibility settings to make your profile public, visible to friends only, or completely private.",
     keywords:["Two-Factor auth", "2FA", "Report", "Block", "Data", "Policy", "Usage"],
-    icon:<MdPrivacyTip color="lightgreen"></MdPrivacyTip>,
+    icon:<MdPrivacyTip color="white"></MdPrivacyTip>,
     location:"Settings"
 
   },
@@ -69,7 +69,7 @@ export const searchable = [{
   {
     section:"Community",
     link:"playlist/community/1",
-    icon:<RiCommunityFill color="yellow"></RiCommunityFill>,
+    icon:<RiCommunityFill color="white"></RiCommunityFill>,
     location:"Community"
 
   },
@@ -78,7 +78,7 @@ export const searchable = [{
     link:"tos",
     desc:"Privacy Policy",
     keywords:["Terms", "Conditions", "Rules", "Regulations", "Cookies", "License", "Content", "Liability", "Rights", "Removal", "Disclaimer"],
-    icon:<MdPolicy color="#8585ff"></MdPolicy>,
+    icon:<MdPolicy color="white"></MdPolicy>,
     location:"TOS"
 
   }

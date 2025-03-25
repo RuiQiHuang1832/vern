@@ -28,29 +28,28 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="text-white">
-      <div className="container-lg mt-5 mb-5 ">
-        <div className={`row gx-0`}>
-          <div className={`col-xxl-6 col-xl-7 col d-flex align-items-center order-xl-1 order-2 justify-content-lg-start justify-content-center`}>
-            <div className="text col-10 col-lg-12 col-xl-10">
-              <h1 className={`${styles["header"]} responsiveHeader fade-in-from-bottom`}>
-                <span style={{ color: "rgb(90,90,90)" }}>Elevate Entertainment&nbsp;</span>
-                <span className="d-none d-xl-inline">
+    <div  className="text-white">
+      <div  className="mx-auto mt-5 mb-5 col-10 ">
+        <div  style={{flexWrap:"wrap-reverse"}} className={`d-flex gx-0`}>
+          <div style={{flex:"1 1 400px"}} className={` d-flex align-items-center justify-content-xl-start `}>
+            <div style={{flex:"1"}} className="text col-10">
+              <h1 className={`${styles["header"]} fade-in-from-bottom`}>
+                <span style={{ color: "rgb(90,90,90)",  }}>Elevate Entertainment&nbsp;</span>
+                {/* <span className="d-none d-xl-inline">
                   <br />
-                </span>
+                </span> */}
+                 <br />
                Your Playlist Playground
               </h1>
               <hr style={{ color: "rgba(255, 255, 255, 0.25)" }} className="fade-in-from-bottom"></hr>
-              <p className="fade-in-from-bottom fade-in-delay-1  mb-5 fw-light">
+              <p className="fade-in-from-bottom fade-in-delay-1 text-wrap-pretty mb-5 fw-light">
                 Craft and curate your ultimate media collection.&nbsp;
-                <span className="d-none d-xl-inline">
                   <br />
-                </span>
                 Explore, rate, and design playlists tailored to your tastes.
               </p>
               <div className="fade-in-from-bottom fade-in-delay-2 ">
                 <a href="" className={`${styles["get-started"]} d-inline-flex text-decoration-none text-white align-items-center learn-more-hover-circle`}>
-                  <span style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"600", fontFamily:"monospace"}} className="me-5 fs-5 text-decoration-underline">Get started — it&apos;s free</span>
+                  <span className="me-sm-5 me-4 fs-5 text-decoration-underline">Get started — it&apos;s free</span>
                   <div className="position-relative">
                     <BsArrowRight className={`${styles["icon"]}`} size="2em"></BsArrowRight>
                     <div className="hover-circle">
@@ -64,9 +63,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={`col-xxl-6 col-xl-5 d-flex justify-content-center order-xl-2 order-1`}>
-            <div className="image">
-              <Image src={image_4.src} alt="Home page logo" width={660} height={460} priority={true} className={`${styles["objectFit"]} fade-in-image ${isVisible ? "animate" : ""}`} quality={100} />
+          <div className={` d-flex justify-content-center ${styles["header-img"]}`}>
+            <div className="image position-relative w-100 h-auto">
+              <Image src={image_4.src} alt="Home page logo" fill objectFit="contain" priority={true} className={`${styles["objectFit"]} fade-in-image ${isVisible ? "animate" : ""}`} quality={100} />
             </div>
           </div>
         </div>
@@ -80,12 +79,17 @@ export default function Home() {
       <ThreeItemShowcase></ThreeItemShowcase>
       <FrameworkIntegrations></FrameworkIntegrations>
       <MembershipOptions></MembershipOptions>
+      <div className="spacer" style={{height:"170px"}}></div>
       <UserReviews></UserReviews>
+      <div className="spacer" style={{height:"300px"}}></div>
+
       <div className={`${styles["faq-news-container"]}`}>
         <div className={`${styles["wave"]}`}></div>
         <Faq></Faq>
         <div className="py-5"></div>
+        <div className="col-11 mx-auto">
         <Newsletter></Newsletter>
+        </div>
       </div>
       <CallToAction></CallToAction>
     </div>

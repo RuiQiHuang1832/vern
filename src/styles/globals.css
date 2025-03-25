@@ -31,9 +31,11 @@
 
 body {
   background-color: var(--page-background-color) !important;
+
 }
 html {
   scroll-behavior: smooth;
+
 }
 .navbar-expand-lg .navbar-nav a.nav-link {
   padding: 15px 0px 0px 0px;
@@ -94,7 +96,7 @@ a.navbar-brand {
   height: auto;
 }
 
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   .responsiveHeader {
     font-size: 2.4em !important;
   }
@@ -104,7 +106,7 @@ a.navbar-brand {
   .responsiveHeader {
     font-size: 1.8em !important;
   }
-}
+} */
 
 .defaultGreen {
   color: #86c232 !important;
@@ -114,9 +116,9 @@ a.navbar-brand {
   background-color: #86c232 !important;
 }
 
-.section-heading {
+/* .section-heading {
   border-bottom: 1px solid #d0d7deb3;
-}
+} */
 
 .form-control:focus {
   box-shadow: none !important;
@@ -419,14 +421,9 @@ textarea {
   font-size: 30px;
 }
 
-@media screen and (max-width: 389px) {
-  .brand {
-    font-size: 23px;
-  }
-}
 
 .text-wrap-balance {
-  text-wrap: balance;
+  text-wrap: balance !important;
 }
 
 .text-wrap-pretty {
@@ -682,4 +679,41 @@ mark {
   align-items: center;
   width: 3em; 
   height: 3em;
+}
+
+
+.white-nowrap {
+  white-space: normal;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .white-nowrap {
+    white-space: nowrap;
+  }
+}
+
+
+.section-container {
+  text-align: center;
+   margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem !important;
+}
+
+.section-heading {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: monospace;
+}
+
+.section-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #6c757d; 
 }

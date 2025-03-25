@@ -7,7 +7,7 @@
     display: flex;
     overflow: hidden; /* Hide content that overflows the container */
     position: relative;
-    width: 40%; /* Full width of the viewport */
+    max-width:650px; /* Full width of the viewport */
     height: auto; /* Adjust height to match your image */
     background: #f9f9f9; /* Optional: background color */
    
@@ -84,16 +84,20 @@
     position: absolute;
     top: -120px;
     right: 0;
-    width: 150px;
+    width: 50px;
     height: 100%;
     background-color:#1A1A1A;
   }
-  
+  @media screen and (max-width: 1200px) {
+    .wave::after {
+      display: none;
+    }
+  }
   .wave::before {
     content: "";
     position: absolute;
     top: -120px;
-    right: -350px;
+    right: -10vw;
     width: 90%;
     height: 100%;
    background-repeat: no-repeat;

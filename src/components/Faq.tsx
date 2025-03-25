@@ -14,9 +14,9 @@ export default function Faq() {
   };
 
   return (
-    <div className="d-flex justify-content-end align-items-center ">
-            <div id="accordionExample" className="home-page-accordion accordion col-6 order-1 pb-5">
-              <div className=" px-4 mb-4 col-10 text-wrap-balance">
+    <div className="d-flex justify-lg-content-end justify-content-center align-items-center ">
+            <div id="accordionExample" className="home-page-accordion accordion col-lg-6 col-10 order-1 pb-5">
+              <div className=" px-4 mb-4 col-sm-10 text-wrap-balance">
                 <FadeInElement value="fade-in-section">
               <h6 className="item slow item-1" style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Frequently Asked Questions</h6>
                 <h1 className="my-4 item slow">we&apos;re here to answer all your questions</h1>
@@ -24,15 +24,15 @@ export default function Faq() {
                 </FadeInElement>
               </div>
               {accordionData.map((accordion,i) => (
-                <FadeInElement key={accordion.id} value="fade-in-section-left">
+                <FadeInElement  key={accordion.id} value="fade-in-section-left">
                 <div   className={`accordion-item p-4  ${styles["accordion-item-home"]} ${activeItem === i ? 'active' : ''}`}>
                   <h2 className="accordion-header">
-                    <button className="accordion-button collapsed"  onClick={() => toggleAccordion(i)}
+                    <button className={`accordion-button collapsed ${styles["resp-width"]}`}  onClick={() => toggleAccordion(i)}
  type="button" data-bs-toggle="collapse" data-bs-target={`#${accordion.id}`} aria-expanded="false" aria-controls={accordion.id}>
                       <div className="fw-light accordion-question text-white fs-4">{i+1}. {accordion.question}</div>
                     </button>
                   </h2>
-                  <div id={accordion.id} data-bs-parent="#accordionExample" className="accordion-collapse collapse">
+                  <div id={accordion.id} data-bs-parent="#accordionExample" className="accordion-collapse collapse ">
                     <div style={{ color: "white" }} className="accordion-body fw-light fs-6">
                       {accordion.answer}
                     </div>
@@ -41,7 +41,7 @@ export default function Faq() {
                 </FadeInElement>
               ))}
             </div>
-            <div className="mx-auto">
+            <div className="mx-auto d-none d-lg-block">
             <FadeInElement value="fade-in-from-z">
 <Image src={faqguy} alt="faqguy" width={350} height={0} style={{ height: "auto"}} className="item" quality={100}></Image>
 </FadeInElement>

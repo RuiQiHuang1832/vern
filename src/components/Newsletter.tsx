@@ -13,28 +13,21 @@ export default function Newsletter() {
     <FadeInElement value="fade-in-section">
     <div style={{ background: "#121212", borderRadius: "24px" }} className="p-5">
 
-    <div className="d-flex align-items-center">
-      <div style={{flex:"1"}}>
-      <FadeInElement value="fade-in-section-left">
-      <div className=" d-flex flex-column">
-        <h1 className="mb-3">
-        Join Our Growing Community &nbsp;<SiMinutemailer></SiMinutemailer>
+    <div className="d-flex align-items-center flex-wrap">
+      <div style={{flex:"1 1 500px"}} className="d-flex flex-column">
+        <h1  className="mb-3">
+        Join Our Growing Community&nbsp;<SiMinutemailer></SiMinutemailer>
         </h1>
-        <p style={{ fontSize: "18px"}} className="mb-3 secondary col-9  text-wrap fw-light">
+        <p style={{ fontSize: "18px"}} className="mb-3 secondary text-wrap fw-light text-wrap-pretty">
           The {WEBSITE_NAME} newsletter provides creative deep dives, review content, inspiration, and occasional product updates.{" "}
         </p>
-      </div>
-      </FadeInElement>
-      <FadeInElement value="fade-in-section-left">
       <form style={{ columnGap: "0.5rem", rowGap: "0.5rem" }} className="d-flex flex-column flex-sm-row col-9">
-        <input required type="text" style={{ flex: "1" }} placeholder="Enter email address..." className={`form-control light-border-input ph-color-white`} />
+        <input required type="text" style={{ flex: "1",padding:"10px" }} placeholder="Enter email address..." className={`form-control light-border-input ph-color-white`} />
         <Button buttonColor={{ cssColor: "white" }} type="submit" width="auto" radius="10px" padding="10px" styleClass={`${styles["support-button"]}`}>
           <span style={{ color: "black" }}>Subscribe</span>
           <BsArrowRight className={`${styles["support-arrow"]}`} color="black" size="1em"></BsArrowRight>
         </Button>
       </form>
-      </FadeInElement>
-      <FadeInElement value="fade-in-section-left">
 
       <div  className="mt-3 secondary text-wrap-pretty fw-light">
         By subscribing, you agree to our{" "}
@@ -47,15 +40,12 @@ export default function Newsletter() {
         </a>
         . <span className="text-danger">*</span> <br></br> Unsubscribe anytime. <MdUnsubscribe></MdUnsubscribe> <br></br>
       </div>
-      </FadeInElement>
 
       </div>
-      <div style={{transform:"translateX(-100px)"}} className=" text-center " >
+      <div style={{flex:"1 1 500px"}} className=" text-center " >
 
-      <FadeInElement value="fade-in-from-z">
 
-        <Image  src={reading} alt="newsletter" width={400} height={0} style={{ height: "auto"}} className="item" quality={100}></Image>
-        </FadeInElement>
+        <Image  src={reading} alt="newsletter" width={500} height={500} className="item globalObjectFit" quality={100}></Image>
 
         </div>
 
@@ -64,3 +54,5 @@ export default function Newsletter() {
     </FadeInElement>
   );
 }
+
+

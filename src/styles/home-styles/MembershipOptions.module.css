@@ -17,11 +17,15 @@ ul li.marker {
     position: absolute;
     top: -120px;
     right: -100px;
-    width: 250px;
+    width: 290px;
     height: 100%;
     background-color:#121212;
   }
-  
+  @media screen and (max-width: 1200px) {
+    .wave::after {
+      display: none;
+    }
+  }
   .wave::before {
     content: "";
     position: absolute;
@@ -33,3 +37,19 @@ ul li.marker {
   background-image: url("/wave-2.svg");
   
   }
+
+  .mem-container {
+    border-radius: 24px ;
+    flex:1 1 33%;
+    background-color: #1A1A1A;
+  }
+  @media (max-width: 950px) {
+  .mem-container {
+    flex:1 1 100%;
+    min-height: 700px; 
+  }
+  .wrap {
+    flex-wrap: wrap;
+    
+  }
+}

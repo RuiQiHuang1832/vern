@@ -1,9 +1,30 @@
 
 .steps-container {
-    max-width:42rem;
-    margin: 0 auto;
-    text-align: center;
+ gap: 5em;
+ min-height: 30em; 
+ border-radius: 24px; 
+ background:#121212; 
+ padding: 3em;
+}
+
+
+.smaller-steps-container {
+ padding: 2em;
+ border-radius: 24px ;
+ background: #1A1A1A;
+}
+@media screen and (max-width: 400px) {
+  .steps-container {
+    padding: 2em;
+
   }
+  .smaller-steps-container {
+    padding: 1.5em;
+  }
+}
+
+
+
   .step-grid {
     display: grid;
     gap: 32px;
@@ -34,17 +55,23 @@
   content: "";
   position: absolute;
   top: -120px;
-  left: -70px;
-  width: 150px;
+  left: 0px;
+  width: 350px;
   height: 100%;
   background-color:#1A1A1A;
+
+}
+@media screen and (max-width: 1200px) {
+  .wave::after {
+    display: none;
+  }
 }
 
 .wave::before {
   content: "";
   position: absolute;
   top: -120px;
-  left: -240px;
+  left: 0px;
   width: 100%;
   height: 100%;
  background-repeat: no-repeat;
@@ -55,7 +82,7 @@
 
 .circled-number-container {
  left: 50%;
-  top: -23%;
+  top: -16%;
   transform: translateX(-50%);
   position:absolute;
 }

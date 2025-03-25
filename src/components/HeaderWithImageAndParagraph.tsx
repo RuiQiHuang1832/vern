@@ -6,17 +6,16 @@ import FadeInElement from "./FadeInElement";
 
 export default function HeaderWithImageAndParagraph({ header, paragraph, imageSrc, imageWidth, imageHeight, direction, id }: HeaderProps) {
   
-  const imageContainer: string = classNames("col-lg-6 col-12 my-4 d-flex justify-content-center");
 
 
   return (
-    <section style={{paddingTop:"10em", paddingBottom:"10em"}} className={` d-flex container`} id={id}>
-      <div style={{gap:"2em"}} className={`${direction} flex-column align-content-center d-flex mx-auto`}>
-        <div  className={classNames("col-lg-6  col-12 d-flex align-items-center", direction == "flex-lg-row" ? "justify-content-md-start" : "justify-content-md-end", "order-1 order-lg-0", "justify-content-center")} >
-          <div  className={`text-wrap-balance`}>
+    <section style={{paddingTop:"10em", paddingBottom:"10em", transition: 'all 0.5s ease-in-out'}} className={`col-lg-11 col-xl-9 col-10  d-flex mx-auto`} id={id}>
+      <div  className={`${direction} flex-column align-content-center d-flex mx-auto `}>
+        <div style={{flex:"1"}}  className={classNames("col-lg-7  col-12 d-flex align-items-center", direction == "flex-lg-row" ? "justify-content-md-start" : "justify-content-md-end", "order-1 order-lg-0", "justify-content-center")} >
+          <div  className={`text-wrap-pretty`}>
             <div>
               <FadeInElement value="fade-in-section-left">
-            <h1 style={{ fontSize: "3.1em" }} className={`responsiveHeader mb-3`}>{header}</h1>
+            <h1 style={{ fontSize: 'clamp(2.5em, 3.5vw, 3.1em)' }} className={`responsiveHeader mb-3`}>{header}</h1>
             </FadeInElement>
             <FadeInElement value="fade-in-section-left">
 
@@ -25,7 +24,8 @@ export default function HeaderWithImageAndParagraph({ header, paragraph, imageSr
             </div>
           </div>
         </div>
-        <div className={imageContainer}>
+        <div className="mx-3"></div>
+        <div  style={{flex:"1"}} className="col-lg-6 col-12 my-4 d-flex justify-content-center">
         <FadeInElement value="fade-in-section">
 
           <div className="image">

@@ -62,7 +62,6 @@ export type stepDataType = {
     role:string
     description: string;
     source:StaticImageData;
-
   };
   export type accordionDataType = {
     id: string;
@@ -84,6 +83,12 @@ export type stepDataType = {
     description: string;
     src:StaticImageData
   };
+  export type introData = {
+    header: string;
+    title: string;
+    description: React.ReactNode;
+  }
+
 
   export const membershipData:membershipDataType[] = [
     {
@@ -157,7 +162,7 @@ export type stepDataType = {
 
 export const toolData:toolDataType[] = [
     {
-        title:"Smart recommendations",
+        title:"Smart Suggestions",
         description:"Get personalized media suggestions based on your reviews, search history, and preferences, helping you discover content you'll love. Our recommendations are tailored to match your unique taste, making it easier to find new movies, books, and shows.",
         source:tool_1
     },

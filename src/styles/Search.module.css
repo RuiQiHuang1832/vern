@@ -12,6 +12,9 @@
 }
 
 
+
+
+
 @keyframes fadeInOpacity {
     0% {
         opacity: 0;
@@ -78,7 +81,9 @@
 .subtext {
     text-align: center;
     font-weight:300;
-    font-size:1.5em;
+    transition: all 0.5s ease-in-out;
+    font-size: clamp(0.5em, 3vw, 1.5em);
+    text-wrap: pretty;
 }
 .results-icon {
         border:2px solid black;

@@ -65,7 +65,7 @@ export default function Navigation({ hidden = false }: NavigationProps) {
   return isSearchOpen ? (
     <>
       <div onClick={searchOverlay} className={styles["search-close-btn"]}>
-        <AiOutlineClose size="2.5em" color="white" />
+        <AiOutlineClose style={{ fontSize: "clamp(25px, 3vw, 40px)" }}color="white" />
       </div>
       <Search />
     </>
@@ -76,7 +76,7 @@ export default function Navigation({ hidden = false }: NavigationProps) {
           <div className={`nav-item me-auto ${styles["search"]}`}>
             <div className={`nav-link fs-5 me-xxl-5 pt-2 `}>
               <div className="position-relative" onClick={searchOverlay}>
-                <div    onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`${styles["rotating-circle-container"]}`}>
+                <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`${styles["rotating-circle-container"]}`}>
               <div style={{transform: `rotate(${angle}deg)`}} className={`${styles["rotating-circle"]}`}>
               <svg height="56" width="56" viewBox="0 0 56 56"><path d="M29.465,0.038373A28,28,0,0,1,52.948,40.712L51.166,39.804A26,26,0,0,0,29.361,2.0356Z"  fill="#F14243"></path><path d="M51.483,43.250A28,28,0,0,1,4.5172,43.250L6.1946,42.161A26,26,0,0,0,49.805,42.161Z" fill="#45A3FE"></path><path d="M3.0518,40.712A28,28,0,0,1,26.535,0.038373L26.639,2.0356A26,26,0,0,0,4.8338,39.804Z"  fill="#F2CC42"></path></svg>
               </div>
@@ -90,12 +90,13 @@ export default function Navigation({ hidden = false }: NavigationProps) {
         <a className={`navbar-brand fw-bold ms-xxl-3 ps-0 ps-md-2 pt-2`} href="/">
           <span className="brand">{WEBSITE_NAME}</span>
         </a>
-    
-          <div className="order-first pt-2">
-            <button className="navbar-toggler navbar-dark py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <FaBars color="#86c232" size="1.3em" />
-            </button>
-            </div>
+  
+          <div style={{visibility: hidden ? "hidden" : "visible"}} className="order-first pt-2">
+          <button className="navbar-toggler navbar-dark py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <FaBars color="#86c232" size="1.3em" />
+          </button>
+          </div>
+
             <div style={{visibility: hidden ? "hidden" : "visible"}} className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className={`navbar-nav mb-lg-0 flex-grow-1 ${styles["custom-column-gap"]}`}>
                 {navLinks.map(

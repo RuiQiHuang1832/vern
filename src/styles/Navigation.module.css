@@ -52,11 +52,11 @@
 .custom-column-gap {
   column-gap: 2em;
 }
-@media screen and (max-width: 435px) {
+/* @media screen and (max-width: 435px) {
   .custom-column-gap {
     column-gap:1em;
   }
-}
+} */
 
  @media screen and (min-width:992px) {
   .nav-shake:hover {
