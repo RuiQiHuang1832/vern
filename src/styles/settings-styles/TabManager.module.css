@@ -1,5 +1,5 @@
 .tab-active {
-    color:#bafe3b !important;
+    color:white !important;
     background-color:#2f3439 !important;
 }
 
@@ -10,7 +10,7 @@
         position: absolute;
         top: calc(50% - 12px);
         width: 0.15rem;
-        background: #a0d147;
+        background: white;
 
 }
 

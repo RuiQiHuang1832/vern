@@ -120,7 +120,8 @@ export default function General() {
           dropdownClass={styles["phone-dropdown"]}
           onChange={setValue}
           searchClass={styles["search-class"]}
-          inputClass={`form-control light-border-input`}
+          inputClass={`light-border-input`}
+          inputStyle={{width:"100%"}}
         />
       ),
     },
