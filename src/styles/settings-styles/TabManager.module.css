@@ -19,6 +19,7 @@
     color:var(--nav-item-color);
     border-color:transparent !important;
     border-radius:5px !important;
+    font-size: 14px;
 }
 
 .bg-color:hover {
@@ -30,4 +31,12 @@
 }
 
 
+.mobile-view-tab {
+background-color:transparent;
+color:white;
+border-color:transparent ;
+font-size: 14px;
+padding:24px 16px;
+border-bottom: 1px solid #303030 !important
 
+}
