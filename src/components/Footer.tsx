@@ -36,7 +36,7 @@ export default function Footer() {
         <div style={{fontSize:"13px"}} className="text-center p-2 text-white">Back to top</div>
       </div> }
     
-      <section  className="col-11 mx-auto py-5">
+      <section  className="col-11 mx-auto pt-5 pb-sm-5 pb-3">
         {/* <div style={{columnGap:"50px"}} className="d-flex justify-content-center mb-2 flex-wrap">
         <Link href="/playlist/community" className="p-2 text-decoration-none text-reset">Community</Link>
         <Link href="https://airtable.com/appZ6rwp0wgPvNpjJ/pagfrOydoyfmz8qJe/form" className="p-2 text-decoration-none text-reset">Contact</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
           <Link href="/tos" style={{color:"#fafafccc", fontSize:"12px"}} className="p-2 me-2 text-decoration-none text-reset">Privacy Policy</Link>
           <Link href="/tos" style={{color:"#fafafccc", fontSize:"12px"}} className="p-2 me-2 text-decoration-none text-reset">Responsible Disclosure</Link>
           <Link href="/tos" style={{color:"#fafafccc", fontSize:"12px"}} className="p-2 me-2 text-decoration-none text-reset">Trust Center</Link>
-          <div  style={{opacity:"0.8", fontSize:"12px"}} className="ms-auto p-2">© 2024-2025 {WEBSITE_NAME} Technologies Inc. All rights reserved.</div>
+          <div  style={{opacity:"0.8", fontSize:"12px"}} className="ms-md-auto p-2">© 2024-2025 {WEBSITE_NAME} Technologies Inc. All rights reserved.</div>
         </div>
       </section>
     </footer>
