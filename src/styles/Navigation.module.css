@@ -50,7 +50,7 @@
 }
 
 .custom-column-gap {
-  column-gap: 2em;
+  column-gap: 1.5em;
 }
 /* @media screen and (max-width: 435px) {
   .custom-column-gap {
@@ -140,3 +140,22 @@
   }
 }
 
+
+
+.navigation-overlay {
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  position: fixed;
+  overflow: hidden; 
+  z-index: 2000;
+  animation: fadeInOpacity;
+  animation-duration: 0.2s;
+  background-color: #121212
+}
+
+
+.hamburger-container:hover {
+  background:rgba(128, 128, 128, 0.058);
+}

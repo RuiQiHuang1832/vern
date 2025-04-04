@@ -24,6 +24,7 @@
     "eslint-plugin-react": "^7.33.1",
     "framer-motion": "^11.3.2",
     "fuzzy-search": "^3.2.1",
+    "hamburger-react": "^2.5.2",
     "json-server": "^1.0.0-beta.1",
     "lodash": "^4.17.21",
     "next": "^13.5.4",
