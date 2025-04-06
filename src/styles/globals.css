@@ -40,7 +40,10 @@ html {
   padding: 15px 0px 0px 0px;
   line-height: 1.2em;
 }
-
+.navbar {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0rem;
+}
 .table {
   --bs-table-bg: transparent;
   --bs-table-color: white;

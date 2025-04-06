@@ -33,12 +33,10 @@
 @media screen and (max-width:1090px) {
   .nav-dropdown-menu {
     border-bottom: 1px solid #444a4d;
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    padding:2.25rem 5vw !important;
   }
   .hover-dropdown:hover {
     background: rgba(121,135,161,0.15);
-    border-radius:10px;
     transition: background 300ms;
 
   }
@@ -145,17 +143,63 @@
 .navigation-overlay {
   width: 100%;
   height: 100%;
-  top: 100px;
+  top: 125px;
   left: 0;
   position: fixed;
   overflow: hidden; 
   z-index: 2000;
   animation: fadeInOpacity;
   animation-duration: 0.2s;
-  background-color: #121212
+  background-color: #121212;
+  padding:4px;
 }
 
 
 .hamburger-container:hover {
   background:rgba(128, 128, 128, 0.058);
+}
+
+.rounded-button {
+  display:none;
+}
+
+.desktop-view {
+  display:block;
+  flex-grow:1;
+}
+
+.mobile-view {
+  display:none;
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 1090px) {
+  .rounded-button {
+    border: 1px solid hsla(0, 0%, 25%, 1);
+    border-radius: 9999px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+  .desktop-view{
+    display:none;
+    flex-grow:0;
+  }
+  .mobile-view {
+    display:block;
+  }
+}
+
+div.navigation-overlay > a:first-of-type > div
+{
+  border-top: 1px solid #444a4d
+}
+
+.hamburger-link {
+  font-size:16px;
+  color:white;
 }
