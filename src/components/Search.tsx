@@ -39,7 +39,7 @@ export default function Search() {
   }
   const itemVariants = {
     hidden: { opacity: 0, y: -10 },
-    visible: (index) => ({
+    visible: (index:number) => ({
       opacity: 1,
       y: 0,
       transition: {
