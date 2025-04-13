@@ -40,3 +40,19 @@ padding:24px 16px;
 border-bottom: 1px solid #303030 !important
 
 }
+
+
+.back-button {
+    border: 1px solid #303030 !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    text-align: left;
+    margin:0 -35px;
+}
+
+.back {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+}

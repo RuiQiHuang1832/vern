@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div  className="text-white">
+    <div  className="text-white"> 
       <div  className="mx-auto mt-5 mb-5 col-10 ">
         <div  style={{flexWrap:"wrap-reverse"}} className={`d-flex gx-0`}>
           <div style={{flex:"1 1 400px"}} className={` d-flex align-items-center justify-content-xl-start `}>

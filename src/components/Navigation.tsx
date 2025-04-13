@@ -123,7 +123,7 @@ export default function Navigation({ hidden = false }: NavigationProps) {
             <li className="nav-item pt-2">
               <div className={`nav-link fs-5 px-3 ${styles["try-button"]}`}>
                 <Link className="text-decoration-none text-reset text-nowrap" href="/login">
-                  TRY FREE
+                  Get Started
                 </Link>
               </div>
             </li>

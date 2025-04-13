@@ -172,7 +172,7 @@ export default function PrivacySecurity() {
   ];
 
   return (
-    <div className="fw-light container">
+    <div className="fw-light">
       {title.map((k, i) => (
         <section key={i}>
           <SectionHeading on={true} section={k.section}></SectionHeading>

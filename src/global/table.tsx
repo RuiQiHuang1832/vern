@@ -8,7 +8,7 @@ export const searchable = [{
     section: "Home",
     link:"",
     keywords: ["Newsletter", "Inspiration", "Steps", "Management", "Smart", "Power tools", "Features", "Creative", "Customizable", "Question", "FAQ", "Ask", "Question", "Upgrade", "Started", "Learn"],
-    icon:<IoHomeSharp></IoHomeSharp>,
+    icon:<IoHomeSharp color="rgb(108, 117, 125)"></IoHomeSharp>,
     location:"Home"
 
   },
@@ -17,7 +17,7 @@ export const searchable = [{
     link:"settings/general",
     desc:"General Settings. Customize your profile to reflect your identity and preferences. Update your avatar, name, and contact details, or manage acc.",
     keywords: ["Avatar", "Display Name", "Email", "Phone Number", "Biography", "Password", "Delete Account"],
-    icon:<FaGear color="white"></FaGear>,
+    icon:<FaGear color="rgb(108, 117, 125)"></FaGear>,
     location:"Settings"
   },
   {
@@ -25,7 +25,7 @@ export const searchable = [{
     link:"settings/billing",
     desc:"View and manage your current subscription plan and access details.",
     keywords:["Billing Summary", "Current Subscription", "Current Plan", "Payment Information", "Add-ons"],
-    icon:<FaReceipt color="white"></FaReceipt>,
+    icon:<FaReceipt color="rgb(108, 117, 125)"></FaReceipt>,
     location:"Settings"
 
   },
@@ -34,7 +34,7 @@ export const searchable = [{
     link:"settings/sessions",
     desc:"This is a list of devices that have logged into your account.",
     keywords:["Mobile" ],
-    icon:<GiAerialSignal color="white"></GiAerialSignal>,
+    icon:<GiAerialSignal color="rgb(108, 117, 125)"></GiAerialSignal>,
     location:"Settings"
 
   },
@@ -43,7 +43,7 @@ export const searchable = [{
     link:"settings/notification",
     desc:"Manage your personal notification settings.",
     keywords:["Comments", "Likes", "Followers", "Reviews", "Recommendations"],
-    icon:<FaBell color="white"></FaBell>,
+    icon:<FaBell color="rgb(108, 117, 125)"></FaBell>,
     location:"Settings"
 
   },
@@ -52,7 +52,7 @@ export const searchable = [{
     link:"settings/appearance",
     desc:`Choose how ${WEBSITE_NAME} looks to you. Select a single theme, or sync with your system and automatically switch between day and night themes.`,
     keywords:["Emoji skin tone", "Preference", "Accent color", "Dark", "Light"],
-    icon:<FaPaintbrush color="white"></FaPaintbrush>,
+    icon:<FaPaintbrush color="rgb(108, 117, 125)"></FaPaintbrush>,
     location:"Settings"
 
   },
@@ -61,7 +61,7 @@ export const searchable = [{
     link:"settings/privacy-security",
     desc:"Choose who can see your profile and its content. Control visibility settings to make your profile public, visible to friends only, or completely private.",
     keywords:["Two-Factor auth", "2FA", "Report", "Block", "Data", "Policy", "Usage"],
-    icon:<MdPrivacyTip color="white"></MdPrivacyTip>,
+    icon:<MdPrivacyTip color="rgb(108, 117, 125)"></MdPrivacyTip>,
     location:"Settings"
 
   },
@@ -69,7 +69,7 @@ export const searchable = [{
   {
     section:"Community",
     link:"playlist/community/1",
-    icon:<RiCommunityFill color="white"></RiCommunityFill>,
+    icon:<RiCommunityFill color="rgb(108, 117, 125)"></RiCommunityFill>,
     location:"Community"
 
   },
@@ -78,7 +78,7 @@ export const searchable = [{
     link:"tos",
     desc:"Privacy Policy",
     keywords:["Terms", "Conditions", "Rules", "Regulations", "Cookies", "License", "Content", "Liability", "Rights", "Removal", "Disclaimer"],
-    icon:<MdPolicy color="white"></MdPolicy>,
+    icon:<MdPolicy color="rgb(108, 117, 125)"></MdPolicy>,
     location:"TOS"
 
   }

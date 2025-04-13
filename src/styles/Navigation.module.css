@@ -108,13 +108,16 @@
 
 
 .try-button {
-  background-color: #1D8754; 
+  background-color: transparent; 
+  border: 1px solid #1D8754;
   color: white !important;
    border-radius: 6px;
+   cursor: pointer;
 }
 
 .try-button:hover {
   opacity: 90%;
+  background-color: #1D8754;
 }
 
 .rotating-circle-container {
