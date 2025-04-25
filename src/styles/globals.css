@@ -12,11 +12,12 @@
 }
 
 /* For Retina or high-DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+/* @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body {
-    zoom: 115%; /* Scale content down for high DPI */
+    zoom: 115%; 
   }
-}
+} */
+/* Scale content down for high DPI */
 
 * {
   margin: 0;
@@ -31,10 +32,12 @@
 body {
   background-color: var(--page-background-color) !important;
 
+
 }
 html {
   scroll-behavior: smooth;
-
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .navbar-expand-lg .navbar-nav a.nav-link {
   padding: 15px 0px 0px 0px;
@@ -718,4 +721,8 @@ mark {
   font-size: 1.25rem;
   font-weight: 300;
   color: #6c757d; 
+}
+
+.subtext {
+  margin-bottom:24px;
 }

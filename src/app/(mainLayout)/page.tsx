@@ -87,7 +87,7 @@ export default function Home() {
         <div className={`${styles["wave"]}`}></div>
         <Faq></Faq>
         <div className="py-5"></div>
-        <div className="col-11 mx-auto">
+        <div className="col-10 col-sm-11 mx-auto">
         <Newsletter></Newsletter>
         </div>
       </div>

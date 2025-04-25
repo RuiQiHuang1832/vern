@@ -49,7 +49,7 @@ export default function Appearance() {
 
   return (
     <div>
-      <section>
+      <section style={{marginBottom:"5rem"}}>
       <SectionHeading on={true} section="Theme Preferences"></SectionHeading>
       <p className="subtext">Choose how {WEBSITE_NAME} looks to you. Select a single theme, or sync with your system and automatically switch between day and night themes.</p>
       <div className={styles["grid"]}>
@@ -68,8 +68,8 @@ export default function Appearance() {
         ))}
       </div>
       </section>
-      <section>
-      <SectionHeading on={true} headingStyles="mt-5" section="Emoji skin tone preference"></SectionHeading>
+      <section style={{marginBottom:"5rem"}}>
+      <SectionHeading on={true} section="Emoji skin tone preference"></SectionHeading>
       <p className="subtext">Preferred default emoji skin tone</p>
       {emojis.map((e, i) => (
         <label key={i} className="me-2">
@@ -79,7 +79,7 @@ export default function Appearance() {
       ))}
       </section>
       <section>
-      <SectionHeading on={true} headingStyles="mt-5" section="Accent color"></SectionHeading>
+      <SectionHeading on={true} section="Accent color"></SectionHeading>
       <p className="subtext">Highlight color for objects like buttons</p>
       <div className={styles["accent-section"]}>
         {accents.map((e, i) => (

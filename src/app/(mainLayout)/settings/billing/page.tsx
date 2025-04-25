@@ -63,11 +63,13 @@ export default function Billing() {
             <div className={styles["plan-subtext"]}>The basics for all reviewers</div>
           </div>
           <div className={`ms-auto text-end d-flex flex-sm-row flex-column ${styles["btn-group"]}`}>
-            <Button styleClass={styles["compare-button"]} href="#" buttonColor={{ bootstrapColor: "btn btn-outline-success" }} radius="10px" padding="7px 10px 7px 10px" width="auto" type="button">
-              Compare all Plans
+            <Button styleClass={styles["compare-button"]} buttonColor={{ cssColor: "white" }} radius="10px" padding="10px" width="auto" type="button">
+            <span style={{ color: "black" }}>Compare All Plans</span>
             </Button>
-            <Button styleClass={styles["upgrade-button"]} buttonColor={{ cssColor: "#1F883D" }} radius="10px" padding="7px 10px 7px 10px" width="auto" type="button">
-              Upgrade
+       
+            <Button styleClass={styles["upgrade-button"]} buttonColor={{ cssColor: "white" }} radius="10px" padding="10px" width="auto" type="button">
+            <span style={{ color: "black" }}>Upgrade</span>
+
             </Button>
           </div>
         </div>
@@ -100,6 +102,7 @@ export default function Billing() {
       <SectionHeading on={true} section="Add-ons"></SectionHeading>
       <p className="subtext">Discover optional features and upgrades to tailor your experience to your needs.</p>
       {addOns.map((addOn, i) => (
+        <>
         <div key={i} className={styles["addOn-container"]}>
           <div className={styles["addOn-heading"]}>
             <addOn.icon style={{ marginBottom: "3px" }} size={40}></addOn.icon>
@@ -108,13 +111,15 @@ export default function Billing() {
               <div className={styles["addOn-subtext"]}>{addOn.subtext}</div>
             </div>
             <div className="ms-auto align-self-center">
-              <Button styleClass={styles["addOn-button"]} buttonColor={{ cssColor: "#1F883D" }} radius="10px" padding="7px 10px 7px 10px" width="auto" type="button">
-                Add
-              </Button>
+            <Button styleClass={styles["addOn-button"]} buttonColor={{ cssColor: "white" }} radius="10px" padding="10px" width="auto" type="button">
+            <span style={{ color: "black" }}>Add</span>
+            </Button>
             </div>
           </div>
           <div className="p-3">{addOn.description}</div>
         </div>
+        <br/>
+        </>
       ))}
       </section>
     </div>

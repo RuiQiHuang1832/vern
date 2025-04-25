@@ -92,7 +92,7 @@ export type stepDataType = {
 
   export const membershipData:membershipDataType[] = [
     {
-      plan: "essentials",
+      plan: "Essentials",
       price: "$0",
       type: "Get started for free",
       description: "Perfect for casual users looking to start organizing their favorite media.",
@@ -100,16 +100,16 @@ export type stepDataType = {
       src: shrimp
     },
     {
-      plan: "premium",
+      plan: "Premium",
       price: "$8",
       type: "Open an account",
-      description: "Ideal for enthusiasts ready to dive deeper into media cataloging.",
+      description: "Ideal for enthusiasts ready to dive deeper into media cataloging and entertainment.",
       features: ["Unlimited playlists", "Advanced media search filters", "Custom tags for better organization", "Collaborative playlist creation", "Download playlists as PDF"],
       src: crocodile
 
     },
     {
-      plan: "enterprise",
+      plan: "Enterprise",
       price: "Custom pricing",
       type: "Contact sales",
       description: "Designed for power users who want the complete media curation experience.",
@@ -204,7 +204,7 @@ export const quoteData:quoteDataType[] = [
     {
         name:"Alex Johnson",
         role:"Advisor @ Synergy Studios",
-        description:"This platform has transformed how I discover and share media. The recommendations are spot on and the community is incredibly supportive.",
+        description:"This platform has transformed how I discover and share media. The community is incredibly supportive.",
         source: alex_johnson,
       
     },

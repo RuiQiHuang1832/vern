@@ -1,7 +1,6 @@
 .revoke-button {
     letter-spacing: normal;
-    font-weight: 300;
-    font-size:12px;
+    font-size:0.8rem;
 }
 
 .indicator {
@@ -34,7 +33,7 @@
 .individual-session-container {
     border: 1px solid  hsla(0,0%,25%,1);
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     padding: 1rem;
     padding-left: 0;
 }

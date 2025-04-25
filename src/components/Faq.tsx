@@ -15,7 +15,7 @@ export default function Faq() {
 
   return (
     <div className="d-flex justify-lg-content-end justify-content-center align-items-center ">
-            <div id="accordionExample" className="home-page-accordion accordion col-lg-6 col-10 order-1 pb-5">
+            <div id="accordionExample" className="home-page-accordion accordion col-lg-6 col-md-10 col-11 order-1 pb-5">
               <div className=" px-4 mb-4 col-sm-10 text-wrap-balance">
                 <FadeInElement value="fade-in-section">
               <h6 className="item slow item-1" style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Frequently Asked Questions</h6>

@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from "react";
 import styles from "@/styles/settings-styles/PrivacySecurity.module.css";
 import SectionHeading from "@/components/SectionHeading";
 import { WEBSITE_NAME } from "@/global/global";
-
+import Button from "@/components/Button";
 type UnitProps = {
   unitClass: string;
   children: ReactNode;
@@ -43,16 +43,18 @@ const Footer = (props: FooterProps) => {
   return (
     <footer className={`${styles["footer"]} ${props.footerClass}`}>
       <small className={`${styles["footer-text"]}`}>{props.footer}</small>
-      {props.buttonText && <button  type="submit" disabled className={props.buttonClass}>
-        {props.buttonText}
-      </button>}
+      {props.buttonText && (
+        <Button buttonColor={{ cssColor: "" }} type="submit" width="auto" radius="10px" padding="8px" styleClass={props.buttonClass}>
+          {props.buttonText}
+        </Button>
+      )}
     </footer>
   );
 };
 
 const Head = (props: HeadProps) => {
   return (
-    <div className="p-4">
+    <div  className="p-4">
       <h5>{props.title}</h5>
       <p className={`${styles["description"]}`}>{props.description}</p>
       {props.showInput ? <input type="text" className={`form-control light-border-input`} /> : props.specialInput}
@@ -174,7 +176,7 @@ export default function PrivacySecurity() {
   return (
     <div className="fw-light">
       {title.map((k, i) => (
-        <section key={i}>
+        <section style={{marginBottom:"5rem"}} key={i}>
           <SectionHeading on={true} section={k.section}></SectionHeading>
           <p className="subtext">{k.subtext}</p>
           {k.option.map((e, index) => (
@@ -183,7 +185,7 @@ export default function PrivacySecurity() {
                 <Head title={e.title} description={e.description} showInput={e.showInput} specialInput={e.specialInput} />
                 <Footer footer={e.footer} buttonClass={e.buttonClass ?? "btn btn-sm btn-light"} buttonText={e.buttonText} footerClass={e.footerClass ?? styles["default-footer"]} />
               </Unit>
-              <br />
+              {index == 0 ? <br/> : <></>}
             </React.Fragment>
           ))}
         </section>

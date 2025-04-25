@@ -54,9 +54,9 @@ export default function UserReviews() {
   return (
     <FadeInElement value="fade-in-section-left">
     <section className="col-lg-11 col-10 mx-auto" style={{ background: "#1A1A1A", borderRadius: "24px", margin: "2rem 0rem", marginBottom:"15rem" }}>
-      <div  style={{ padding: "8rem 0 8rem 0" }} className={`d-flex justify-content-around flex-wrap`}>
+      <div  style={{ padding: "5rem 0 5rem 0" }} className={`d-flex justify-content-around flex-wrap`}>
         <div >
-          <h1 className="mb-4 text-center col-md-12 col-10 mx-auto">what people<br className="d-none d-xl-inline-block"></br> are saying</h1>
+          <h1 className="mb-4 text-center col-md-12 col-10 mx-auto text-wrap-pretty">real thoughts <br className="d-none d-xl-inline-block"></br> from our users</h1>
         </div>
         <div style={{ background: "rgb(17 17 17 / 51%)", borderRadius: "10px"}} className="position-relative col-xl-7 col-10 mt-xl-0 mt-5">
           <div style={{ position: "absolute", top: "0", right: "0" }} className={`${clicked && styles["hidden"]}`}>
@@ -80,21 +80,22 @@ export default function UserReviews() {
             fadeEffect={{
               crossFade: true,
             }}
-            className={` mySwiper p-5 `}
+            className={` mySwiper `}
+            style={{padding:"max(24px, 5vw)"}}
             loop={true}
             spaceBetween={30}
           >
             {quoteData.map((e, index) => (
               <SwiperSlide key={index}>
-                <h2 style={{ height:'clamp(180px, 15vw, 250px)', textAlign: "left",fontSize: 'clamp(0.5em,4vw, 2em)',transition: 'font-size 0.5s ease-in-out' }} className={`fw-light review-description overflow-hidden`}>
+                <h2 style={{ height:'clamp(150px, 15vw, 250px)', textAlign: "left",fontSize: 'clamp(1rem,4vw, 2rem)',transition: 'font-size 0.5s ease-in-out' }} className={`fw-light review-description`}>
                   &ldquo;{e.description}&rdquo;
                 </h2>
                 <div style={{ gap: "15px" }} className="d-flex">
                   <div style={{ gap: "20px", textAlign: "left", }} className="d-flex me-auto align-items-center pt-5">
                     <Image style={{ borderRadius: "9999px" }} priority={true} src={e.source.src} width={64} height={1000} quality={100} className={`${styles["object-fit"]} review-avatar d-none d-sm-block`} alt={e.name}></Image>
                     <div style={{ fontSize: "20px" }} className="fw-light">
-                      <div style={{fontSize: 'clamp(0.5em, 3vw, 1em)',transition: 'font-size 0.5s ease-in-out'}} className="review-name">{e.name}</div>
-                      <div className="review-role" style={{ color: "#6B7280", fontSize: 'clamp(0.5em, 3vw, 1em)',transition: 'font-size 0.5s ease-in-out' }}>
+                      <div style={{fontSize: 'clamp(1rem,3vw, 1.5rem)',transition: 'font-size 0.5s ease-in-out'}} className="review-name">{e.name}</div>
+                      <div className="review-role" style={{ color: "#6B7280", fontSize: 'clamp(1rem,3vw, 1.5rem)',transition: 'font-size 0.5s ease-in-out' }}>
                         <BiSolidBriefcaseAlt2 style={{ transform: "translateY(-2px)" }}></BiSolidBriefcaseAlt2>&nbsp;{e.role}
                       </div>
                     </div>

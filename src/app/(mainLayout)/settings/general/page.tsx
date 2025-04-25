@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import SectionHeading from "@/components/SectionHeading";
 import "react-phone-input-2/lib/style.css";
 import { WEBSITE_NAME } from "@/global/global";
+import Button from "@/components/Button";
 
 type UnitProps = {
   unitClass: string;
@@ -31,13 +32,16 @@ const Unit = ({ children, unitClass }:UnitProps) => {
   return <section className={unitClass}>{children}</section>;
 };
 
+
+
 const Footer = (props: FooterProps ) => {
   return (
-    <footer className={`${styles["footer"]} ${props.footerClass} flex-column flex-sm-row text-center`}>
+    <footer style={{backgroundColor:"#0a0a0a", borderRadius: "0 0 10px 10px"}} className={`${styles["footer"]} ${props.footerClass} flex-column flex-sm-row text-center`}>
       {props.footer && <small className={`${styles["footer-text"]} mb-sm-0 ${props.buttonText && "mb-2"}`}>{props.footer}</small>}
-      {props.buttonText && <button  type="submit" disabled className={props.buttonClass}>
+      {props.buttonText && 
+      <Button  buttonColor={{ cssColor: "" }} type="submit" width="auto" radius="10px" padding="8px"  styleClass={props.buttonClass}>
         {props.buttonText}
-      </button>}
+    </Button>}
     
     </footer>
   );
@@ -45,7 +49,7 @@ const Footer = (props: FooterProps ) => {
 
 const Head = (props: HeadProps) => {
   return (
-    <div className="p-4">
+    <div style={{backgroundColor:"#0a0a0a", borderRadius: "10px 10px 0px 0px"}} className="p-4">
       <h5>{props.title}</h5>
       <p className={`${styles["description"]}`}>
         {props.description}
@@ -66,7 +70,7 @@ export default function General() {
       footer: "An avatar is optional but strongly recommended.",
       buttonText: "",
       showInput: false,
-      buttonClass: "btn btn-sm btn-light",
+      buttonClass: "btn btn-sm btn-dark",
       footerClass: styles["default-footer"],
       unitClass: styles["default-unit"],
       specialInput: (
@@ -176,7 +180,7 @@ export default function General() {
             <Head title={e.title} description={e.description} showInput={e.showInput} specialInput={e.specialInput} />
             <Footer footer={e.footer} buttonClass={e.buttonClass} buttonText={e.buttonText} footerClass={e.footerClass} />
           </Unit>
-          <br />
+          <br/>
         </React.Fragment>
       ))}
     </div>

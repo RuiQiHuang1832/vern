@@ -42,7 +42,7 @@ export default function Sessions() {
                   <small className="text-nowrap">Your current session</small>
                 </div>
                 <div className="ms-auto align-self-center text-nowrap">
-                  <Button styleClass={styles["revoke-button"]} eventOnClick={() => handleOnClick(i)} buttonColor={{ cssColor: "grey" }} radius="10px" padding="5px 8px 5px 8px" width="auto" type="button">
+                  <Button styleClass={styles["revoke-button"]} buttonColor={{ cssColor: "white" }}eventOnClick={() => handleOnClick(i)}  radius="10px" padding="10px" width="auto" type="button">
                     See More
                   </Button>
                 </div>

@@ -14,16 +14,16 @@ export default function MembershipOptions() {
       <FadeInElement value="fade-in-section">
       <div style={{ gap: "2rem",  }} className={`mt-5 col-lg-11 col-10 d-flex justify-content-center mx-auto ${styles["wrap"]} `}>
         {membershipData.map((e, i) => (
-          <div  key={i} className={`${styles["mem-container"]} p-5 fw-light focus-ring ring-blue item item-${i}`}>
+          <div  key={i} className={`${styles["mem-container"]}  fw-light focus-ring ring-blue item item-${i}`}>
             <div className="d-flex justify-content-between align-items-center">
-              <div style={{fontSize:'40px', fontWeight:"400"}}>{e.plan}</div>  
+              <div style={{fontSize:"clamp(1.5rem,3vw,3rem)", fontWeight:"400"}}>{e.plan}</div>  
              <div className="d-none d-xl-block"><Image priority src={e.src} width={70} height={70} alt={"icon"} ></Image>
              </div>
             </div>
-            <p className="secondary">{e.description}</p>
-            <h3>{e.price}{i !== 2 && <small style={{color:"#848484"}}>/month</small>}</h3>
+            <p style={{fontSize:"clamp(14px, 3vw, 1rem)"}} className="secondary">{e.description}</p>
+            <h3 style={{fontSize:"clamp(1rem, 3vw, 1.5rem)"}}>{e.price}{i !== 2 && <small style={{color:"#848484"}}>/month</small>}</h3>
             <div className="py-3">
-              <Button buttonColor={{ cssColor: "black" }} type="submit" width="100%" radius="10px" padding="13px" styleClass={``}>
+              <Button buttonColor={{ cssColor: "black" }} type="submit" width="100%" radius="10px" padding="13px" styleClass={`text-white`}>
                 {e.type}
               </Button>
             </div>

@@ -45,7 +45,7 @@ export default function Newsletter() {
       <div style={{flex:"1 1 500px"}} className=" text-center " >
 
 
-        <Image  src={reading} alt="newsletter" width={500} height={500} className="item globalObjectFit" quality={100}></Image>
+        <Image  src={reading} alt="newsletter" width={500} height={500} className="item globalObjectFit d-none d-md-block" quality={100}></Image>
 
         </div>
 

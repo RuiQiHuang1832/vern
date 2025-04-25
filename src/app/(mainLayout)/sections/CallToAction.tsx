@@ -24,12 +24,12 @@ export default function CallToAction() {
     <section style={{ padding: "0rem 0rem 6rem 0", backgroundColor:"black" }}>
       <div className={`${styles["wave"]}`}></div>
 
-    <div style={{gap:"3rem", }}  className="d-flex justify-content-between mb-5 col-11 mx-auto flex-wrap">
+    <div style={{gap:"3rem", }}  className="d-flex justify-content-between mb-5 col-10 col-md-11 mx-auto flex-wrap">
 
       <div style={{flex:"1"}} className="col-6">
       <FadeInElement value="fade-in-section">
 
-        <h1 style={{ fontSize: "5rem" }} className={`fw-bold  item mb-4 lh-1 item slow item-1`}>
+        <h1 style={{ fontSize: 'clamp(3.6em, 6vw, 5em)'}} className={`fw-bold  item mb-4 lh-1 item slow item-1`}>
           Ready to get started?
         </h1>
         <p style={{ fontSize: "1.5rem"}} className={` secondary text-wrap-pretty mb-5 fw-light item slow`}>

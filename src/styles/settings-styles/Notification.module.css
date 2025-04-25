@@ -11,6 +11,7 @@
   padding: 1rem; 
   padding-left:1.5rem;
   border-bottom: 1px solid hsla(0, 0%, 25%, 1);
+  background-color: #0a0a0a65;
 }
 
 .title {
@@ -18,6 +19,6 @@
 }
 
 .label {
-  color:#7D7D7D
+  color:#ffffff
 }
 
