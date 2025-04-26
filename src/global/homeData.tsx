@@ -124,14 +124,14 @@ export type stepDataType = {
   export const stepData: stepDataType[] = [
     {
         id: "step 1",
-        title: "Select Media Type",
+        title: "Select Media",
         description: "Users choose the type of media they want to review, such as movies, TV shows, or music. This ensures the review process is tailored to the specific category.",
         icon: step_1, // Represents media like movies and shows.
         image: step1
     },
     {
         id: "step 2",
-        title: "Choose Specific Title",
+        title: "Choose Title",
         description: "After selecting the media type, users pick a specific title (up to 10) within that category. This allows them to focus on the media they find most interesting.",
         icon: step_2, // Suggests listing or selecting items.
         image: step2

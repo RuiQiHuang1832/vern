@@ -40,10 +40,10 @@ export default function StepPassword(props:StepPassword) {
         </span>
       </div>
       <div className="d-flex justify-content-between mt-5">
-        <Button buttonColor={{ cssColor: "black" }} eventOnClick={props.handleBack} styleClass={`mb-3 ${styles["button"]}`} radius="10px" padding="13px 17px" type="button">
+        <Button buttonColor={{ cssColor: "white" }} eventOnClick={props.handleBack} styleClass={`mb-3 ${styles["button"]}`} radius="10px" padding="13px 17px" type="button">
           <LuArrowLeftToLine></LuArrowLeftToLine>
         </Button>
-        <Button buttonColor={{ cssColor: "black" }} eventOnClick={props.handleContinue} styleClass={`mb-3 ${props.password === "" ? styles["button-continue-disabled"] : styles["button"] } `} radius="10px" padding="12px" type="button">
+        <Button buttonColor={{ cssColor: "white" }} eventOnClick={props.handleContinue} styleClass={`mb-3 ${props.password === "" ? styles["button-continue-disabled"] : styles["button"] } `} radius="10px" padding="12px" type="button">
           Continue&nbsp;<LuArrowRightToLine></LuArrowRightToLine>
         </Button>
       </div>
