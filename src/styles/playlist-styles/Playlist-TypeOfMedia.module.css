@@ -1,9 +1,9 @@
 .checkmark {
-    border:1px solid rgb(82, 186, 90);
+    border:1px solid rgb(0, 0, 0);
     border-radius: 10px;
     position:absolute;
     padding:7px 10px;
-    background:rgb(82, 186, 90);
+    background:rgb(0, 0, 0);
     top:25px;
     right:25px;
     
@@ -16,7 +16,7 @@
    
    
    .mySwiper {
-     background-color:#3a4045;
+     background-color:#1a1a1a;
      border-radius: 50px !important;
      padding: 3em 3em;
    }
@@ -34,7 +34,8 @@
   .option {
     padding: 10em 0;
     border-radius: 50px;
-    background-color:rgb(28,31,34);
+    background-color:rgb(17 17 17 / 51%);
+
   }
   
   .option:hover {
@@ -43,7 +44,14 @@
   }
   
   .highlight-media {
-    background:#ddffa1 !important;
-    color:black;
+    background:#ffffff !important;
+    color:black 
   }
   
+  .media-type {
+    color:#6B7280
+  }
+
+  .media-type-selected {
+    color:black;
+  }

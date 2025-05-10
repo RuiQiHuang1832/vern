@@ -29,10 +29,10 @@ export default function CallToAction() {
       <div style={{flex:"1"}} className="col-6">
       <FadeInElement value="fade-in-section">
 
-        <h1 style={{ fontSize: 'clamp(3.6em, 6vw, 5em)'}} className={`fw-bold  item mb-4 lh-1 item slow item-1`}>
+        <h1 style={{ fontSize: 'clamp(2.5em, 6vw, 5em)'}} className={`fw-bold  item mb-4 lh-1 item slow item-1`}>
           Ready to get started?
         </h1>
-        <p style={{ fontSize: "1.5rem"}} className={` secondary text-wrap-pretty mb-5 fw-light item slow`}>
+        <p className={`mobile-font secondary text-wrap-pretty mb-5 fw-light item slow`}>
         Experience {WEBSITE_NAME} for free—submit reviews, rate media, and connect with enthusiasts. Upgrade with an optional subscription for even more features!
         </p>
 

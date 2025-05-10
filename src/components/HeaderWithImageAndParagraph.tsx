@@ -15,11 +15,11 @@ export default function HeaderWithImageAndParagraph({ header, paragraph, imageSr
           <div  className={`text-wrap-pretty`}>
             <div>
               <FadeInElement value="fade-in-section-left">
-            <h1 style={{ fontSize: 'clamp(2.5em, 3.5vw, 3.1em)' }} className={`responsiveHeader mb-3`}>{header}</h1>
+            <h1 className={`responsiveHeader mb-3`}>{header}</h1>
             </FadeInElement>
             <FadeInElement value="fade-in-section-left">
 
-            <span style={{lineHeight:"1.6", fontSize:'22px'}} className="secondary fw-light item-1">{paragraph}</span>            </FadeInElement>
+            <span style={{lineHeight:"1.6"}} className="mobile-font secondary fw-light item-1">{paragraph}</span>            </FadeInElement>
 
             </div>
           </div>

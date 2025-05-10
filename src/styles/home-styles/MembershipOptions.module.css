@@ -50,8 +50,9 @@ ul li.marker {
     flex:1 1 33%;
     background-color: #1A1A1A;
     padding:25px;
+    min-height: 50rem; 
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1065px) {
   .mem-container {
     flex:1 1 100%;
     min-height: 700px; 
@@ -59,5 +60,14 @@ ul li.marker {
   .wrap {
     flex-wrap: wrap;
     
+  }
+}
+
+.description {
+ min-height: 5rem;
+}
+@media (max-width:1065px) {
+  .description {
+    min-height: 0rem;
   }
 }

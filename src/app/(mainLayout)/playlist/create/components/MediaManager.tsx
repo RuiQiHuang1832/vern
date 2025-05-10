@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import MediaReview from './MediaReview';
+import Button from '@/components/Button';
 export interface MediaData {
   id: number;
   mediaName: string;
@@ -54,7 +55,7 @@ export default function MediaManager() {
       },
       {
         title: `Choose up to 10 ${selectedMedia?.toLowerCase()} to review.`,
-        component: <MediaSelection selectedMedia={selectedMedia} currentPage={currentComponent} selectedTitles={selectedTitles} onTitleAdd={handleTitleAdd}   />,
+        component: <MediaSelection selectedMedia={selectedMedia} currentPage={currentComponent} selectedTitles={selectedTitles} onTitleAdd={handleTitleAdd} onClear={setSelectedTitles}   />,
       },
       {
         title: `Here you can review the ${selectedTitles.length} selected media.`,
@@ -106,11 +107,13 @@ export default function MediaManager() {
     ))}
       <br></br>
         <div className="text-end container">
-    <button type="button" onClick={handleBack} className={`${styles["nav-back"]} btn me-3 fw-semibold back`}>Back</button> 
+        <Button buttonColor={{ cssColor: "white" }} eventOnClick={handleBack} type="submit" width="auto" radius="10px" padding="10px" styleClass={` ${styles["nav-back"]} btn me-3 back`}>
+<span style={{ color: "black" }}>Back</span></Button>
     {
     currentComponent === components.length 
-    ? <button type="submit" className={`fw-semibold ${styles["nav-next"]}`}>Submit</button> 
-    : <button type="button"  onClick={handleContinue} className={`${styles["nav-next"]} ${selectedMedia == null ? styles["disabled_swiper_button"] : ""} ${currentComponent == 2 && selectedTitles.length == 0 ? styles["disabled_swiper_button"] : ""}  fw-semibold btn continue`}>Continue</button>
+    ?   <Button buttonColor={{ cssColor: "white" }} eventOnClick={handleBack} type="submit" width="auto" radius="10px" padding="10px" styleClass={`${styles["nav-next"]}`}>
+<span style={{ color: "black" }}>Submit</span></Button>
+    : <Button buttonColor={{ cssColor: "white" }} eventOnClick={handleContinue} type="submit" width="auto" radius="10px" padding="10px" styleClass={`${styles["nav-next"]} ${selectedMedia == null ? styles["disabled_swiper_button"] : ""} ${currentComponent == 2 && selectedTitles.length == 0 ? styles["disabled_swiper_button"] : ""}  btn continue`}><span style={{ color: "black" }}>Continue</span></Button>
     }
     
     </div>
@@ -118,3 +121,5 @@ export default function MediaManager() {
     </>
   )
 }
+
+

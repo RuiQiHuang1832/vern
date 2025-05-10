@@ -5,14 +5,17 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "@/styles/playlist-styles/Playlist-MediaSelection.module.css";
 import { FaSearch } from "react-icons/fa";
-import classNames from "classnames";
-import { RiDeleteBinFill } from "react-icons/ri";
 import { MediaData } from "./MediaManager";
 import _ from "lodash";
+import Button from "@/components/Button";
+import { MdOutlineAdd } from "react-icons/md";
+import { RiSubtractFill } from "react-icons/ri";
+import { FaTrashCan } from "react-icons/fa6";
 
 interface MediaSelectionProps {
   selectedMedia: string | null;
   selectedTitles: MediaData[];
+  onClear: (data: MediaData[]) => void;
   onTitleAdd: (data:MediaData[]) => void; 
   currentPage: number;
 }
@@ -148,29 +151,25 @@ export default function MediaSelection(props: MediaSelectionProps) {
   return (
     <div className={`${props.currentPage > 2 ?"d-none": ""}`}>
       <div className="input-group mb-3">
-        <span className={`input-group-text ${styles["light-border-input"]} border-end-0 ${styles["add-transition"]} bg-transparent pe-0`}>
+        <span className={`input-group-text ${styles["light-border-input"]} border-end-0 ${styles["add-transition"]} bg-transparent ps-3 pe-1`}>
           <FaSearch></FaSearch>
         </span>
-        <input onChange={handleChange} placeholder="Enter the title name..." value={searchData.mediaName} type="text" className={`fw-light form-control border-start-0 ${styles["light-border-input"]} ph-color-white movieTitleInput`} />
+        <input onChange={handleChange} placeholder="Enter the title name..." value={searchData.mediaName} type="text" className={`py-3 fw-light form-control border-start-0 ${styles["light-border-input"]} ph-color-white movieTitleInput`} />
 
         <div className={`${styles["date-picker"]}`}>
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             showYearPicker
-            className={`form-control fw-light  ${styles["light-border-input"]} ${styles["form-control-without-rounded-borders"]} col-5`}
+            className={`form-control fw-light py-3  ${styles["light-border-input"]} ${styles["form-control-without-rounded-borders"]} col-5`}
             dateFormat="yyyy"
             onFocus={(e) => e.target.blur()}
           />
         </div>
-          <button onClick={handleSearch} className={`${styles["nav-search"]} btn`}>Search</button>
-      </div>
-      <div className="d-flex align-items-baseline mb-5">
-      <button onClick={handleAdd} className={`${styles["nav-next"]} btn`}>Add</button>
-      
+           <Button buttonColor={{ cssColor: "white" }} eventOnClick={handleSearch} type="submit" width="auto" radius="0px" padding="10px" styleClass={`${styles["nav-search"]} btn ${styles['search-radius']}`}><span style={{ color: "black" }}>Search</span></Button>
       </div>
       {feedback.message === "" ? (
-        <h6 className="fw-light d-flex justify-content-center" role="status">
+        <h6 className="fw-light d-flex justify-content-center mt-5" role="status">
           Search for movies, add them and they will show up here!
         </h6>
       ) : (
@@ -193,14 +192,30 @@ export default function MediaSelection(props: MediaSelectionProps) {
           </div>
         ) : (
           <>
-            <Image className="rounded focus-ring" alt="movie pic" width="250" height="350" src={`https://image.tmdb.org/t/p/original/${titleData.mediaPoster}`}></Image>
+          <div className={`${styles["poster-container"]} position-relative d-inline-block focus-ring rounded`}>
+            <Image className={`${styles["poster-image"]} rounded `} alt="movie pic" width="250" height="350" src={`https://image.tmdb.org/t/p/original/${titleData.mediaPoster}`}></Image>
+            <div className={styles["poster-add"]}>
+               <button onClick={handleAdd} type="button" className="btn btn-success d-flex align-items-center text-center p-2 green-red">
+                    <MdOutlineAdd />
+                  </button>
+          
+      </div> 
+          </div>
             <h5 className="mt-3">
               {titleData.mediaName} ({titleData.mediaYear})
-            </h5>
-          </>
+            </h5></>
         )}
       </div>
-      <div className={`${styles["grid"]} text-center`}>
+      <div className="d-flex justify-content-between align-items-center">
+      <h4 className="mb-2 fw-light">Tray ({props.selectedTitles.length})</h4>
+      {!!props.selectedTitles.length &&  <button onClick={() => props.onClear([])} type="button" className="btn btn-danger d-flex align-items-center text-center p-2 green-red">
+                   <FaTrashCan />
+                  </button>}
+          
+       </div>
+      <hr/>
+      <div className={`${styles["grid"]} text-center mt-5`}>
+        
         {props.selectedTitles.map((media, i) =>
           media.mediaPoster === undefined ? <></> : (
             <div key={i}>
@@ -208,7 +223,7 @@ export default function MediaSelection(props: MediaSelectionProps) {
                 <Image className={`${styles["poster-image"]} rounded `} key={i} alt="movie pic" width="250" height="350" src={`https://image.tmdb.org/t/p/original/${media.mediaPoster}`}></Image>
                 <div className={` ${styles["poster-delete"]}`}>
                   <button onClick={(e) => handleDelete(e, media.id)} type="button" className="btn btn-danger d-flex align-items-center text-center p-2 ring-red">
-                    <RiDeleteBinFill />
+                    <RiSubtractFill />
                   </button>
                 </div>
               </div>

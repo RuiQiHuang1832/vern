@@ -726,3 +726,8 @@ mark {
 .subtext {
   margin-bottom:24px;
 }
+
+
+.mobile-font {
+  font-size: clamp(16px, 3vw, 1.5rem);
+}

@@ -21,7 +21,7 @@ export default function HowItWorks() {
                   </div>{" "}
                 </div>
             </div>
-            <div style={{ flex: "1 1 0px" }} className="text-center">
+            <div style={{ flex: "1 1 0px", alignContent:"center" }} className="text-center">
               <FadeInElement value="fade-in-from-z">
                 <Image src={data.image} alt={`step-${i + 1}`} width={450} height={450} className="item globalObjectFit" quality={100}></Image>
               </FadeInElement>

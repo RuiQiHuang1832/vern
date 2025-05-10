@@ -2,7 +2,8 @@
     background-color:black !important;
     color:white !important;
      border-color:#333333 ;
-     outline: none !important
+     outline: none !important;
+     font-size:1rem;
   }
   .light-border-input:focus {
     border-color:rgb(119 116 116) !important
@@ -38,20 +39,22 @@
     gap: 2rem;
     grid-template-columns:repeat(auto-fill, minmax(15em, 1fr))
   }
-  
-  .poster-delete {
+  .poster-delete, .poster-add {
     position:absolute;
     left: 50%;
     top: 50%; 
     transform: translate(-50%, -50%);
     display:none; 
-  
   }
   
-  .poster-container:hover .poster-delete {
+  .poster-container:hover .poster-add  {
     display:inline-block !important;
-  
   }
+ .poster-container:hover .poster-delete {
+    display:inline-block !important;
+  }
+
+
   
   .poster-container:hover .poster-image {
     opacity: 0.4;
@@ -85,3 +88,7 @@
     height: 350px;
   }
 
+.search-radius {
+  border-top-right-radius:10px !important;
+  border-bottom-right-radius:10px !important;
+}

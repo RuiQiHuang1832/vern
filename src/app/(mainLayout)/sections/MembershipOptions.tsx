@@ -20,7 +20,7 @@ export default function MembershipOptions() {
              <div className="d-none d-xl-block"><Image priority src={e.src} width={70} height={70} alt={"icon"} ></Image>
              </div>
             </div>
-            <p style={{fontSize:"clamp(14px, 3vw, 1rem)"}} className="secondary">{e.description}</p>
+            <p style={{fontSize:"clamp(14px, 3vw, 1rem)"}} className={`secondary ${styles["description"]}`}>{e.description}</p>
             <h3 style={{fontSize:"clamp(1rem, 3vw, 1.5rem)"}}>{e.price}{i !== 2 && <small style={{color:"#848484"}}>/month</small>}</h3>
             <div className="py-3">
               <Button buttonColor={{ cssColor: "black" }} type="submit" width="100%" radius="10px" padding="13px" styleClass={`text-white`}>

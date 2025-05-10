@@ -20,7 +20,7 @@ export default function Faq() {
                 <FadeInElement value="fade-in-section">
               <h6 className="item slow item-1" style={{letterSpacing:"1.5px", textTransform:"uppercase", fontWeight:"500", fontFamily:"monospace"}}>Frequently Asked Questions</h6>
                 <h1 className="my-4 item slow">we&apos;re here to answer all your questions</h1>
-                <p className="fs-5 secondary fw-light item slow item-2">Everything you need to know about the product, team, and billing. Can’t find the answer you’re looking for? Post your question in our <span className="text-decoration-underline">community forum!</span></p>
+                <p  className="mobile-font secondary fw-light item slow item-2">Everything you need to know about the product, team, and billing. Can’t find the answer you’re looking for? Post your question in our <span className="text-decoration-underline">community forum!</span></p>
                 </FadeInElement>
               </div>
               {accordionData.map((accordion,i) => (
@@ -29,7 +29,7 @@ export default function Faq() {
                   <h2 className="accordion-header">
                     <button className={`accordion-button collapsed ${styles["resp-width"]}`}  onClick={() => toggleAccordion(i)}
  type="button" data-bs-toggle="collapse" data-bs-target={`#${accordion.id}`} aria-expanded="false" aria-controls={accordion.id}>
-                      <div className="fw-light accordion-question text-white fs-4">{i+1}. {accordion.question}</div>
+                      <div className="fw-light accordion-question text-white mobile-font">{i+1}. {accordion.question}</div>
                     </button>
                   </h2>
                   <div id={accordion.id} data-bs-parent="#accordionExample" className="accordion-collapse collapse ">

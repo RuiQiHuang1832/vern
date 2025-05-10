@@ -76,14 +76,14 @@ export default function TypeOfMedia(props:TypeOfMedia) {
           <SwiperSlide  key={index}>
             {activeMedia == media.type ? (
               <div className={styles["checkmark"]}>
-                <FaCheck color="black" />
+                <FaCheck color="white" />
               </div>
             ) : (
               <></>
             )}
             <div onClick={() => handleClick(media.type)} className={`focus-ring ${media.active === false ? styles["disabled-media-selection"] : ""} ${styles["option"]} ${activeMedia == media.type ? styles["highlight-media"] : ""}`}>
-              <media.icon size="3em" color={`${activeMedia == media.type ? "black" : "#95CD4D"}`} />
-              <div className="mt-3">{media.type}</div>
+              <media.icon size="3em" color={`${activeMedia == media.type ? "black" : "white"}`} />
+              <div  className={`mt-3 ${activeMedia == media.type ? styles["media-type-selected"] :styles["media-type"]}`}>{media.type}</div>
             </div>
           </SwiperSlide>
         ))}

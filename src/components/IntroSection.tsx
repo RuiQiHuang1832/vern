@@ -6,7 +6,7 @@ export default function IntroSection({ header, title, description }: introData) 
       <FadeInElement value="fade-in-section">
         <h6 className="item slow item-1 section-heading">{header}</h6>
         <h1 className="item slow section-title">{title}</h1>
-        <p className="item slow item-2 section-description">{description}</p>
+        <p className="item slow item-2 section-description mobile-font">{description}</p>
       </FadeInElement>
     </div>
   );

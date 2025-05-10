@@ -1,0 +1,13 @@
+/* default (desktop) */
+h1.typing-title {
+    min-height: 3rem; 
+    font-size: clamp(32px, 5vw, 3.3em);
+    transition: font-size 0.5s ease-in-out;
+  }
+
+  /* smaller screens */
+  @media (max-width: 480px) {
+    h1.typing-title {
+      min-height: 6rem;
+    }
+  }
