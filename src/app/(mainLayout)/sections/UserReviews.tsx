@@ -92,7 +92,7 @@ export default function UserReviews() {
                 </h2>
                 <div style={{ gap: "15px" }} className="d-flex">
                   <div style={{ gap: "20px", textAlign: "left", }} className="d-flex me-auto align-items-center pt-5">
-                    <Image style={{ borderRadius: "9999px" }} priority={true} src={e.source.src} width={64} height={1000} quality={100} className={`${styles["object-fit"]} review-avatar d-none d-sm-block`} alt={e.name}></Image>
+                    <Image style={{ borderRadius: "9999px", width:'64px', height:"64px" }} priority={true} src={e.source.src} width={64} height={64} quality={100} className={` review-avatar d-none d-sm-block`}  alt={e.name}></Image>
                     <div style={{ fontSize: "20px" }} className="fw-light">
                       <div style={{fontSize: 'clamp(1rem,3vw, 1.5rem)',transition: 'font-size 0.5s ease-in-out'}} className="review-name">{e.name}</div>
                       <div className="review-role" style={{ color: "#6B7280", fontSize: 'clamp(1rem,3vw, 1.5rem)',transition: 'font-size 0.5s ease-in-out' }}>

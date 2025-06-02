@@ -40,7 +40,7 @@ const Tabs = ({ tabs, selectedTabIndex, setSelectedTab, onTabClick }: Props): JS
     >
       {tabs.map((item, i) => {
         return (
-          <Link scroll={false} key={i} href={`?tab=${encodeURIComponent(item.id.toLowerCase()).replace(/%20/g, '+')}`} style={{color:"white"}} className="text-decoration-none">
+          <Link scroll={false} key={i} href={`?tab=${encodeURIComponent(item.id.toLowerCase()).replace(/%20/g, '+')}`} style={{color:"black"}} className="text-decoration-none">
           <motion.button
             key={i}
             className={classNames(
@@ -58,7 +58,7 @@ const Tabs = ({ tabs, selectedTabIndex, setSelectedTab, onTabClick }: Props): JS
               onTabClick(item.id);
             }}
           >
-            {item.id} {item.hasBadge && <span className="badge text-bg-primary ms-2">{i}</span>}
+           {item.icon}&nbsp;&nbsp;{item.id} {item.hasBadge && <span className="badge text-bg-primary ms-2">{i}</span>}
           </motion.button>
           </Link>
         );

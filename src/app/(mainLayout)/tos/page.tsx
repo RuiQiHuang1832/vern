@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { getCurrentDate } from "@/helpers/date";
 import { WEBSITE_NAME } from "@/global/global";
 export default function Tos() {
-    const headerColorStyle = classNames("text-success")
+    const headerColorStyle = classNames("text-white")
   return (
     <div className="text-white container py-5 fw-light">
       <h2 className={`${headerColorStyle} text-center`}>

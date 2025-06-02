@@ -32,18 +32,19 @@ export default function StepPassword(props:StepPassword) {
       <p style={{ fontSize: "14px" }} className="fw-light mb-5">
         Your password must be at <span className="text-info">least 8 characters long</span>, and contain at <span className="text-info">least one digit and one non-digit character</span>
       </p>
-      
-      <div className="input-group  mb-3">
-        <input type={hiddenStatus ? "password" : "text"} onChange={handleOnChange} className={`form-control light-border-input ${styles["password-input"]}`} placeholder="Enter your password" />
+
+      <form className="input-group  mb-3">
+        <input type="text" name="username" autoComplete="username" readOnly hidden />
+        <input autoComplete="new-password" type={hiddenStatus ? "password" : "text"} onChange={handleOnChange} className={`form-control light-border-input ${styles["password-input"]}`} placeholder="Enter your password" />
         <span onClick={handleEyeChange} className={`input-group-text ${styles["password-eye"]} py-3 pe-4`}>
-          {hiddenStatus ? <FaEye/> : <FaEyeSlash />}
+          {hiddenStatus ? <FaEye /> : <FaEyeSlash />}
         </span>
-      </div>
+      </form>
       <div className="d-flex justify-content-between mt-5">
         <Button buttonColor={{ cssColor: "white" }} eventOnClick={props.handleBack} styleClass={`mb-3 ${styles["button"]}`} radius="10px" padding="13px 17px" type="button">
           <LuArrowLeftToLine></LuArrowLeftToLine>
         </Button>
-        <Button buttonColor={{ cssColor: "white" }} eventOnClick={props.handleContinue} styleClass={`mb-3 ${props.password === "" ? styles["button-continue-disabled"] : styles["button"] } `} radius="10px" padding="12px" type="button">
+        <Button buttonColor={{ cssColor: "white" }} eventOnClick={props.handleContinue} styleClass={`mb-3 ${props.password === "" ? styles["button-continue-disabled"] : styles["button"]} `} radius="10px" padding="12px" type="button">
           Continue&nbsp;<LuArrowRightToLine></LuArrowRightToLine>
         </Button>
       </div>

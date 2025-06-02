@@ -63,9 +63,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={` d-flex justify-content-center ${styles["header-img"]}`}>
-            <div className="image position-relative w-100 h-auto">
-              <Image src={image_4.src} alt="Home page logo" fill objectFit="contain" priority={true} className={`${styles["objectFit"]} fade-in-image ${isVisible ? "animate" : ""}`} quality={100} />
+          <div className={` d-flex justify-content-center ${styles["header-img"]} align-items-center`}>
+            <div className="image position-relative w-100 ">
+              <Image src={image_4.src} alt="Home page logo" width={1000} height={1000}  priority={true} className={`globalObjectFit fade-in-image ${isVisible ? "animate" : ""}`} quality={100} />
             </div>
           </div>
         </div>

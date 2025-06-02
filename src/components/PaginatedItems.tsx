@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import ReactPaginate from "react-paginate";
-import { useState, useEffect, MouseEventHandler, MouseEvent } from "react";
+import { useState, useEffect, MouseEvent } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Pagination } from 'swiper/modules';
+import SkeletonLoader from "@/components/SkeletonLoader";
+
 
 type PageChangeEvent = {
   selected: number; // The selected page number
@@ -16,6 +17,7 @@ type PaginatedItemsProps = {
   showPages: boolean;
   displayFunction: (data: DataItem[]) => JSX.Element; // Define the prop type for displayFunction
   setLoad: React.Dispatch<React.SetStateAction<boolean>>;
+  setResultLength?: React.Dispatch<React.SetStateAction<number>>; // Optional prop to set the result length
 };
 
 interface DataItem {
@@ -28,7 +30,7 @@ interface DataByTab {
   [key: string]: DataItem[]; // The keys are the tab names, and the values are arrays of DataItem
 }
 
-export default function PaginatedItems({ itemsPerPage, currentPage, displayFunction, url, showPages, setLoad }: PaginatedItemsProps) {
+export default function PaginatedItems({ itemsPerPage, currentPage, displayFunction, url, showPages, setLoad,setResultLength }: PaginatedItemsProps) {
   const router = useRouter();
   const [totalDataLength, setTotalDataLength] = useState(0);
   const [cache, setCache] = useState([]);
@@ -58,6 +60,7 @@ export default function PaginatedItems({ itemsPerPage, currentPage, displayFunct
         } else {
           setCache(fetchedData); // Store the full data set
           setTotalDataLength(fetchedData.length);
+          setResultLength?.(fetchedData.length); // Set the result length if provided
         }
         setIsLoading(false);
         setLoad(false);
@@ -113,27 +116,26 @@ export default function PaginatedItems({ itemsPerPage, currentPage, displayFunct
             onPageChange={handlePageClick}
             disableInitialCallback={true}
             containerClassName="pagination justify-content-start fs-4"
-            pageLinkClassName="page-link shadow-none paginatedLink paginatedItems "
+            pageLinkClassName="page-link shadow-none  paginatedLink paginatedItems "
             previousClassName="page-item me-1"
             previousLinkClassName="page-link paginatedLink paginatedItems shadow-none general-nav"
             nextClassName="page-item ms-1"
             nextLinkClassName="page-link paginatedLink paginatedItems shadow-none general-nav"
             activeClassName="page-item active"
             activeLinkClassName="page-item bg-white text-dark border-0"
-            initialPage={currentPage - 1}
             pageClassName="mx-1"
             disabledClassName="paginate-disabled"
           />
           {pageCount > 1 && (
             <div className="ms-3 jump ">
               <div className="dropdown">
-                <button className={`btn dropdown-toggle border border-white text-white`} type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ height: "40px",backgroundColor:"black" }}>
+                <button  className={`btn dropdown-toggle  text-white`} type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ height: "40px",backgroundColor:"#292929d2",border:"none" }}>
                   Jump
                 </button>
-                <ul onClick={(e) => handleJump(e)} style={{ maxHeight: "250px", overflow: "scroll", overflowX: "hidden", maxWidth: "100px", borderRadius: 0 }} className="dropdown-menu border-0">
+                <ul onClick={(e) => handleJump(e)} style={{ maxHeight: "250px", overflow: "scroll", background:"#292929d2", overflowX: "hidden", maxWidth: "100px", borderRadius: 0 }} className="dropdown-menu border-0">
                   {Array.from({ length: pageCount }, (e, i) => (
-                    <li key={i+1}>
-                      <a className="dropdown-item" href="#" data-page={i + 1}>
+                    <li className="" key={i+1}>
+                      <a className="dropdown-item text-white" href="#" data-page={i + 1}>
                         {i+1}
                       </a>
                     </li>
@@ -148,22 +150,15 @@ export default function PaginatedItems({ itemsPerPage, currentPage, displayFunct
   }
 
   if (isLoading) {
-    return <div className="spinner">Loading...</div>;
+    return <SkeletonLoader></SkeletonLoader>;
   }
 
   if (error) {
-    return <div className="error">Error fetching data. Unexpected error or Out of range</div>;
+    return <div className="error">Error fetching data. Unexpected error or Out of range. Check if db json is active</div>;
   }
 
   return (
     <>
-      {showPages && <Pagination></Pagination>}
-      {showPages && ( <div>
-<div style={{background:"rgb(14 15 16)"}} className="py-2 ps-3 rounded ">
-  Found {totalDataLength} results.
-</div>
-</div>) }
-    
       {displayFunction(paginatedData)}
       {showPages && <Pagination></Pagination>}
     </>

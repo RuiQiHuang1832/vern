@@ -16,7 +16,7 @@
   background:#1B1E21;
 }
 .nav-tabs {
-  border-bottom: 1px solid #3d3d3d !important; 
+  border-bottom: 1px solid transparent !important; 
 }
 
 .active {

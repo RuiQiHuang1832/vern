@@ -1,13 +1,14 @@
 .grid {
   display: grid;
   gap: 0.8rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: auto;
 }
 
 .object-fit {
   max-width: 100%;
-  height:110%
+  height:110%;
+   cursor: pointer;
 }
 
 /* .community-banner {
@@ -83,9 +84,6 @@
   background: rgba(219, 213, 213, 0);
 }
 
-.card-review-container {
-  cursor:pointer;
-}
 
 .title {
   transition: color 0.3s ease-in-out;
@@ -96,12 +94,83 @@
 
 }
 
-.card-review-container:hover .title {
-  color:rgb(255, 0, 0)
-}
-
 
 .card-review-container:hover .figure {
   transform: translateY(-1rem);
 }
+
+
+
+  
+  .more-button:hover .more-arrow {
+    width:20px;
+  
+  }
+  
+  .more-arrow {
+    width:0;
+    transition: width 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Spring effect on initial state */
+    transform: translateX(5px); /* Use transform to simulate margin-left */
+  
+  }
+
+  .extra-button {
+    position: absolute;
+    top:10px;
+    right:10px;
+    border-radius:9999px;
+    background:rgba(0, 0, 0, 0.472);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    visibility: hidden;
+    cursor: pointer;
+  }
+
+  .extra-button:hover {
+    background:rgba(0, 0, 0, 0.672);
+    
+  }
+
+  .card-review-container:hover .extra-button {
+    visibility: visible;
+  }
+
+  .big-frame:hover {
+    cursor:pointer;
+    opacity: 90%;
+  }
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: rgba(41, 41, 41, 0.823) url('/arrow.svg') no-repeat right 1rem center;
+  background-size: 1rem;
+
+  color: #ffffff;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 0 2px #555;
+  background-color: rgba(60, 60, 60, 0.9);
+}
+
+.form-select option {
+  background-color: #292929;
+  color: #ffffff;
+  padding: 0.75rem 1rem; /* More padding for comfort */
+  font-size: 1rem;
+  min-width: 320px; /* Force longer width on dropdown if browser allows */
+}
+
 

@@ -70,13 +70,13 @@
 
 .review-container {
     height: 30em;
-     background: #00000080;
+     background: #1a1a1a;
      border-radius: 10px 10px 0 0;
     }
 
 
 .review-container-accordion {
-   background: #00000080;
+   background: #1a1a1a;
 }
 
 .poster-container { 

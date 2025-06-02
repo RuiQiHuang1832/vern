@@ -1,15 +1,15 @@
 .dash {
-    width: 50px;
-    height: 10px;
-    background-color: #e9ebea4b;
-    border-radius: 10px;
+    width: 60px;
+    height: 5px;
+    background-color: rgba(128, 128, 128, 0.413);
+    border-radius: 0px;
     margin-right: 10px;
 }
 
 .completed {
-    background-color:darkgreen !important
+    background-color:rgb(255, 255, 255) !important
   }
 
 .current {
-    background-color:lightgreen !important
+    background-color:rgb(255, 255, 255) !important
   }

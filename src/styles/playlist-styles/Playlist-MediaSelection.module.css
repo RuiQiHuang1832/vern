@@ -67,12 +67,9 @@
     border: 1px solid transparent !important;
   }
   .nav-search:active {
-    background-color:rgba(59, 141, 66, 0.751) !important ;
+    opacity: 0.8;
   }
-  .nav-search:hover {
-    background-color:rgba(59, 141, 66, 0.751) ;
-  }
-  
+ 
   .date-picker {
     flex: 0 0 15%; 
   }
@@ -91,4 +88,18 @@
 .search-radius {
   border-top-right-radius:10px !important;
   border-bottom-right-radius:10px !important;
+}
+
+
+
+
+.grid > div:empty::before {
+  content: "+ Available Slot";
+  display: block;
+  text-align: center;
+  color: #aaa;
+  padding: 2rem;
+  border: 1px dashed #ccc;
+  border-radius: 0.5rem;
+
 }

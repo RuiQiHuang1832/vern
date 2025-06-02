@@ -7,6 +7,10 @@
  
 }
 
+h1,h2,h3,h4,h5,h6 {
+  letter-spacing:-0.025em;
+}
+
 .secondary {
   color:#767676;
 }
@@ -97,7 +101,7 @@ a.navbar-brand {
 }
 
 .globalObjectFit {
-  max-width: 100%;
+  max-width:100% !important;
   height: auto;
 }
 
@@ -519,8 +523,14 @@ textarea {
   padding-bottom: 2rem !important;
 }
 
+.active {
+  box-shadow: none !important;
+}
+
+
+
 .paginatedLink {
-  background-color: black;
+  background-color: #292929d2;
   color: white;
 }
 
@@ -531,7 +541,13 @@ textarea {
   justify-content: center;
   text-decoration: none;
   color: white;
-  background-color: black;
+  background-color: #292929d2;
+    border:none !important
+}
+
+.pagination li:nth-child(2) a[rel="canonical"] {
+  border-top-left-radius:10px !important;
+  border-bottom-left-radius:10px !important;
 }
 
 .page-link:hover {
@@ -554,6 +570,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  border:none !important
 }
 
 .paginate-disabled {
@@ -731,3 +748,10 @@ mark {
 .mobile-font {
   font-size: clamp(16px, 3vw, 1.5rem);
 }
+
+.hover-underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 80%;
+}
+
