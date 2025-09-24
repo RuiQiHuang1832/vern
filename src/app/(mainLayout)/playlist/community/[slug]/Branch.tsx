@@ -20,7 +20,7 @@ type CommunityProps = {
 export default function Branch(props: CommunityProps) {
   const [selectItems, setSelectItems] = useState("0");
   const [itemsPerPage, setItemsPerPage] = useState(16);
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [, setIsLoading] = useState<boolean>(true)
   const [resultLength, setResultLength] = useState<number>(0);
   const pathname = usePathname();
   const router = useRouter();
@@ -86,4 +86,3 @@ export default function Branch(props: CommunityProps) {
      </div>
   );
 }
-#

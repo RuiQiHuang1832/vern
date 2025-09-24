@@ -16,7 +16,7 @@ import { useMediaQuery } from "react-responsive";
 const navLinks = [
   // { text: "VIEW", href: "/playlist/view" },
   { text: "Create", href: "/playlist/create" },
-  { text: "Community", href: "" },
+  { text: "Community", href: "/in-maintenance" },
   { text: "Support", href: "https://airtable.com/appZ6rwp0wgPvNpjJ/pagfrOydoyfmz8qJe/form" },
   { text: "Log In", href: "/login" },
 ];
