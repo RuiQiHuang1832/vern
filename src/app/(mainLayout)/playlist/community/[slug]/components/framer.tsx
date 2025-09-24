@@ -35,7 +35,7 @@ const Tabs = ({ tabs, selectedTabIndex, setSelectedTab, onTabClick }: Props): JS
   return (
     <nav
       ref={navRef}
-      className="nav-container"
+      className={`nav-container container-scrollbar`}
       onPointerLeave={() => setHoveredTabIndex(null)}
     >
       {tabs.map((item, i) => {

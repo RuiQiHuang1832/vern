@@ -69,7 +69,7 @@
 }
 
 .review-container {
-    height: 30em;
+    height: 23rem;
      background: #1a1a1a;
      border-radius: 10px 10px 0 0;
     }
@@ -79,14 +79,14 @@
    background: #1a1a1a;
 }
 
-.poster-container { 
+/* .poster-container { 
    transform: translate(24px, -20px);
 }
 @media screen and (max-width: 767px) {
   .poster-container { 
     transform: translateY(-20px);
  }
-}
+} */
 
 
 
@@ -95,23 +95,34 @@
 }
 
 .genres {
-    color:rgb(114 168 255)
+    color:rgb(253, 253, 253)
 }
 
 
 .dropdown-review-arrow {
-    float: right;
+  position: absolute;
+  right: 40px;
+  bottom:35px;
     transition: transform 0.5s ease; /* Adjust the duration and timing function as needed */
     cursor: pointer;
+
   }
+
+
 
   .rotate {
-    transform: rotate(-180deg);
+  transform: rotate(90deg);
+
   }
 
 
-  .box-shadow {
-    box-shadow:0px 15px 20px 5px rgba(0,0,0,0.75)
+  .image-container {
+    /* box-shadow:0px 15px 20px 5px rgba(0,0,0,0.75); */
+    transform:translateY(5px);
+  }
+
+  .image-container:hover {
+    opacity: 70%;
   }
 
 .accordion-content {

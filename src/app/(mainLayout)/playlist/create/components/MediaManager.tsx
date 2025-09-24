@@ -84,7 +84,7 @@ export default function MediaManager() {
         component: <MediaSelection selectedMedia={selectedMedia} currentPage={currentComponent} selectedTitles={selectedTitles} onTitleAdd={handleTitleAdd} onClear={setSelectedTitles} MAX_LIMIT={MAX_LIMIT} onSetPlaceholder={setPlaceholder}  />,
       },
       {
-        title: `Here you can review the ${selectedTitles.length} selected media.`,
+        title: `You can now review what you selected.`,
         component: <MediaReview selectedTitles={selectedTitles} currentPage={currentComponent} />,
       },
       // Add more steps as needed
@@ -132,12 +132,12 @@ useEffect(() => {
 
   return (
     <>
-  <ProgressDashes progressContainerClassName={"container"} length={3} current={currentComponent}></ProgressDashes>
+  <ProgressDashes progressContainerClassName={"container-md"} length={3} current={currentComponent}></ProgressDashes>
   
   <Swiper navigation={{ nextEl: ".continue", prevEl: ".back" }}  modules={[Navigation]} speed={1000} allowTouchMove={false} draggable={false}  simulateTouch={false}  watchSlidesProgress={true} slidesPerView={1} spaceBetween={100}>
     {components.map((c,index) => (
         <SwiperSlide key={index}>
-    <div key={resetKey} className="container">
+    <div key={resetKey} className="container-md">
       <h2 className="my-4 fw-light">{c.title}</h2>
       {c.component}
       </div>

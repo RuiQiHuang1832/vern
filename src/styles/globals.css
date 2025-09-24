@@ -671,7 +671,7 @@ textarea {
 .focus-ring:hover {
   border-color: transparent !important;
   /* Create the ring effect */
-  box-shadow: 0 0 0 6px #26262E, 0 0 0 8px rgb(55, 255, 131);
+  box-shadow: 0 0 0 6px #26262E, 0 0 0 8px #ffffff;
 }
 
 .focus-ring:has(.ring-red:hover)  {

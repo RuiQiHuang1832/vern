@@ -56,8 +56,10 @@
 .underline {
     position: absolute; /* absolute */
     z-index: 10; /* z-10 */
-    bottom: -7px; /* bottom-0 */
+    bottom: -5px; /* bottom-0 */
     left: 0; /* left-0 */
     height: 2px; /* h-[2px] */
     background-color: rgb(255, 255, 255); /* bg-slate-500 */
 }
+
+

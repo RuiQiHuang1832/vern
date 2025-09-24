@@ -156,7 +156,11 @@ export default function MediaSelection(props: MediaSelectionProps) {
         <span className={`input-group-text ${styles["light-border-input"]} border-end-0 ${styles["add-transition"]} bg-transparent ps-3 pe-1`}>
           <FaSearch></FaSearch>
         </span>
-        <input onChange={handleChange} placeholder="Enter the title name..." value={searchData.mediaName} type="text" className={`py-3 fw-light form-control border-start-0 ${styles["light-border-input"]} ph-color-white movieTitleInput`} />
+        <input onChange={handleChange}   onKeyDown={(e) => {
+    if (e.key === 'Enter') {
+      handleSearch(); // Only runs on Enter
+    }
+  }} placeholder="Enter the title name..." value={searchData.mediaName} type="text" className={`py-3 fw-light form-control border-start-0 ${styles["light-border-input"]} ph-color-white movieTitleInput`} />
 
         <div className={`${styles["date-picker"]}`}>
           <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} showYearPicker className={`form-control fw-light py-3  ${styles["light-border-input"]} ${styles["form-control-without-rounded-borders"]} col-5`} dateFormat="yyyy" onFocus={(e) => e.target.blur()} />

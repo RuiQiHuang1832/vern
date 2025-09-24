@@ -105,7 +105,7 @@ export default function Landing(props:CommunityProps) {
                 </div>
               </div>
 
-              <Image style={{ borderRadius: "11px" }} src={[horizon.src, horizon2.src][i]} alt="Home page logo" width={0} height={0} sizes="100vw" className={` h-100 w-100`} priority={true} quality={100} />
+              <Image style={{ borderRadius: "11px" }} src={[horizon.src, horizon3.src][i]} alt="Home page logo" width={0} height={0} sizes="100vw" className={` h-100 w-100`} priority={true} quality={100} />
             </div>
           ))}
           {Array.from({ length: 4 }).map((e, i) => (
@@ -122,7 +122,7 @@ export default function Landing(props:CommunityProps) {
                     </div>
                 </div>
               </div>
-              <Image style={{ borderRadius: "10px" }} src={[horizon.src, horizon2.src, horizon3.src, horizon4.src, horizon5.src][i]} alt="Home page logo" width={0} height={0} sizes="100vw" className={`h-100 w-100`} priority={true} quality={100} />
+              <Image style={{ borderRadius: "10px" }} src={[horizon.src, horizon.src, horizon3.src, horizon4.src, horizon5.src][i]} alt="Home page logo" width={0} height={0} sizes="100vw" className={`h-100 w-100`} priority={true} quality={100} />
             </div>
           ))}
         </div>
@@ -137,9 +137,15 @@ export default function Landing(props:CommunityProps) {
         </div>
       </div>
       <hr></hr>
-      <div className={`nav nav-tabs ${styles["tab-container"]}`}>
+      <div className={`position-relative`}>
+      <div className={`${styles["fade-out-left"]}`}></div>
+      <div className={`${styles["fade-out-right"]}`}></div>
+        <div className={`${styles["container-scrollbar"]} ${styles["tab-container"]}  nav nav-tabs`}>
         <Framer.Tabs {...framer.tabProps} onTabClick={handleTabClick} />
+        </div>
+
       </div>
+
       <CommunityGrid itemsPerPage={16} tab={matchingObject} pagination={props.pagination} setLoadState={setIsLoading}></CommunityGrid>
       <div className="mt-5 text-center">
         <Button buttonColor={{ cssColor: "white" }} type="submit" width="auto" radius="10px" padding="10px" href={`/playlist/community/${matchingObject.slug}/?page=1`} styleClass={`${styles["more-button"]}`}>

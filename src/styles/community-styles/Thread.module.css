@@ -1,0 +1,52 @@
+/* .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+ place-items: center;
+ align-items: stretch;
+}
+ */
+
+
+ .grid {
+  column-count: 4;
+  column-gap: 1.5rem;
+}
+
+.grid-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+
+.movie-card {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+
+.movie-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Adjust the height for more/less fade */
+  background: linear-gradient(to top, #1A1A1A, rgba(17, 17, 17, 0));
+
+  pointer-events: none;
+}
+
+.title {
+  position:absolute;
+  top:-100px;
+}
+
+.text-container {
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  background:#1A1A1A
+}
+

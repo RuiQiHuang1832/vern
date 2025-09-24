@@ -11,7 +11,7 @@ import { MdFileUpload } from "react-icons/md";
 import { IoPersonSharp } from "react-icons/io5";
 import { BsDot } from "react-icons/bs";
 import { IoBook } from "react-icons/io5";
-
+import Link from "next/link";
 type DataItem = {
   userId: number;
   id: number;
@@ -34,7 +34,9 @@ function displayData(data: DataItem[]) {
               </figure>
               <div style={{ fontSize: "13px", maxHeight: "250px", minHeight: "250px", background: "rgb(0 0 0 / 26%)", zIndex: "1" }} className="card-body  overflow-hidden ">
                 <h5 style={{ fontSize: "16px" }} className={`card-title mt-3 ${styles["title"]}  hover-underline d-flex justify-content-between align-items-center`}>
-                  {e.title}
+          <Link className="text-decoration-none text-white" href={`/playlist/community/reviews/${i}`}>
+              {e.title}
+            </Link>
                 </h5>
 
                 <div className="info">
