@@ -5,11 +5,6 @@
 A media review site prototype where users can create accounts, explore media, and draft playlists/reviews.  
 More of a **concept app** than a polished product, but it served as an important first step in building my frontend skillset.
 
-## 🌐 Prototype Preview
-
-[job-board-rho-one.vercel.app/jobs](https://vernacular-ruddy.vercel.app/)
-
-
 
 ## ✨ Features (Conceptual)
 
