@@ -6,7 +6,7 @@ A media review site prototype where users can create accounts, explore media, an
 More of a **concept app** than a polished product, but it served as an important first step in building my frontend skillset.
 
 
-## ✨ Features (Conceptual)
+## Features (Conceptual)
 
 - **User Accounts** – mock authentication and account creation flow
 - **Playlists** – organize movies, TV, books, or games into collections
@@ -15,7 +15,7 @@ More of a **concept app** than a polished product, but it served as an important
 - **Basic UI/UX Flows** – built to test frontend patterns, not full functionality
 
 
-## 📸 Screenshots
+## Screenshots
 
 ![Prototype Screenshot](./public/home.png)
 
@@ -28,7 +28,7 @@ _Vern landing page._
 _Vern creation feature._
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js
 - **Frontend:** React, TypeScript, CSS Modules, Bootstrap 5
@@ -37,7 +37,7 @@ _Vern creation feature._
 
 
 
-## 🚀 Getting Started
+## Getting Started
 
 Clone the repo and install dependencies:
 
@@ -48,11 +48,11 @@ npm install
 npm run dev
 ```
 
-## 📄 Status
+## Status
 This was a first-time experiment with the stack.
 The codebase demonstrates early frontend skills but is not actively maintained.
 
-## ❓ FAQ
+## FAQ
 
 **Why is it called “vern”?**  
 The name “vern” was chosen simply as a creative identifier. It was inspired by a character reference from a television show and selected because it felt distinctive, simple, and memorable.
