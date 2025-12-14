@@ -36,18 +36,6 @@ _Vern creation feature._
 - **Deployment:** Vercel (frontend)
 
 
-
-## Getting Started
-
-Clone the repo and install dependencies:
-
-```bash
-git clone https://github.com/yourusername/vern.git
-cd vern
-npm install
-npm run dev
-```
-
 ## Status
 This was a first-time experiment with the stack.
 The codebase demonstrates early frontend skills but is not actively maintained.
